@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const { getEventsByCategory } = require('../controllers/events');
-const { events } = require('../controllers/events');
+const { getOrgs } = require('../controllers/organizations');
+const { getEventsByCategory, events } = require('../controllers/events');
+
+router.get('/organizations', getOrgs);
 
 router.get('/events', getEventsByCategory);
 
