@@ -6,7 +6,11 @@ async function getEventsByCategory(req, res, next) {
   const { date, time } = getDate();
   try {
     const { rows } = await getEventsCategory(category, date, time);
-    return res.json({ message: 'Events imported successfully', data: rows });
+    return res.json({
+      status: 200,
+      message: 'Events imported successfully',
+      data: rows,
+    });
   } catch (err) {
     return next(err);
   }
