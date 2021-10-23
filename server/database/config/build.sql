@@ -22,7 +22,7 @@ BEGIN;
       image TEXT,
       duration TIME NOT NULL,
       details VARCHAR(250) NOT NULL,
-      organizer INTEGER REFERENCES ORGANIZATION(id),
+      organizer_id INTEGER REFERENCES ORGANIZATION(id),
       category TEXT NOT NULL
   );
 
