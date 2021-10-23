@@ -1,7 +1,7 @@
 BEGIN;
-  DROP TABLE IF EXISTS ORGANIZATION,EVENTS,ATTENDANCE,EVENT_ATTENDANCE CASCADE;
+  DROP TABLE IF EXISTS organization,events,attendance,event_attendance CASCADE;
 
-  CREATE TABLE ORGANIZATION(
+  CREATE TABLE organization(
       id SERIAL PRIMARY KEY,
       name VARCHAR(80) NOT NULL,
       email VARCHAR(150) UNIQUE NOT NULL,
@@ -10,7 +10,7 @@ BEGIN;
       categories TEXT
   );
 
-  CREATE TABLE EVENTS(
+  CREATE TABLE events(
       id SERIAL PRIMARY KEY,
       name VARCHAR(100) NOT NULL,
       description TEXT NOT NULL,
@@ -26,7 +26,7 @@ BEGIN;
       category TEXT NOT NULL
   );
 
-  CREATE TABLE ATTENDANCE(
+  CREATE TABLE attendance(
       id SERIAL PRIMARY KEY,
       name VARCHAR(100) NOT NULL,
       email VARCHAR(150) UNIQUE NOT NULL,
@@ -36,7 +36,7 @@ BEGIN;
       phone INTEGER
   );
 
-  CREATE TABLE EVENT_ATTENDANCE(
+  CREATE TABLE event_attendance(
       id SERIAL PRIMARY KEY,
       attendance_id INTEGER REFERENCES ATTENDANCE(id),
       event_id INTEGER REFERENCES EVENTS(id)
