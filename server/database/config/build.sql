@@ -22,7 +22,7 @@ BEGIN;
       image TEXT,
       duration TIME NOT NULL,
       details VARCHAR(250) NOT NULL,
-      organizer_id INTEGER REFERENCES ORGANIZATION(id),
+      organizer_id INTEGER REFERENCES organization(id),
       category TEXT NOT NULL
   );
 
@@ -38,8 +38,8 @@ BEGIN;
 
   CREATE TABLE event_attendance(
       id SERIAL PRIMARY KEY,
-      attendance_id INTEGER REFERENCES ATTENDANCE(id),
-      event_id INTEGER REFERENCES EVENTS(id)
+      attendance_id INTEGER REFERENCES attendance(id),
+      event_id INTEGER REFERENCES events(id)
   );
 
 COMMIT;
