@@ -22,7 +22,7 @@ CREATE TABLE events(
     location VARCHAR(200) NOT NULL,
     image TEXT,
     duration TIME NOT NULL,
-    details VARCHAR(250) NOT NULL,
+    details TEXT NOT NULL,
     organizer_id INTEGER REFERENCES organization(id),
     category TEXT NOT NULL
 );
@@ -33,7 +33,7 @@ CREATE TABLE attendance(
     age INTEGER NOT NULL,
     gender VARCHAR(50) NOT NULL,
     isSubscriber BOOLEAN NOT NULL,
-    phone INTEGER
+    phone VARCHAR(25)
 );
 CREATE TABLE event_attendance(
     id SERIAL PRIMARY KEY,
