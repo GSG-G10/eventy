@@ -1,6 +1,7 @@
-const {getEventByIdQuery, getAllEvents} = require('./events');
+const {getEventByIdQuery, getAllEvents, getEventsCategory} = require('./events');
 
 module.exports = {
+  getEventsCategory,
   getAllEvents,
   getEventByIdQuery
 };
