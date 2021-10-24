@@ -1,26 +1,24 @@
 const { sign } = require('jsonwebtoken');
 
-module.exports = (req, res, next) => {
+const setCookies = async (req, res, next) => {
   const { SECRET_KEY } = process.env;
   const { userId } = req;
-
-  sign(
-    { userId }, SECRET_KEY, (err, token) => {
-      if (err) {
-        next(err);
-      } else {
-        res.cookie(
-          'access_token',
-          token,
-          {
-            httpOnly: true,
-            secure: true,
-          },
-        )
-          .json(
-            { message: 'Logged In Successfully' },
-          );
-      }
-    },
-  );
+  try {
+    const token = await sign({ userId }, SECRET_KEY);
+    return res.cookie(
+      'token',
+      token,
+      {
+        httpOnly: true,
+        secure: true,
+      },
+    )
+      .json(
+        { message: 'Logged In Successfully' },
+      );
+  } catch (err) {
+    return next(err);
+  }
 };
+
+module.exports = setCookies;
