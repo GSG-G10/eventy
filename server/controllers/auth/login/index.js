@@ -1,5 +1,5 @@
 /* eslint-disable no-throw-literal */
-const { compare } = require('bcryptjs');
+const { comparePassword } = require('../../../utils/b-crypt');
 
 const { checkAccount } = require('../../../database/queries');
 const { loginSchema } = require('../../../utils/validation');
@@ -12,7 +12,7 @@ const login = async (req, res, next) => {
     if (!rows.length) {
       return res.status(401).json({ message: 'invalid email or password' });
     }
-    const compared = await compare(password, rows[0].password);
+    const compared = await comparePassword(password, rows[0].password);
     if (!compared) {
       return res.status(401).json({ message: 'invalid email or password' });
     }
