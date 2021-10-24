@@ -10,7 +10,7 @@ const {
   getEventsByCategory,
 } = require('./events');
 
-const signup = require('./auth/sign-up');
+const { login, signup } = require('./auth');
 
 const {
   error404,
@@ -26,5 +26,6 @@ module.exports = {
   getEvent,
   error404,
   events,
+  login,
   signup,
 };

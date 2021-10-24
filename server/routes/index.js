@@ -4,6 +4,7 @@ const {
   events,
   getEvent,
   error404,
+  login,
   deleteEvent,
   serverError,
   organizations,
@@ -22,8 +23,8 @@ router.post('/signup', signup, setCookies);
 
 router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
+router.post('/login', login, setCookies);
 
 router.use(error404);
 router.use(serverError);
-
 module.exports = router;
