@@ -1,274 +1,266 @@
 /***************************** organizations ******************************/
-INSERT INTO organization (id, name, email, password, image, categories) VALUES (1, 'Cogibox', 'ttollerfield0@harvard.edu', 'whAGcftjpnr6', 'http://dummyimage.com/194x100.png/dddddd/000000', 'RF Shielding'),
- (2, 'Fadeo', 'emckeon1@github.com', 'jtF9St3O', 'http://dummyimage.com/240x100.png/5fa2dd/ffffff', 'Plumbing & Medical Gas'),
- (3, 'Eadel', 'mfocke2@stanford.edu', 'PQfFjXII', 'http://dummyimage.com/225x100.png/cc0000/ffffff', 'Masonry'),
- (4, 'Demizz', 'egentery3@google.ca', '5MEagmDCQGt', 'http://dummyimage.com/108x100.png/ff4444/ffffff', 'Structural and Misc Steel (Fabrication)'),
- (5, 'Thoughtsphere', 'smallord4@youtu.be', 'XBaWJPVDJQ', 'http://dummyimage.com/223x100.png/5fa2dd/ffffff', 'Exterior Signage'),
- (6, 'Skibox', 'ipaulusch5@europa.eu', 'njGNPrpL', 'http://dummyimage.com/199x100.png/ff4444/ffffff', 'Curb & Gutter'),
- (7, 'Devshare', 'sraisher6@sina.com.cn', 'BjUB9yA', 'http://dummyimage.com/155x100.png/cc0000/ffffff', 'Landscaping & Irrigation'),
- (8, 'Browsecat', 'hmcharg7@tmall.com', 'ZmHsOTb9YC', 'http://dummyimage.com/177x100.png/cc0000/ffffff', 'Fire Protection'),
- (9, 'Eamia', 'gpurnell8@vinaora.com', 'jBdNY2DZk5GA', 'http://dummyimage.com/127x100.png/dddddd/000000', 'Construction Clean and Final Clean'),
- (10, 'Dabjam', 'james9@huffingtonpost.com', 'S3MOkJQ', 'http://dummyimage.com/117x100.png/dddddd/000000', 'Casework');
+insert into organization (name, email, password, image, categories) values ('Browsecat', 'nalvares0@csmonitor.com', 'Q0fTCwdxmR', 'http://dummyimage.com/220x100.png/cc0000/ffffff', 'literature'),
+('Skipfire', 'kpeoples1@nba.com', 'UqQBSPg', 'http://dummyimage.com/132x100.png/dddddd/000000', 'literature'),
+('Agivu', 'jthorneloe2@sciencedaily.com', 'DV4de1MN5X', 'http://dummyimage.com/221x100.png/cc0000/ffffff', 'formal'),
+('Browsebug', 'abaglin3@telegraph.co.uk', 'xTRCYE4kepD', 'http://dummyimage.com/127x100.png/dddddd/000000', 'art'),
+('Ooba', 'twindmill4@stanford.edu', 'gIHLa6Fecs9j', 'http://dummyimage.com/201x100.png/cc0000/ffffff', 'technology'),
+('Skinix', 'bamyes5@examiner.com', 'QpDOF7HIG', 'http://dummyimage.com/200x100.png/dddddd/000000', 'technology'),
+('Meetz', 'apurchon6@thetimes.co.uk', 'GU2kf5jOdF', 'http://dummyimage.com/227x100.png/dddddd/000000', 'literature'),
+('Eamia', 'loakshott7@quantcast.com', '20fvqHFap', 'http://dummyimage.com/174x100.png/cc0000/ffffff', 'medicine'),
+('Eimbee', 'mbartalini8@seesaa.net', 'M08UqQrHG6h', 'http://dummyimage.com/181x100.png/dddddd/000000', 'literature'),
+('Thoughtblab', 'dinkpin9@kickstarter.com', 'HFZvhYcADi', 'http://dummyimage.com/135x100.png/cc0000/ffffff', 'medicine');
 
 /*********************** events ************************************/
 
-Insert INTO events (id, name, description, price, attendance, start_date, expire_date, location, image, duration, details, organizer_id, category) VALUES (1, 'Aviragen Therapeutics, Inc.', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+insert into events (name, description, price, attendance, start_date, expire_date, location, image, duration, details, organizer_id, category) values ('BlackRock California Municipal Income Trust', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.', 26, 46, '2021-10-26', '2022-03-10', 'Huo’erqi', 'http://dummyimage.com/134x100.png/5fa2dd/ffffff', '6:59', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
 
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 68, 12, '2021-03-30', '2020-11-19', 'Santo Antônio de Posse', 'http://dummyimage.com/204x100.png/dddddd/000000', '8:58 PM', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', 9, 'Prefabricated Aluminum Metal Canopies'),
-(2, 'Constellium N.V.', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+In congue. Etiam justo. Etiam pretium iaculis justo.
 
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 29, 87, '2021-09-17', '2021-07-07', 'Bonthe', 'http://dummyimage.com/196x100.png/dddddd/000000', '9:46 AM', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 1, 'Plumbing & Medical Gas'),
-(3, 'Westmoreland Resource Partners, LP', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 10, 'art'),
+('Aramark', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 53, 6, '2021-11-11', '2022-05-09', 'Chervonoarmiys’k', 'http://dummyimage.com/108x100.png/dddddd/000000', '5:33', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
 
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 61, 68, '2021-01-29', '2021-10-16', 'Siikajoki', 'http://dummyimage.com/129x100.png/dddddd/000000', '5:15 PM', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', 2, 'Structural and Misc Steel (Fabrication)'),
-(4, 'Old Dominion Freight Line, Inc.', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 4, 'society'),
+('First Trust High Income Long Short Fund', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.', 2, 80, '2021-12-13', '2022-04-30', 'Rājshāhi', 'http://dummyimage.com/233x100.png/cc0000/ffffff', '1:39', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 2, 'medicine'),
+('Precision Drilling Corporation', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 75, 86, '2022-01-16', '2022-05-19', 'Binjai', 'http://dummyimage.com/166x100.png/cc0000/ffffff', '20:40', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', 3, 'literature'),
+('Stanley Black & Decker, Inc.', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 24, 18, '2022-01-04', '2022-05-16', 'Pangushan', 'http://dummyimage.com/145x100.png/cc0000/ffffff', '11:42', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 76, 30, '2021-09-12', '2021-04-21', 'Young America', 'http://dummyimage.com/125x100.png/cc0000/ffffff', '3:09 AM', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
 
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 9, 'Drywall & Acoustical (MOB)'),
-(5, 'Vishay Intertechnology, Inc.', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 6, 'literature'),
+('Constellation Brands Inc', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', 34, 97, '2021-12-05', '2022-03-20', 'Monastirákion', 'http://dummyimage.com/116x100.png/cc0000/ffffff', '4:16', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
-Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 93, 100, '2021-02-04', '2021-08-04', 'Nampera', 'http://dummyimage.com/189x100.png/5fa2dd/ffffff', '2:06 PM', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', 9, 'Roofing (Asphalt)'),
-(6, 'WMIH Corp.', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 81, 22, '2021-10-12', '2021-10-02', 'Temuji', 'http://dummyimage.com/170x100.png/cc0000/ffffff', '6:58 AM', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', 5, 'technology'),
+('TD Ameritrade Holding Corporation', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 59, 34, '2021-12-18', '2022-04-11', 'Xinhua', 'http://dummyimage.com/206x100.png/ff4444/ffffff', '6:17', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', 10, 'politics'),
+('Prudential Financial, Inc.', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 2, 29, '2021-11-10', '2022-03-23', 'Villa del Rosario', 'http://dummyimage.com/185x100.png/dddddd/000000', '15:51', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
-Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.', 6, 'Temp Fencing, Decorative Fencing and Gates'),
-(7, 'SITO Mobile, Ltd.', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.', 7, 'formal'),
+('Nustar Energy L.P.', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 51, 45, '2021-10-29', '2022-03-25', 'Alfeizerão', 'http://dummyimage.com/133x100.png/cc0000/ffffff', '10:50', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 5, 'politics'),
+('Gulf Island Fabrication, Inc.', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 16, 75, '2021-12-22', '2022-03-01', 'Novoukrainskiy', 'http://dummyimage.com/250x100.png/dddddd/000000', '8:32', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 41, 79, '2021-01-23', '2021-05-20', 'Panalo-on', 'http://dummyimage.com/147x100.png/ff4444/ffffff', '6:29 PM', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
 
-Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', 8, 'Fire Protection'),
-(8, 'Invitation Homes Inc.', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 58, 67, '2021-03-10', '2021-05-03', 'Kamionka', 'http://dummyimage.com/195x100.png/dddddd/000000', '8:52 PM', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 6, 'art'),
+('EOG Resources, Inc.', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 58, 91, '2021-12-09', '2022-04-22', 'Petaling Jaya', 'http://dummyimage.com/227x100.png/5fa2dd/ffffff', '10:24', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', 5, 'Prefabricated Aluminum Metal Canopies'),
-(9, 'BGC Partners, Inc.', 'Fusce consequat. Nulla nisl. Nunc nisl.', 73, 97, '2021-03-27', '2021-05-22', '‘Awaj', 'http://dummyimage.com/250x100.png/dddddd/000000', '6:56 PM', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 5, 'formal'),
+('First Trust Specialty Finance and Financial Opportunities Fund', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', 9, 22, '2021-11-14', '2022-04-02', 'Esquipulas', 'http://dummyimage.com/242x100.png/cc0000/ffffff', '6:22', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 2, 'Exterior Signage'),
-(10, 'Shutterfly, Inc.', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 95, 10, '2021-01-27', '2020-12-07', 'Bhopālwāla', 'http://dummyimage.com/107x100.png/dddddd/000000', '10:58 PM', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 4, 'Wall Protection'),
-(11, 'Everbridge, Inc.', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
 
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 35, 6, '2021-09-08', '2021-05-26', 'Luxi', 'http://dummyimage.com/158x100.png/5fa2dd/ffffff', '7:59 AM', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 3, 'Fire Sprinkler System'),
-(12, 'National Health Investors, Inc.', 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 10, 'formal'),
+('National Energy Services Reunited Corp.', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', 67, 64, '2021-11-20', '2022-03-26', 'Tras Cerros', 'http://dummyimage.com/107x100.png/dddddd/000000', '20:13', 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
 
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 28, 19, '2021-03-16', '2020-12-18', 'Pevek', 'http://dummyimage.com/183x100.png/ff4444/ffffff', '4:55 AM', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 2, 'Glass & Glazing'),
-(13, 'Fair Isaac Corporation', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 90, 83, '2020-12-01', '2021-09-11', 'Minle', 'http://dummyimage.com/195x100.png/cc0000/ffffff', '2:17 AM', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.', 4, 'Construction Clean and Final Clean'),
-(14, 'Pacific Mercantile Bancorp', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+In congue. Etiam justo. Etiam pretium iaculis justo.
 
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 25, 14, '2021-07-23', '2021-03-29', 'Alor Setar', 'http://dummyimage.com/153x100.png/dddddd/000000', '9:46 PM', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 5, 'technology'),
+('QuickLogic Corporation', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 48, 64, '2021-12-04', '2022-05-07', 'Xikou', 'http://dummyimage.com/152x100.png/5fa2dd/ffffff', '3:11', 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 6, 'Drywall & Acoustical (FED)'),
-(15, 'Anworth Mortgage Asset  Corporation', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.
+Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 5, 'art'),
+('Customers Bancorp, Inc', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 18, 79, '2021-11-24', '2022-02-10', 'Lugait', 'http://dummyimage.com/110x100.png/cc0000/ffffff', '21:04', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
-Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.', 96, 55, '2021-07-18', '2021-03-06', 'Chachagüí', 'http://dummyimage.com/195x100.png/dddddd/000000', '9:11 PM', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 7, 'technology'),
+('WisdomTree United Kingdom Hedged Equity Fund', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 97, 60, '2022-01-07', '2022-05-16', 'Na Khu', 'http://dummyimage.com/241x100.png/cc0000/ffffff', '4:43', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
-Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', 2, 'Drywall & Acoustical (FED)'),
-(16, 'Cartesian, Inc.', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 57, 88, '2021-08-10', '2021-01-14', 'Fresno', 'http://dummyimage.com/167x100.png/5fa2dd/ffffff', '1:13 PM', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 4, 'art'),
+('Analog Devices, Inc.', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 55, 48, '2021-12-02', '2022-04-29', 'Hamburg Harvestehude', 'http://dummyimage.com/241x100.png/ff4444/ffffff', '21:44', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
-Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.', 6, 'Elevator'),
-(17, 'Diversified Restaurant Holdings, Inc.', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', 27, 46, '2021-06-26', '2020-11-05', 'Yanwo', 'http://dummyimage.com/183x100.png/5fa2dd/ffffff', '8:20 PM', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
-Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 4, 'Wall Protection'),
-(18, 'Covisint Corporation', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 7, 'technology'),
+('Cohen & Steers Quality Income Realty Fund Inc', 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.', 45, 20, '2021-11-08', '2022-05-09', 'Shanxi', 'http://dummyimage.com/148x100.png/ff4444/ffffff', '0:27', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 13, 52, '2021-05-27', '2021-03-04', 'Wisła', 'http://dummyimage.com/175x100.png/ff4444/ffffff', '12:12 AM', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 10, 'Epoxy Flooring'),
-(19, 'Smart Sand, Inc.', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 76, 57, '2020-11-01', '2021-01-10', 'Kalapagenep', 'http://dummyimage.com/192x100.png/ff4444/ffffff', '7:19 PM', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 2, 'HVAC'),
-(20, 'Customers Bancorp, Inc', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 89, 41, '2021-01-27', '2020-12-16', 'Serra D''El Rei', 'http://dummyimage.com/173x100.png/5fa2dd/ffffff', '9:41 PM', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1, 'Soft Flooring and Base'),
-(21, 'Western Asset/Claymore U.S Treasury Inflation Prot Secs Fd 2', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', 8, 'literature'),
+('Liquidity Services, Inc.', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 44, 36, '2021-12-19', '2022-01-29', 'Dal’neye Konstantinovo', 'http://dummyimage.com/161x100.png/ff4444/ffffff', '16:04', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 12, 81, '2021-07-25', '2021-06-21', 'Hostos', 'http://dummyimage.com/136x100.png/ff4444/ffffff', '8:40 PM', 'In congue. Etiam justo. Etiam pretium iaculis justo.', 4, 'Termite Control'),
-(22, 'Anadarko Petroleum Corporation', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
-Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', 6, 93, '2021-03-05', '2021-04-02', 'Cosne-Cours-sur-Loire', 'http://dummyimage.com/219x100.png/dddddd/000000', '4:32 AM', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', 7, 'Hard Tile & Stone'),
-(23, 'iRhythm Technologies, Inc.', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 49, 59, '2020-11-25', '2021-05-08', 'Zhongtong', 'http://dummyimage.com/132x100.png/ff4444/ffffff', '4:42 AM', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', 10, 'politics'),
+('Seneca Foods Corp.', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', 44, 98, '2021-12-20', '2022-03-24', 'Salon-de-Provence', 'http://dummyimage.com/123x100.png/dddddd/000000', '16:55', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.', 5, 'medicine'),
+('Hennessy Advisors, Inc.', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 100, 8, '2021-11-08', '2022-03-15', 'Xudat', 'http://dummyimage.com/195x100.png/dddddd/000000', '16:33', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 1, 'medicine'),
+('Fifth Street Senior Floating Rate Corp.', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 43, 13, '2021-11-26', '2022-01-31', 'Mendeleyevo', 'http://dummyimage.com/139x100.png/cc0000/ffffff', '14:15', 'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', 4, 'art'),
+('Renewable Energy Group, Inc.', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 33, 19, '2021-11-13', '2022-01-25', 'Lurut', 'http://dummyimage.com/179x100.png/ff4444/ffffff', '16:41', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 2, 'society'),
+('voxeljet AG', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 67, 48, '2021-12-31', '2022-04-08', 'Cikaso', 'http://dummyimage.com/134x100.png/cc0000/ffffff', '3:43', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 3, 'politics'),
+('Scorpio Tankers Inc.', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 7, 47, '2021-11-02', '2022-02-24', 'Taghazout', 'http://dummyimage.com/152x100.png/5fa2dd/ffffff', '9:33', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
 
-Fusce consequat. Nulla nisl. Nunc nisl.', 5, 'Asphalt Paving'),
-(24, 'Transdigm Group Incorporated', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.', 85, 9, '2021-06-11', '2020-12-02', 'Burqah', 'http://dummyimage.com/176x100.png/cc0000/ffffff', '8:25 PM', 'Fusce consequat. Nulla nisl. Nunc nisl.
+Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 2, 'literature'),
+('DigitalGlobe, Inc', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 54, 28, '2021-12-14', '2022-04-29', 'Shang Boingor', 'http://dummyimage.com/143x100.png/5fa2dd/ffffff', '15:16', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
 
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 6, 'Overhead Doors'),
-(25, 'Delta Natural Gas Company, Inc.', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
+Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 2, 'medicine'),
+('ARI Network Services, Inc.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.', 91, 55, '2021-11-29', '2022-02-02', 'Zhaigang', 'http://dummyimage.com/206x100.png/ff4444/ffffff', '2:43', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.', 4, 'medicine'),
+('Orange', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 84, 7, '2021-12-06', '2022-04-04', 'Hadabei', 'http://dummyimage.com/117x100.png/dddddd/000000', '2:40', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
-Fusce consequat. Nulla nisl. Nunc nisl.', 69, 55, '2021-07-18', '2021-08-04', 'Piran', 'http://dummyimage.com/160x100.png/dddddd/000000', '10:46 PM', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.
+Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
 
-Sed ante. Vivamus tortor. Duis mattis egestas metus.', 10, 'Drilled Shafts'),
-(26, 'Vanguard Russell 2000 Value ETF', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 4, 'art'),
+('Exxon Mobil Corporation', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.', 40, 7, '2022-01-09', '2022-05-14', 'Pangrumasan', 'http://dummyimage.com/196x100.png/ff4444/ffffff', '20:45', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 86, 9, '2021-01-28', '2021-06-10', 'Nam Kliang', 'http://dummyimage.com/229x100.png/cc0000/ffffff', '6:56 PM', 'In congue. Etiam justo. Etiam pretium iaculis justo.
+Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 10, 'Framing (Wood)'),
-(27, 'Impax Laboratories, Inc.', 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 10, 'politics'),
+('iPath US Treasury Long Bond Bear ETN', 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 38, 35, '2022-01-13', '2022-05-07', 'Krotoszyn', 'http://dummyimage.com/106x100.png/cc0000/ffffff', '4:48', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
 
-Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 84, 58, '2021-07-24', '2021-01-29', 'Popovi', 'http://dummyimage.com/140x100.png/cc0000/ffffff', '7:48 PM', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 4, 'Glass & Glazing'),
-(28, 'Oncobiologics, Inc.', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', 2, 'formal'),
+('Independence Holding Company', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 82, 93, '2021-12-11', '2022-02-11', 'Mahdishahr', 'http://dummyimage.com/152x100.png/cc0000/ffffff', '19:43', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 5, 'politics'),
+('People''s United Financial, Inc.', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 47, 51, '2021-12-02', '2022-04-27', 'Aiguo', 'http://dummyimage.com/174x100.png/cc0000/ffffff', '5:52', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
 
-Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', 67, 95, '2020-11-14', '2021-10-06', 'Bail', 'http://dummyimage.com/156x100.png/cc0000/ffffff', '5:34 AM', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 3, 'Overhead Doors'),
-(29, 'Blueprint Medicines Corporation', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 31, 86, '2021-08-16', '2021-03-15', 'Iparia', 'http://dummyimage.com/147x100.png/ff4444/ffffff', '8:15 PM', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
 
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', 5, 'Roofing (Metal)'),
-(30, 'Netflix, Inc.', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 6, 'society'),
+('Reliance Steel & Aluminum Co.', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', 30, 73, '2021-12-24', '2022-04-24', 'Kunda', 'http://dummyimage.com/249x100.png/dddddd/000000', '6:26', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
 
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 32, 36, '2021-04-06', '2020-11-26', 'Monte Novo', 'http://dummyimage.com/178x100.png/cc0000/ffffff', '7:28 AM', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 2, 'Electrical'),
-(31, 'Univar Inc.', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 8, 'formal'),
+('The Medicines Company', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 97, 77, '2021-11-01', '2022-03-07', 'Omaha', 'http://dummyimage.com/181x100.png/5fa2dd/ffffff', '17:12', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
-Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', 8, 59, '2020-12-31', '2021-01-29', 'Além Paraíba', 'http://dummyimage.com/137x100.png/cc0000/ffffff', '8:35 PM', 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 5, 'politics'),
+('Peregrine Pharmaceuticals Inc.', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 94, 9, '2021-12-09', '2022-05-07', 'Ilagan', 'http://dummyimage.com/205x100.png/ff4444/ffffff', '19:56', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
-Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', 1, 'Curb & Gutter'),
-(32, 'Ashford Hospitality Trust Inc', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 19, 67, '2021-01-27', '2021-05-23', 'Pantian', 'http://dummyimage.com/192x100.png/dddddd/000000', '1:24 AM', 'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.
+Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 2, 'formal'),
+('CHS Inc', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 3, 85, '2021-11-06', '2022-03-13', 'Araxá', 'http://dummyimage.com/228x100.png/cc0000/ffffff', '7:57', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 10, 'Doors, Frames & Hardware'),
-(33, 'BioDelivery Sciences International, Inc.', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 83, 10, '2021-05-22', '2021-10-01', 'Bayanbulag', 'http://dummyimage.com/113x100.png/dddddd/000000', '9:36 PM', 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 1, 'Construction Clean and Final Clean'),
-(34, 'Cartesian, Inc.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 4, 'medicine'),
+('Dynagas LNG Partners LP', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 36, 94, '2021-11-03', '2022-04-28', 'Stockholm', 'http://dummyimage.com/143x100.png/dddddd/000000', '18:18', 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
 
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 29, 6, '2021-06-02', '2020-11-25', 'Masindi Port', 'http://dummyimage.com/132x100.png/cc0000/ffffff', '9:48 AM', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
+Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', 2, 'society'),
+('Under Armour, Inc.', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 10, 22, '2022-01-22', '2022-04-23', 'Truskavets', 'http://dummyimage.com/160x100.png/dddddd/000000', '16:06', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', 10, 'Soft Flooring and Base'),
-(35, 'Southern California Edison Company', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 9, 'formal'),
+('Glatfelter', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 43, 83, '2021-11-12', '2022-02-03', 'Aubenas', 'http://dummyimage.com/118x100.png/dddddd/000000', '22:50', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 81, 5, '2021-02-25', '2021-02-11', 'Niamtougou', 'http://dummyimage.com/201x100.png/5fa2dd/ffffff', '12:05 PM', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 9, 'Sitework & Site Utilities'),
-(36, 'BB&T Corporation', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
 
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', 16, 65, '2021-07-17', '2021-06-03', 'Puerto Berrío', 'http://dummyimage.com/147x100.png/dddddd/000000', '6:53 PM', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 2, 'formal'),
+('IF Bancorp, Inc.', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 37, 44, '2021-11-09', '2022-05-17', 'Xiongbei', 'http://dummyimage.com/138x100.png/5fa2dd/ffffff', '15:27', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
-In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 2, 'Landscaping & Irrigation'),
-(37, 'e.l.f. Beauty, Inc.', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', 45, 38, '2021-02-24', '2020-11-19', 'Матејче', 'http://dummyimage.com/137x100.png/ff4444/ffffff', '1:07 AM', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
 
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', 4, 'Drywall & Acoustical (FED)'),
-(38, 'DTE Energy Company', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.', 61, 74, '2021-07-01', '2021-08-08', 'Nanyang', 'http://dummyimage.com/154x100.png/5fa2dd/ffffff', '8:48 AM', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.
-
-Phasellus in felis. Donec semper sapien a libero. Nam dui.', 5, 'Retaining Wall and Brick Pavers'),
-(39, 'Capital One Financial Corporation', 'Fusce consequat. Nulla nisl. Nunc nisl.
-
-Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.', 39, 98, '2021-07-13', '2020-12-24', 'Khoronk’', 'http://dummyimage.com/184x100.png/5fa2dd/ffffff', '11:58 AM', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.
-
-Fusce consequat. Nulla nisl. Nunc nisl.', 9, 'Epoxy Flooring'),
-(40, 'Purefunds Solactive FinTech ETF', 'In congue. Etiam justo. Etiam pretium iaculis justo.
-
-In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', 81, 91, '2020-11-25', '2021-05-13', 'Roissy Charles-de-Gaulle', 'http://dummyimage.com/173x100.png/dddddd/000000', '2:50 PM', 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 5, 'Painting & Vinyl Wall Covering');
+Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', 2, 'formal');
 
 /***************** attendance *********************/
 
-INSERT INTO attendance (id, name, email, age, gender, isSubscriber, phone) VALUES (1, 'Marlowe Caddy', 'mcaddy0@amazon.co.jp', 51, 'Male', false, '191-660-7117'),
- (2, 'Albertine Thunder', 'athunder1@tinyurl.com', 4, 'Male', true, '790-777-8979'),
- (3, 'Eric Dowber', 'edowber2@blogger.com', 50, 'Male', true, '358-400-2549'),
- (4, 'Orville Antonsen', 'oantonsen3@columbia.edu', 44, 'Male', false, '270-150-5123'),
- (5, 'Francine Scutts', 'fscutts4@furl.net', 23, 'Female', false, '439-101-4570'),
- (6, 'Arabella Siddle', 'asiddle5@skyrock.com', 39, 'Male', false, '483-187-5484'),
- (7, 'Rem Swindells', 'rswindells6@deliciousdays.com', 9, 'Female', false, '592-570-8702'),
- (8, 'Buckie Tomek', 'btomek7@exblog.jp', 38, 'Male', false, '720-582-8022'),
- (9, 'Ayn Wadeling', 'awadeling8@sun.com', 30, 'Male', false, '813-322-7373'),
- (10, 'Lana Duly', 'lduly9@shinystat.com', 36, 'Male', true, '562-486-6548'),
- (11, 'Manny Element', 'melementa@diigo.com', 48, 'Female', true, '401-492-8807'),
- (12, 'Neil Strodder', 'nstrodderb@statcounter.com', 11, 'Male', false, '875-254-7195'),
- (13, 'Pepita Prichet', 'pprichetc@foxnews.com', 52, 'Female', false, '518-529-4162'),
- (14, 'Kelley Adshede', 'kadsheded@blogger.com', 38, 'Female', false, '875-680-0384'),
- (15, 'Rosy Shakespeare', 'rshakespearee@altervista.org', 1, 'Male', false, '977-545-8493'),
- (16, 'Godart Picheford', 'gpichefordf@arizona.edu', 51, 'Female', true, '710-742-1338'),
- (17, 'Georgeanne Malec', 'gmalecg@google.cn', 57, 'Male', false, '840-246-6524'),
- (18, 'Dylan Pala', 'dpalah@prnewswire.com', 26, 'Female', false, '441-574-7860'),
- (19, 'Garik Layburn', 'glayburni@t-online.de', 4, 'Male', false, '926-449-1656'),
- (20, 'Sianna Ivshin', 'sivshinj@ameblo.jp', 8, 'Male', true, '933-712-5385');
+INSERT INTO attendance (name, email, age, gender, isSubscriber, phone) VALUES ('Marlowe Caddy', 'mcaddy0@amazon.co.jp', 51, 'Male', false, '191-660-7117'),
+ ('Albertine Thunder', 'athunder1@tinyurl.com', 4, 'Male', true, '790-777-8979'),
+ ('Eric Dowber', 'edowber2@blogger.com', 50, 'Male', true, '358-400-2549'),
+ ('Orville Antonsen', 'oantonsen3@columbia.edu', 44, 'Male', false, '270-150-5123'),
+ ('Francine Scutts', 'fscutts4@furl.net', 23, 'Female', false, '439-101-4570'),
+ ('Arabella Siddle', 'asiddle5@skyrock.com', 39, 'Male', false, '483-187-5484'),
+ ('Rem Swindells', 'rswindells6@deliciousdays.com', 9, 'Female', false, '592-570-8702'),
+ ('Buckie Tomek', 'btomek7@exblog.jp', 38, 'Male', false, '720-582-8022'),
+ ('Ayn Wadeling', 'awadeling8@sun.com', 30, 'Male', false, '813-322-7373'),
+ ('Lana Duly', 'lduly9@shinystat.com', 36, 'Male', true, '562-486-6548'),
+ ('Manny Element', 'melementa@diigo.com', 48, 'Female', true, '401-492-8807'),
+ ('Neil Strodder', 'nstrodderb@statcounter.com', 11, 'Male', false, '875-254-7195'),
+ ('Pepita Prichet', 'pprichetc@foxnews.com', 52, 'Female', false, '518-529-4162'),
+ ('Kelley Adshede', 'kadsheded@blogger.com', 38, 'Female', false, '875-680-0384'),
+ ('Rosy Shakespeare', 'rshakespearee@altervista.org', 1, 'Male', false, '977-545-8493'),
+ ('Godart Picheford', 'gpichefordf@arizona.edu', 51, 'Female', true, '710-742-1338'),
+ ('Georgeanne Malec', 'gmalecg@google.cn', 57, 'Male', false, '840-246-6524'),
+ ('Dylan Pala', 'dpalah@prnewswire.com', 26, 'Female', false, '441-574-7860'),
+ ('Garik Layburn', 'glayburni@t-online.de', 4, 'Male', false, '926-449-1656'),
+ ('Sianna Ivshin', 'sivshinj@ameblo.jp', 8, 'Male', true, '933-712-5385');
 
 /******************* event_attendance ******************************/
-INSERT INTO event_attendance (id, attendance_id, event_id) VALUES (1, 4, 11),
- (2, 10, 17),
- (3, 12, 32),
- (4, 9, 11),
- (5, 15, 14),
- (6, 16, 5),
- (7, 11, 18),
- (8, 14, 40),
- (9, 9, 15),
- (10, 5, 32),
- (11, 19, 33),
- (12, 12, 8),
- (13, 16, 40),
- (14, 11, 21),
- (15, 11, 7),
- (16, 10, 6),
- (17, 10, 25),
- (18, 13, 19),
- (19, 8, 13),
- (20, 9, 37),
- (21, 13, 14),
- (22, 3, 11),
- (23, 2, 33),
- (24, 4, 25),
- (25, 8, 39),
- (26, 11, 32),
- (27, 3, 18),
- (28, 15, 27),
- (29, 6, 19),
- (30, 3, 32),
- (31, 18, 34),
- (32, 5, 8),
- (33, 15, 25),
- (34, 16, 18),
- (35, 8, 7),
- (36, 15, 24),
- (37, 5, 36),
- (38, 4, 2),
- (39, 12, 14),
- (40, 17, 3),
- (41, 4, 39),
- (42, 4, 6),
- (43, 13, 29),
- (44, 6, 20),
- (45, 1, 36),
- (46, 6, 28),
- (47, 13, 13),
- (48, 14, 29),
- (49, 6, 13),
- (50, 15, 38),
- (51, 15, 2),
- (52, 10, 40),
- (53, 9, 34),
- (54, 8, 16),
- (55, 15, 37),
- (56, 11, 23),
- (57, 10, 30),
- (58, 19, 7),
- (59, 16, 27),
- (60, 12, 34),
- (61, 20, 30),
- (62, 1, 6),
- (63, 10, 23),
- (64, 11, 11),
- (65, 12, 1),
- (66, 14, 17),
- (67, 8, 18),
- (68, 5, 11),
- (69, 6, 25),
- (70, 17, 17),
- (71, 3, 30),
- (72, 13, 1),
- (73, 1, 13),
- (74, 17, 23),
- (75, 19, 37),
- (76, 5, 21),
- (77, 6, 13),
- (78, 16, 19),
- (79, 16, 1),
- (80, 15, 25),
- (81, 8, 25),
- (82, 15, 28),
- (83, 5, 28),
- (84, 10, 40),
- (85, 18, 11),
- (86, 10, 24),
- (87, 20, 25),
- (88, 12, 7),
- (89, 18, 4),
- (90, 17, 37),
- (91, 10, 25),
- (92, 1, 19),
- (93, 6, 3),
- (94, 19, 19),
- (95, 18, 29),
- (96, 1, 33),
- (97, 15, 29),
- (98, 3, 5),
- (99, 17, 6),
- (100, 8, 38);
+insert into event_attendance (attendance_id, event_id) values (13, 10),
+(4, 11),
+(12, 1),
+(13, 35),
+(4, 34),
+(18, 16),
+(4, 8),
+(9, 26),
+(8, 21),
+(15, 32),
+(13, 18),
+(18, 27),
+(4, 33),
+(16, 3),
+(1, 3),
+(8, 22),
+(6, 16),
+(11, 38),
+(7, 13),
+(14, 3),
+(3, 8),
+(20, 5),
+(7, 2),
+(4, 6),
+(12, 20),
+(10, 3),
+(14, 15),
+(9, 13),
+(9, 5),
+(8, 32),
+(2, 2),
+(3, 13),
+(20, 4),
+(9, 32),
+(16, 25),
+(19, 37),
+(5, 5),
+(3, 35),
+(17, 31),
+(9, 9),
+(8, 36),
+(19, 28),
+(20, 17),
+(19, 24),
+(5, 32),
+(11, 28),
+(3, 12),
+(14, 29),
+(18, 4),
+(9, 33),
+(15, 11),
+(14, 36),
+(2, 29),
+(2, 25),
+(3, 5),
+(15, 2),
+(6, 28),
+(1, 26),
+(15, 36),
+(8, 26),
+(11, 33),
+(5, 19),
+(16, 27),
+(14, 26),
+(20, 3),
+(14, 18),
+(7, 35),
+(8, 13),
+(13, 27),
+(20, 10),
+(9, 25),
+(8, 4),
+(7, 39),
+(13, 16),
+(15, 5),
+(16, 2),
+(20, 13),
+(16, 6),
+(17, 16),
+(14, 28),
+(1, 21),
+(1, 23),
+(19, 33),
+(16, 20),
+(17, 18),
+(1, 6),
+(8, 25),
+(6, 9),
+(12, 32),
+(20, 27),
+(12, 17),
+(9, 3),
+(17, 25),
+(20, 19),
+(9, 32),
+(4, 29),
+(12, 18),
+(19, 18),
+(15, 17),
+(8, 9);
  
