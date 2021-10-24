@@ -1,5 +1,6 @@
 const {
   getAllOrgs,
+  checkAccount,
   addNewOrganization,
   getOrganizationByIdQuery,
 } = require('./organizations');
@@ -14,6 +15,7 @@ const {
 module.exports = {
   getAllOrgs,
   deleteQuery,
+  checkAccount,
   getAllEvents,
   getEventByIdQuery,
   getEventsCategory,

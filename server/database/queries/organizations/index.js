@@ -1,9 +1,11 @@
 const getAllOrgs = require('./get-all-orgs');
-const getOrganizationByIdQuery = require('./get-org-id');
+const checkAccount = require('./check-org-email');
 const addNewOrganization = require('./add-new-org');
+const getOrganizationByIdQuery = require('./get-org-id');
 
 module.exports = {
   getAllOrgs,
-  getOrganizationByIdQuery,
+  checkAccount,
   addNewOrganization,
+  getOrganizationByIdQuery,
 };
