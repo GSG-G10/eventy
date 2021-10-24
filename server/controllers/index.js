@@ -1,5 +1,7 @@
 const { organizations, getOrganization } = require('./organizations');
-const { getEventsByCategory, getEvent, events } = require('./events');
+const {
+  getEventsByCategory, getEvent, events, deleteEvent,
+} = require('./events');
 const { error404, serverError } = require('./errors');
 
 module.exports = {
@@ -10,4 +12,5 @@ module.exports = {
   serverError,
   getEvent,
   events,
+  deleteEvent,
 };
