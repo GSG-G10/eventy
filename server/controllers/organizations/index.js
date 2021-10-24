@@ -1,5 +1,5 @@
-const getOrgs = require('./get-all-organizations');
+const organizations = require('./get-all-organizations');
 
 module.exports = {
-  getOrgs,
+  organizations,
 };

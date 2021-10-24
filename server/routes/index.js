@@ -1,11 +1,8 @@
 const router = require('express').Router();
-const { getOrgs } = require('../controllers/organizations');
-const { getEventsByCategory, events } = require('../controllers/events');
-
-router.get('/organizations', getOrgs);
-
-router.get('/events', getEventsByCategory);
+const { organizations } = require('../controllers/organizations');
+const { events } = require('../controllers/events');
 
 router.get('/events', events);
+router.get('/organizations', organizations);
 
 module.exports = router;
