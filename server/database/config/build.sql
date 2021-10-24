@@ -9,7 +9,8 @@ CREATE TABLE organization(
     email VARCHAR(150) UNIQUE NOT NULL,
     password VARCHAR(100) NOT NULL,
     image TEXT,
-    categories TEXT
+    description TEXT,
+    categories TEXT NOT NULL
 );
 CREATE TABLE events(
     id SERIAL PRIMARY KEY,

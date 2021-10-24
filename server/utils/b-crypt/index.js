@@ -1,5 +1,5 @@
-const hashpassword = require('./hash-passwords');
+const hashPassword = require('./hash-passwords');
 
 module.exports = {
-  hashpassword,
+  hashPassword,
 };
