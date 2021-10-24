@@ -38,6 +38,10 @@ CREATE TABLE attendance(
 CREATE TABLE event_attendance(
     id SERIAL PRIMARY KEY,
     attendance_id INTEGER REFERENCES attendance(id),
-    event_id INTEGER REFERENCES events(id)
+    event_id INTEGER,
+   CONSTRAINT event_id
+      FOREIGN KEY(event_id) 
+	  REFERENCES events(id)
+	  ON DELETE CASCADE
 );
 COMMIT;
