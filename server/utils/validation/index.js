@@ -5,5 +5,5 @@ const joinEventValidation = require('./join-event-validation');
 module.exports = {
   loginSchema,
   signupValidation,
-  joinEventValidation
+  joinEventValidation,
 };

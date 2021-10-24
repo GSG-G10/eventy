@@ -8,7 +8,7 @@ const login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
     await loginSchema.validateAsync(req.body);
-    const { rows } = await checkAccount(0, email);
+    const { rows } = await checkAccount(email);
     if (!rows.length) {
       return res.status(401).json({ message: 'invalid email or password' });
     }
