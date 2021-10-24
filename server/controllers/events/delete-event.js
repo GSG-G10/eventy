@@ -17,8 +17,7 @@ const deleteEvent = async (req, res, next) => {
         message: 'Event Deleted Successfully',
       });
     }
-    // eslint-disable-next-line no-throw-literal
-    throw ({ message: 'Forbidden User', status: 403 });
+    return res.status(403).json({ message: 'Forbidden User' });
   } catch (err) {
     return next(err);
   }
