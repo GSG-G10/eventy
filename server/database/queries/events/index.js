@@ -5,5 +5,5 @@ const getEventByIdQuery = require('./get-event-id');
 module.exports = {
   getEventsCategory,
   getAllEvents,
-  getEventByIdQuery
+  getEventByIdQuery,
 };

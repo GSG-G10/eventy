@@ -3,5 +3,5 @@ const getOrganizationByIdQuery = require('./get-org-id');
 
 module.exports = {
   getAllOrgs,
-  getOrganizationByIdQuery
+  getOrganizationByIdQuery,
 };

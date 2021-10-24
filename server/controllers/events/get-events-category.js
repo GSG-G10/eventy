@@ -1,5 +1,5 @@
 const { getEventsCategory } = require('../../database/queries');
-const { getDate } = require('../../utils');
+const getDate = require('../../utils/get-date');
 
 async function getEventsByCategory(req, res, next) {
   const { category } = req.query;
