@@ -14,9 +14,13 @@ module.exports = async (req, res, next) => {
       req.userId = value.userId;
       next();
     } else {
-      res.status(403).json({ status: 403, message: 'You are not registred yet' });
+      res.status(401).json({ status: 401, message: 'You are not registred yet' });
     }
   } catch (err) {
-    next(err);
+    if (err.message.includes('invalid')) {
+      res.status(401).json({ status: 401, message: 'Invalid token' });
+    } else {
+      next(err);
+    }
   }
 };
