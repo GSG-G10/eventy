@@ -1,16 +1,30 @@
-const { organizations, getOrganization } = require('./organizations');
 const {
-  getEventsByCategory, getEvent, events, deleteEvent,
-} = require('./events');
-const { error404, serverError } = require('./errors');
-
-module.exports = {
   organizations,
-  getEventsByCategory,
   getOrganization,
+} = require('./organizations');
+
+const {
+  events,
+  getEvent,
+  deleteEvent,
+  getEventsByCategory,
+} = require('./events');
+
+const signup = require('./auth/sign-up');
+
+const {
   error404,
   serverError,
-  getEvent,
-  events,
+} = require('./errors');
+
+module.exports = {
+  getEventsByCategory,
+  getOrganization,
+  organizations,
+  serverError,
   deleteEvent,
+  getEvent,
+  error404,
+  events,
+  signup,
 };
