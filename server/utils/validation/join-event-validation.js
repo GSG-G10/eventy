@@ -5,5 +5,5 @@ module.exports = joi.object({
   email: joi.string().email().required(),
   age: joi.integer().max(3).required(),
   gender: joi.string().required(),
-  phone: joi.string().pattern(/^[0-9]+$/).required(),
+  phone: joi.string().max(20).pattern(/^[0-9]+$/).required(),
 });
