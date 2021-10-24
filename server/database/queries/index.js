@@ -3,8 +3,8 @@ const { getEventsCategory, getAllEvents, getEventByIdQuery } = require('./events
 
 module.exports = {
   getAllOrgs,
-  getEventsCategory,
   getAllEvents,
-  getOrganizationByIdQuery,
   getEventByIdQuery,
+  getEventsCategory,
+  getOrganizationByIdQuery,
 };

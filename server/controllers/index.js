@@ -4,5 +4,5 @@ const { getEventsByCategory } = require('./events');
 module.exports = {
   getOrgs,
   getEventsByCategory,
-  getOrganization
+  getOrganization,
 };

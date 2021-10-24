@@ -1,7 +1,7 @@
-const getOrgs = require('./get-all-organizations');
+const organizations = require('./get-all-organizations');
 const getOrganization = require('./get-organization-id');
 
 module.exports = {
-  getOrgs,
+  organizations,
   getOrganization,
 };
