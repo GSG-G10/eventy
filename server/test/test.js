@@ -37,9 +37,53 @@ test('test GET events route', (done) => {
     });
 });
 // eslint-disable-next-line no-undef
-test('test GET event route', (done) => {
+test('test GET event with id param route', (done) => {
   request(app)
     .get('/api/v1/events/5')
+    .expect(200)
+    .expect('Content-Type', /json/)
+    .end((err) => {
+      if (err) { return done(err); }
+      return done();
+    });
+});
+// eslint-disable-next-line no-undef
+test('test GET event with category queryString route', (done) => {
+  request(app)
+    .get('/api/v1/events?category=informal')
+    .expect(200)
+    .expect('Content-Type', /json/)
+    .end((err) => {
+      if (err) { return done(err); }
+      return done();
+    });
+});
+// eslint-disable-next-line no-undef
+test('test GET event with type queryString route', (done) => {
+  request(app)
+    .get('/api/v1/events?type=top')
+    .expect(200)
+    .expect('Content-Type', /json/)
+    .end((err) => {
+      if (err) { return done(err); }
+      return done();
+    });
+});
+// eslint-disable-next-line no-undef
+test('test GET organization route', (done) => {
+  request(app)
+    .get('/api/v1/organizations')
+    .expect(200)
+    .expect('Content-Type', /json/)
+    .end((err) => {
+      if (err) { return done(err); }
+      return done();
+    });
+});
+// eslint-disable-next-line no-undef
+test('test GET organization route', (done) => {
+  request(app)
+    .get('/api/v1/organizations/5')
     .expect(200)
     .expect('Content-Type', /json/)
     .end((err) => {
