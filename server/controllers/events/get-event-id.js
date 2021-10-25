@@ -1,8 +1,8 @@
 const { getEventByIdQuery } = require('../../database/queries');
 
 const getEvent = async (req, res, next) => {
-  const { id } = req.params;
   try {
+    const { id } = req.params;
     const { rows: data } = await getEventByIdQuery(id);
     return res.json({
       status: 200,

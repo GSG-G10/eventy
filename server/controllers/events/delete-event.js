@@ -1,9 +1,9 @@
 const { deleteQuery, getEventByIdQuery } = require('../../database/queries');
 
 const deleteEvent = async (req, res, next) => {
-  const { id } = req.params;
-  const { userId } = req;
   try {
+    const { id } = req.params;
+    const { userId } = req;
     // check if the event exist
     const { rows } = await getEventByIdQuery(id);
     if (!rows.length) {
