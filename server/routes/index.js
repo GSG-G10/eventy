@@ -6,6 +6,7 @@ const {
   error404,
   login,
   deleteEvent,
+  updateEvent,
   serverError,
   organizations,
   getOrganization,
@@ -18,6 +19,7 @@ const {
 
 router.get('/events', events);
 router.get('/events/:id', getEvent);
+router.put('/events/:id', updateEvent);
 router.delete('/events/:id', checkIsSignedIn, deleteEvent);
 
 router.post('/signup', signup, setCookies);

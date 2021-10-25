@@ -6,6 +6,7 @@ const {
 const {
   events,
   getEvent,
+  updateEvent,
   deleteEvent,
   getEventsByCategory,
 } = require('./events');
@@ -21,11 +22,12 @@ module.exports = {
   getEventsByCategory,
   getOrganization,
   organizations,
-  serverError,
+  updateEvent,
   deleteEvent,
-  getEvent,
+  serverError,
   error404,
+  getEvent,
+  signup,
   events,
   login,
-  signup,
 };
