@@ -5,7 +5,9 @@ module.exports = async (req, res, next) => {
     const {
       rows,
     } = await getAllOrgs();
-
+    if (!rows.length) {
+      return res.json({ status: 204, message: 'No Data Found' });
+    }
     return res.json({
       status: 200,
       message: 'Organizations Imported Successfully',
