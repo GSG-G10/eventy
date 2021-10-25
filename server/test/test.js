@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const request = require('supertest');
 
 const app = require('../app');
 
-// eslint-disable-next-line no-undef
 test('test 200 status /', async () => {
   await request(app)
     .get('/')
@@ -11,7 +12,6 @@ test('test 200 status /', async () => {
     .catch((err) => { throw err; });
 });
 
-// eslint-disable-next-line no-undef
 test('test  /404 route', async () => {
   await request(app)
     .get('/api/v1/error')
@@ -19,7 +19,6 @@ test('test  /404 route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET events route', async () => {
   await request(app)
     .get('/api/v1/events')
@@ -27,7 +26,6 @@ test('test GET events route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET event with id param route', async () => {
   await request(app)
     .get('/api/v1/events/5')
@@ -35,7 +33,6 @@ test('test GET event with id param route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET event with category queryString route', async () => {
   await request(app)
     .get('/api/v1/events?category=informal')
@@ -43,7 +40,6 @@ test('test GET event with category queryString route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET event with type queryString route', async () => {
   await request(app)
     .get('/api/v1/events?type=top')
@@ -51,7 +47,6 @@ test('test GET event with type queryString route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET organization route', async () => {
   await request(app)
     .get('/api/v1/organizations')
@@ -59,7 +54,6 @@ test('test GET organization route', async () => {
     .expect('Content-Type', /json/)
     .catch((err) => { throw err; });
 });
-// eslint-disable-next-line no-undef
 test('test GET organization route with id param', async () => {
   await request(app)
     .get('/api/v1/organizations/5')
