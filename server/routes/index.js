@@ -13,11 +13,12 @@ const {
 
 const {
   setCookies,
+  checkIsSignedIn,
 } = require('../middlewares');
 
 router.get('/events', events);
 router.get('/events/:id', getEvent);
-router.delete('/events/:id', deleteEvent);
+router.delete('/events/:id', checkIsSignedIn, deleteEvent);
 
 router.post('/signup', signup, setCookies);
 

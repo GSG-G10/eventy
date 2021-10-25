@@ -8,10 +8,12 @@ module.exports = async (req, res, next) => {
       rows,
     } = await checkAccount(req.body.email);
     if (rows.length > 0) {
-      res.json({
-        status: 403,
-        message: 'Email is already exists',
-      });
+      res
+        .status(403)
+        .json({
+          status: 403,
+          message: 'Email is already exists',
+        });
     } else {
       const {
         rows: [{ id }],
