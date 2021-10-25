@@ -4,9 +4,9 @@ const getDate = require('../../utils/get-date');
 const getTopEvent = async (req, res, next) => {
   try {
     const { type } = req.query;
-    const { date, time } = getDate();
+    const { date } = getDate();
     if (type === 'top') {
-      const { rows } = await getTopEventsQuery(date, time);
+      const { rows } = await getTopEventsQuery(date);
       return res.json({
         status: 200,
         message: 'Events imported successfully',
