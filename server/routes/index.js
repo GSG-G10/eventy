@@ -9,6 +9,7 @@ const {
   serverError,
   organizations,
   getOrganization,
+  addAttendence,
 } = require('../controllers');
 
 const {
@@ -25,6 +26,8 @@ router.post('/signup', signup, setCookies);
 router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
 router.post('/login', login, setCookies);
+
+router.post('/events/:id/attendance', addAttendence);
 
 router.use(error404);
 router.use(serverError);

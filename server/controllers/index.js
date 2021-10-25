@@ -12,6 +12,8 @@ const {
 
 const { login, signup } = require('./auth');
 
+const addAttendence = require('./attendance');
+
 const {
   error404,
   serverError,
@@ -20,6 +22,7 @@ const {
 module.exports = {
   getEventsByCategory,
   getOrganization,
+  addAttendence,
   organizations,
   serverError,
   deleteEvent,
