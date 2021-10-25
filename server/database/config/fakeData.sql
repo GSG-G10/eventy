@@ -1,10 +1,11 @@
 /***************************** organizations ******************************/
-insert into organization (name, email, password, image, categories)
+insert into organization (name, email, password, image, description, categories)
 values (
         'Browsecat',
         'nalvares0@csmonitor.com',
         'Q0fTCwdxmR',
         'http://dummyimage.com/220x100.png/cc0000/ffffff',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'literature'
     ),
     (
@@ -12,6 +13,7 @@ values (
         'kpeoples1@nba.com',
         'UqQBSPg',
         'http://dummyimage.com/132x100.png/dddddd/000000',
+        'This is the organization description whitch should include a breif information about this  organization and its activities',
         'literature'
     ),
     (
@@ -19,6 +21,7 @@ values (
         'jthorneloe2@sciencedaily.com',
         'DV4de1MN5X',
         'http://dummyimage.com/221x100.png/cc0000/ffffff',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'formal'
     ),
     (
@@ -26,6 +29,7 @@ values (
         'abaglin3@telegraph.co.uk',
         'xTRCYE4kepD',
         'http://dummyimage.com/127x100.png/dddddd/000000',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'art'
     ),
     (
@@ -33,6 +37,7 @@ values (
         'twindmill4@stanford.edu',
         'gIHLa6Fecs9j',
         'http://dummyimage.com/201x100.png/cc0000/ffffff',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'technology'
     ),
     (
@@ -40,6 +45,7 @@ values (
         'bamyes5@examiner.com',
         'QpDOF7HIG',
         'http://dummyimage.com/200x100.png/dddddd/000000',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'technology'
     ),
     (
@@ -47,6 +53,7 @@ values (
         'apurchon6@thetimes.co.uk',
         'GU2kf5jOdF',
         'http://dummyimage.com/227x100.png/dddddd/000000',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'literature'
     ),
     (
@@ -54,6 +61,7 @@ values (
         'loakshott7@quantcast.com',
         '20fvqHFap',
         'http://dummyimage.com/174x100.png/cc0000/ffffff',
+        'This is the organization description whitch should include a breif information about this  organization and its activities', 
         'medicine'
     ),
     (
@@ -61,6 +69,7 @@ values (
         'mbartalini8@seesaa.net',
         'M08UqQrHG6h',
         'http://dummyimage.com/181x100.png/dddddd/000000',
+        'This is the organization description whitch should include a breif information about this  organization and its activities',
         'literature'
     ),
     (
@@ -68,6 +77,7 @@ values (
         'dinkpin9@kickstarter.com',
         'HFZvhYcADi',
         'http://dummyimage.com/135x100.png/cc0000/ffffff',
+        'This is the organization description whitch should include a breif information about this organization and its activities',
         'medicine'
     );
 /*********************** events ************************************/
