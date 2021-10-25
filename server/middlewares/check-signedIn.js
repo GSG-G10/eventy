@@ -1,4 +1,4 @@
-const { verify } = require('jsonwebtoken');
+const { verifyToken } = require('../utils/jwt');
 
 const {
   env: { SECRET_KEY },
@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
       cookies: { token },
     } = req;
     if (token) {
-      const value = verify(token, SECRET_KEY);
+      const value = await verifyToken(token, SECRET_KEY);
       req.userId = value.userId;
       next();
     } else {
