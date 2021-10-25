@@ -8,21 +8,23 @@ module.exports = async (req, res, next) => {
       rows,
     } = await checkAccount(req.body.email);
     if (rows.length > 0) {
-      res
+      return res
         .status(403)
         .json({
           status: 403,
           message: 'Email is already exists',
         });
-    } else {
-      const {
-        rows: [{ id }],
-      } = await addNewOrganization(req.body);
-      req.userId = id;
-      next();
     }
+    const {
+      rows: [{ id }],
+    } = await addNewOrganization(req.body);
+    req.userId = id;
+    return next();
   } catch (error) {
-    error.status = 400;
-    next(error);
+    if (error.details) { // for validation error
+      error.status = 400;
+      return next(error);
+    }
+    return next(error);
   }
 };
