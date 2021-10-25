@@ -1,10 +1,14 @@
 const getEventsByCategory = require('./get-events-category');
+const { getOrganizationEvents } = require('../organizations');
 const { getAllEvents } = require('../../database/queries');
 const getDate = require('../../utils/get-date');
 
 module.exports = async (req, res, next) => {
   if (req.query.category) {
     return getEventsByCategory(req, res, next);
+  }
+  if (req.query.organization) {
+    return getOrganizationEvents(req, res, next);
   }
   const { date } = getDate();
   try {
