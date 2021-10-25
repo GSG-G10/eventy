@@ -1,6 +1,6 @@
 /***************************** organizations ******************************/
-insert into organization (name, email, password, image, description, categories)
-values (
+INSERT INTO organization (name, email, password, image, description, categories)
+VALUES (
         'Browsecat',
         'nalvares0@csmonitor.com',
         'Q0fTCwdxmR',
@@ -81,7 +81,7 @@ values (
         'medicine'
     );
 /*********************** events ************************************/
-insert into events (
+INSERT INTO events (
         name,
         description,
         price,
@@ -95,7 +95,7 @@ insert into events (
         organizer_id,
         category
     )
-values (
+VALUES (
         'BlackRock California Municipal Income Trust',
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         26,
@@ -904,8 +904,8 @@ VALUES (
         '933-712-5385'
     );
 /******************* event_attendance ******************************/
-insert into event_attendance (attendance_id, event_id)
-values (13, 10),
+INSERT INTO event_attendance (attendance_id, event_id)
+VALUES (13, 10),
     (4, 11),
     (12, 1),
     (13, 35),
