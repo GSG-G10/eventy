@@ -1,9 +1,11 @@
 const nodemailer = require('nodemailer');
 
 const sendEmail = async ({
+  // eslint-disable-next-line camelcase
   name, description, price, start_date, expire_date, location, duration, details, category,
 }, userEmail, next) => {
   try {
+    // configuration data
     const config = {
       host: 'smtp.gmail.com',
       port: 587,
@@ -14,9 +16,9 @@ const sendEmail = async ({
       },
     };
     const transporter = nodemailer.createTransport(config);
-
+    // the message that will be sent to user
     const message = {
-      from: 'eventy.organization@gmail.com',
+      from: process.env.ORG_EMAIL,
       to: userEmail,
       subject: `Invitation for ${name} event `,
       html: ` 
