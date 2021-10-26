@@ -1,5 +1,12 @@
 /***************************** organizations ******************************/
-INSERT INTO organization (name, email, password, image, description, categories)
+INSERT INTO organization (
+        name,
+        email,
+        password,
+        image,
+        description,
+        categories
+    )
 VALUES (
         'Browsecat',
         'nalvares0@csmonitor.com',
