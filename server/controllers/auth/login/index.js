@@ -17,7 +17,6 @@ module.exports = async (req, res, next) => {
   } catch (err) {
     if (err.details) {
       err.status = 400;
-      return next(err);
     }
     return next(err);
   }
