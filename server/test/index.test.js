@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 const request = require('supertest');
-
 const app = require('../app');
 
 describe('Post attendance Test', () => {
@@ -10,7 +9,7 @@ describe('Post attendance Test', () => {
       .post(`/api/v1/events/${id}/attendance`)
       .send({
         name: 'ahmad sabbah',
-        email: 'new-email1@email.com',
+        email: 'new-email@email.com',
         age: 25,
         gender: 'gender',
         phone: '65465465465',
@@ -24,7 +23,7 @@ describe('Post attendance Test', () => {
       .post(`/api/v1/events/${id}/attendance`)
       .send({
         name: 'ahmad sabbah',
-        email: 'email@email.com',
+        email: 'exists-email@email.com',
         age: 25,
         gender: 22,
         phone: '65465465465',
@@ -38,12 +37,12 @@ describe('Post attendance Test', () => {
       .post(`/api/v1/events/${id}/attendance`)
       .send({
         name: 'ahmad sabbah',
-        email: 'existed-email@femail.com',
+        email: 'email@email.com',
         age: 25,
         gender: 'male',
         phone: '65465465465',
       })
       .expect(200);
-    expect(res.body).toEqual({ message: 'Already joined', status: 200 });
+    expect(res.body).toEqual({ message: 'Already joined' });
   });
 });

@@ -3,25 +3,24 @@ const nodemailer = require('nodemailer');
 const sendEmail = async ({
   // eslint-disable-next-line camelcase
   name, description, price, start_date, expire_date, location, duration, details, category,
-}, userEmail, next) => {
-  try {
-    // configuration data
-    const config = {
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.ORG_EMAIL,
-        pass: process.env.ORG_EMAIL_PASSWORD,
-      },
-    };
-    const transporter = nodemailer.createTransport(config);
-    // the message that will be sent to user
-    const message = {
-      from: process.env.ORG_EMAIL,
-      to: userEmail,
-      subject: `Invitation for ${name} event `,
-      html: ` 
+}, userEmail) => {
+  // configuration data
+  const config = {
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.ORG_EMAIL,
+      pass: process.env.ORG_EMAIL_PASSWORD,
+    },
+  };
+  const transporter = nodemailer.createTransport(config);
+  // the message that will be sent to user
+  const message = {
+    from: process.env.ORG_EMAIL,
+    to: userEmail,
+    subject: `Invitation for ${name} event `,
+    html: ` 
       <h3> You have been invited for ${name} event </h3>
       <h4> Event Information: </h4>
       <ul>
@@ -36,11 +35,8 @@ const sendEmail = async ({
       <li> <strong> Category:</strong> ${category} </li>
        </ul>
     `,
-    };
-    return await transporter.sendMail(message);
-  } catch (err) {
-    return next(err);
-  }
+  };
+  return transporter.sendMail(message);
 };
 
 module.exports = sendEmail;
