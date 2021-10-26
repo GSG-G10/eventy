@@ -7,4 +7,5 @@ module.exports = joi.object({
   age: joi.number().max(100).required(),
   gender: joi.string().required(),
   phone: joi.string().max(20).pattern(/^[0-9]+$/).required(),
+  isSubscriber: joi.boolean(),
 });

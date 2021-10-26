@@ -12,6 +12,7 @@ const sendEmail = require('../../utils/sendEmail');
 const addAttendence = async (req, res, next) => {
   try {
     const { id: eventId } = req.params;
+    req.body.isSubscriber = Boolean(req.body.isSubscriber);
     await joinEventValidation.validateAsync({ ...req.body, eventId });
     // check if the user exists
     const { rows } = await getAttendance(req.body.email);
