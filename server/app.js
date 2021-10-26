@@ -21,7 +21,7 @@ app.use([compression(), cookieParser(), express.urlencoded({ extended: false }),
 
 app.use('/api/v1/', router);
 
-if (NODE_ENV === 'development') {
+if (NODE_ENV === 'development' || NODE_ENV === 'test') {
   app.get('/', (req, res) => {
     res.json({ message: 'Server is running' });
   });
