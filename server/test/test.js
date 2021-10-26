@@ -113,7 +113,7 @@ describe('Server Tests', () => {
           email: 'twindmill4@stanford.edu',
           password: 'gIHLa6Fecs9j',
           image: 'http://dummyimage.com/201x100.png/cc0000/ffffff',
-          description: 'This is the organization description whitch should include a breif information about this organization and its activities',
+          description: 'This is the organization description which should include a breif information about this organization and its activities',
           categories: 'technology',
         },
       ],
@@ -150,12 +150,12 @@ describe('Server Tests', () => {
       expect(res.body).toEqual({ error: { message: '"gender" must be a string', status: 400 } });
     });
     test('test 200 status for already joined message when post existed attendance', async () => {
-      const id = 6;
+      const id = 34;
       const res = await request(app)
         .post(`/api/v1/events/${id}/attendance`)
         .send({
           name: 'ahmad sabbah',
-          email: 'email@email.com',
+          email: 'oantonsen3@columbia.edu',
           age: 25,
           gender: 'male',
           phone: '65465465465',
