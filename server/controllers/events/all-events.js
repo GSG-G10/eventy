@@ -1,24 +1,28 @@
-const getEventsByCategory = require('./get-events-category');
-const { getAllEvents } = require('../../database/queries');
 const getDate = require('../../utils/get-date');
+const getTopEvent = require('./get-events-type');
+const { getAllEvents } = require('../../database/queries');
+const getEventsByCategory = require('./get-events-category');
+const { getOrganizationEvents } = require('../organizations');
 
 module.exports = async (req, res, next) => {
   try {
     if (req.query.category) {
       return getEventsByCategory(req, res, next);
     }
-    const { date } = getDate();
-    const {
-      rows: data,
-    } = await getAllEvents(date);
-    if (!data.length > 0) {
-      return res.json({ status: 204, message: 'No Data Found' });
+    if (req.query.type) {
+      return getTopEvent(req, res, next);
     }
-    return res.json({
-      status: 200,
-      message: 'Events imported successfully',
-      data,
-    });
+    if (req.query.organization) {
+      return getOrganizationEvents(req, res, next);
+    }
+    const { date } = getDate();
+    const events = await getAllEvents(date);
+
+    if (!events?.length) {
+      res.json({ message: 'No events founded' });
+    }
+
+    return res.json(events);
   } catch (error) {
     return next(error);
   }

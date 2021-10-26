@@ -8,8 +8,10 @@ const {
 const {
   deleteQuery,
   getAllEvents,
+  updateEventQuery,
   getEventsCategory,
   getEventByIdQuery,
+  getOrganizationEvents,
 } = require('./events');
 
 module.exports = {
@@ -17,8 +19,10 @@ module.exports = {
   deleteQuery,
   checkAccount,
   getAllEvents,
+  updateEventQuery,
   getEventByIdQuery,
   getEventsCategory,
   addNewOrganization,
+  getOrganizationEvents,
   getOrganizationByIdQuery,
 };
