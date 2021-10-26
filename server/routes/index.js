@@ -22,11 +22,11 @@ router.get('/events/:id', getEvent);
 router.put('/events/:id', checkIsSignedIn, updateEvent);
 router.delete('/events/:id', checkIsSignedIn, deleteEvent);
 
+router.post('/login', login, setCookies);
 router.post('/signup', signup, setCookies);
 
 router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
-router.post('/login', login, setCookies);
 
 router.use(error404);
 router.use(serverError);
