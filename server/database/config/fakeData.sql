@@ -1,5 +1,12 @@
 /***************************** organizations ******************************/
-INSERT INTO organization (name, email, password, image, description, categories)
+INSERT INTO organization (
+        name,
+        email,
+        password,
+        image,
+        description,
+        categories
+    )
 VALUES (
         'Browsecat',
         'nalvares0@csmonitor.com',
@@ -61,7 +68,7 @@ VALUES (
         'loakshott7@quantcast.com',
         '20fvqHFap',
         'http://dummyimage.com/174x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this  organization and its activities', 
+        'This is the organization description whitch should include a breif information about this  organization and its activities',
         'medicine'
     ),
     (
