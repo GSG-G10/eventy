@@ -2,17 +2,11 @@ const { getAllOrgs } = require('../../database/queries');
 
 module.exports = async (req, res, next) => {
   try {
-    const {
-      rows,
-    } = await getAllOrgs();
-    if (!rows.length) {
-      return res.json({ status: 204, message: 'No Data Found' });
+    const organizations = await getAllOrgs();
+    if (!organizations.length > 0) {
+      return res.json({ message: 'No Organizations Found' });
     }
-    return res.json({
-      status: 200,
-      message: 'Organizations Imported Successfully',
-      data: rows,
-    });
+    return res.json(organizations);
   } catch (err) {
     return next(err);
   }
