@@ -144,16 +144,7 @@ test('POST /events 201 test', async () => {
     .expect(201);
 
   // Check the response
-  expect(response.body.name).toBe(data.name);
-  expect(response.body.description).toBe(data.description);
-  expect(response.body.price).toBe(data.price);
-  expect(response.body.attendance).toBe(data.attendance);
-  expect(response.body.startDate).toBe(data.startDate);
-  expect(response.body.expireDate).toBe(data.expireDate);
-  expect(response.body.location).toBe(data.location);
-  expect(response.body.duration).toBe(data.duration);
-  expect(response.body.details).toBe(data.details);
-  expect(response.body.category).toBe(data.category);
+  expect(response.body).toStrictEqual(data);
 });
 
 test('POST /events 400 test', async () => {
