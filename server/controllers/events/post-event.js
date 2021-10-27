@@ -8,6 +8,9 @@ const createEvent = async (req, res, next) => {
     await createEventQuery(userId, req.body);
     return res.status(201).json(req.body);
   } catch (err) {
+    if (err.details) {
+      err.status = 400;
+    }
     return next(err);
   }
 };
