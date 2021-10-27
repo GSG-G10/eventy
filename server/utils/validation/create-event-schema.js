@@ -3,8 +3,8 @@ const joi = require('joi');
 module.exports = joi.object({
   name: joi.string().required(),
   description: joi.string().required(),
-  price: joi.number().positive().required(),
-  attendance: joi.number().positive().required(),
+  price: joi.number().required(),
+  attendance: joi.number().required(),
   startDate: joi.date().required(),
   expireDate: joi.date().required(),
   location: joi.string().required(),

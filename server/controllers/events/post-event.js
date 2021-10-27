@@ -6,10 +6,7 @@ const createEvent = async (req, res, next) => {
     const { userId } = req;
     await createEventValidation.validateAsync(req.body);
     await createEventQuery(userId, req.body);
-    return res.json({
-      status: 200,
-      message: 'Event updated successfully',
-    });
+    return res.status(201).json(req.body);
   } catch (err) {
     return next(err);
   }
