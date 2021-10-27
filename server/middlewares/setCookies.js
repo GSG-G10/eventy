@@ -1,10 +1,10 @@
-const { sign } = require('jsonwebtoken');
+const { signToken } = require('../utils/jwt');
 
-const setCookies = (req, res, next) => {
+const setCookies = async (req, res, next) => {
   const { SECRET_KEY } = process.env;
   const { userId } = req;
   try {
-    const token = sign({ userId }, SECRET_KEY);
+    const token = await signToken({ userId }, SECRET_KEY);
     return res.cookie(
       'token',
       token,
