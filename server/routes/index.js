@@ -11,6 +11,7 @@ const {
   serverError,
   organizations,
   getOrganization,
+  createEvent,
 } = require('../controllers');
 
 const {
@@ -20,6 +21,7 @@ const {
 
 router.get('/events', events);
 router.get('/events/:id', getEvent);
+router.post('/events', checkIsSignedIn, createEvent);
 router.put('/events/:id', checkIsSignedIn, updateEvent);
 router.delete('/events/:id', checkIsSignedIn, deleteEvent);
 
