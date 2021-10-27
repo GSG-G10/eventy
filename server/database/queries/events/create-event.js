@@ -1,13 +1,14 @@
 const connection = require('../../connection');
 
-const createEventQuery = (userId, {
+module.exports = async (userId, {
   name,
   description,
   price, attendance,
   startDate, expireDate,
   location, image, duration, details, category,
-}) => connection
-  .query(`INSERT INTO events (
+}) => {
+  const { rows } = await connection
+    .query(`INSERT INTO events (
     organizer_id,
     name,
     description,
@@ -20,7 +21,7 @@ const createEventQuery = (userId, {
     duration,
     details,
     category) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING *;`,
-  [userId, name, description, price, attendance, startDate, expireDate,
-    location, image, duration, details, category]);
-
-module.exports = createEventQuery;
+    [userId, name, description, price, attendance, startDate, expireDate,
+      location, image, duration, details, category]);
+  return rows[0];
+};

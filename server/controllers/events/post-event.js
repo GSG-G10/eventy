@@ -6,8 +6,7 @@ const createEvent = async (req, res, next) => {
     const { userId } = req;
     await createEventValidation.validateAsync(req.body);
     const creatEvent = await createEventQuery(userId, req.body);
-    const { rows } = creatEvent;
-    return res.status(201).json(rows[0]);
+    return res.status(201).json(creatEvent);
   } catch (err) {
     if (err.details) {
       err.status = 400;
