@@ -37,7 +37,7 @@ test('POST /events 201 test', async () => {
     });
 });
 
-test('POST /events 400 test', async () => {
+test('POST /events 404 test', async () => {
   const data = {
     name: 'Code Academy training',
     description: 'Tec training for developers in Gaza',
