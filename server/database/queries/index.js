@@ -8,6 +8,7 @@ const {
 const {
   deleteQuery,
   getAllEvents,
+  updateEventQuery,
   getEventsCategory,
   getEventByIdQuery,
   createEventQuery,
@@ -20,6 +21,7 @@ module.exports = {
   checkAccount,
   getAllEvents,
   createEventQuery,
+  updateEventQuery,
   getEventByIdQuery,
   getEventsCategory,
   addNewOrganization,
