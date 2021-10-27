@@ -19,7 +19,7 @@ const createEventQuery = (userId, {
     image,
     duration,
     details,
-    category) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);`,
+    category) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING *;`,
   [userId, name, description, price, attendance, startDate, expireDate,
     location, image, duration, details, category]);
 
