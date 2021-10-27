@@ -5,7 +5,6 @@ const request = require('supertest');
 const app = require('../app');
 const dbBuild = require('../database/config/build');
 const connection = require('../database/connection');
-const { describe } = require('../utils/validation/login');
 
 describe('Server Tests', () => {
   beforeEach(() => dbBuild());
@@ -122,6 +121,58 @@ describe('Server Tests', () => {
     return expect(expected).toEqual(res.body);
   });
   describe('Authentication Tests', () => {
-    
-  })
+    test('test signup route with status 200', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: 'ahmad',
+          email: 'email@email.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Logged In Successfully' });
+    });
+    test('test signup route with status 400 Bad Request', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: '',
+          email: 'email@email.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(400);
+      expect(res.body).toEqual({
+        error: {
+          message: '"name" is not allowed to be empty',
+          status: 400,
+        },
+      });
+    });
+    test('test signup route with status 403 Already exists', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: 'ahmad',
+          email: 'nalvares0@csmonitor.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(403);
+      expect(res.body).toEqual({
+        status: 403,
+        message: 'Email is already exists',
+      });
+    });
+  });
 });
