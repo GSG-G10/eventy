@@ -5,6 +5,7 @@ const request = require('supertest');
 const app = require('../app');
 const dbBuild = require('../database/config/build');
 const connection = require('../database/connection');
+const { describe } = require('../utils/validation/login');
 
 describe('Server Tests', () => {
   beforeEach(() => dbBuild());
@@ -120,4 +121,7 @@ describe('Server Tests', () => {
     };
     return expect(expected).toEqual(res.body);
   });
+  describe('Authentication Tests', () => {
+    
+  })
 });
