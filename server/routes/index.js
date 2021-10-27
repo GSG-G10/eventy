@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const {
+  login,
   signup,
   events,
-  getEvent,
+  signout,
   error404,
-  login,
+  getEvent,
   deleteEvent,
   updateEvent,
   serverError,
@@ -24,6 +25,7 @@ router.delete('/events/:id', checkIsSignedIn, deleteEvent);
 
 router.post('/login', login, setCookies);
 router.post('/signup', signup, setCookies);
+router.get('/signout', checkIsSignedIn, signout);
 
 router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
