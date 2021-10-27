@@ -13,7 +13,7 @@ const setCookies = async (req, res, next) => {
         secure: true,
       },
     )
-      .json(
+      .status(201).json(
         { message: 'Logged In Successfully' },
       );
   } catch (err) {

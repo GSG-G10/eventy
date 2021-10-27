@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
       const updatedEvent = await updateEventQuery(eventId, req.body);
       return res.json(updatedEvent);
     }
-    return res.status(400).json({ message: 'You dont have permission to update this event.' });
+    return res.status(403).json({ message: 'You dont have permission to update this event.' });
   } catch (err) {
     if (err.details) {
       err.status = 400;
