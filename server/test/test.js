@@ -103,6 +103,167 @@ describe('Server Tests', () => {
     };
     return expect(expected).toEqual(res.body);
   });
+  describe('Authentication Tests', () => {
+    // signup tests
+    test('test signup route with status 200', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: 'ahmad',
+          email: 'email@email.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Logged In Successfully' });
+    });
+    test('test signup route with status 400 Bad Request', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: '',
+          email: 'email@email.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(400);
+      expect(res.body).toEqual({
+        error: {
+          message: '"name" is not allowed to be empty',
+          status: 400,
+        },
+      });
+    });
+    test('test signup route with status 403 Already exists', async () => {
+      const res = await request(app)
+        .post('/api/v1/signup')
+        .send({
+          name: 'ahmad',
+          email: 'nalvares0@csmonitor.com',
+          password: '123456789',
+          confirmPassword: '123456789',
+          photo: 'asdasdfgf.com',
+          description: 'this is a description',
+          categories: 'politics',
+        })
+        .expect(403);
+      expect(res.body).toEqual({
+        status: 403,
+        message: 'Email is already exists',
+      });
+    });
+    // login tests
+    test('test login route with status 200 Logged in successfuly', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3@telegraph.co.uk',
+          password: '123456789',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Logged In Successfully' });
+    });
+    test('test login route with status 400 Bad Request', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3telegraph.co.uk',
+          password: '123456789',
+        })
+        .expect(400);
+      expect(res.body).toEqual({
+        error: {
+          message: '"email" must be a valid email',
+          status: 400,
+        },
+      });
+    });
+    test('test login route with status 401 Not Authorized', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3@telegraph.co.uk',
+          password: '1234567',
+        })
+        .expect(401);
+      expect(res.body).toEqual({ message: 'invalid email or password' });
+    });
+  });
+
+  test('PUT /events 401 test', async () => {
+    const data = {
+      name: 'Code Academy training',
+      description: 'Tec training for developers in Gaza',
+      price: 3,
+      attendance: 4,
+      startDate: '2022-11-14',
+      expireDate: '2022-12-17',
+      location: 'online',
+      duration: '08:00:00',
+      details: 'Online tec training',
+      organizer_id: 23,
+      category: 'technology',
+    };
+
+    await request(app)
+      .put('/api/v1/events/70')
+      .send(data)
+      .expect(401);
+  });
+
+  test('PUT /events 200 test', async () => {
+    const data = {
+      name: 'Code Academy training',
+      description: 'Tec training for developers in Gaza',
+      price: 3,
+      attendance: 4,
+      startDate: '2022-11-14',
+      expireDate: '2022-12-17',
+      location: 'online',
+      duration: '08:00:00',
+      details: 'Online tec training',
+      organizer_id: 11,
+      category: 'technology',
+    };
+
+    await request(app)
+      .get('/api/v1/events/39')
+      .set('Cookie', [`token=${process.env.token}`])
+      .send(data)
+      .expect(200);
+  });
+
+  test('DELETE /events 401 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/46')
+      .expect(401);
+  });
+
+  test('DELETE /events 403 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/46')
+      .expect(401);
+  });
+
+  test('DELETE /events 200 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/20')
+      .set('Cookie', [`token=${process.env.token}`])
+      .expect(200);
+  });
+
+  test('DELETE /events 400 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/ghgh')
+      .set('Cookie', [`token=${process.env.token}`])
+      .expect(400);
+  });
 });
 
 test('POST /events 201 test', async () => {
