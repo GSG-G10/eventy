@@ -212,4 +212,73 @@ describe('Server Tests', () => {
       expect(res.body).toEqual({ message: 'invalid email or password' });
     });
   });
+
+  test('PUT /events 401 test', async () => {
+    const data = {
+      name: 'Code Academy training',
+      description: 'Tec training for developers in Gaza',
+      price: 3,
+      attendance: 4,
+      startDate: '2022-11-14',
+      expireDate: '2022-12-17',
+      location: 'online',
+      duration: '08:00:00',
+      details: 'Online tec training',
+      organizer_id: 23,
+      category: 'technology',
+    };
+
+    await request(app)
+      .put('/api/v1/events/70')
+      .send(data)
+      .expect(401);
+  });
+
+  test('PUT /events 200 test', async () => {
+    const data = {
+      name: 'Code Academy training',
+      description: 'Tec training for developers in Gaza',
+      price: 3,
+      attendance: 4,
+      startDate: '2022-11-14',
+      expireDate: '2022-12-17',
+      location: 'online',
+      duration: '08:00:00',
+      details: 'Online tec training',
+      organizer_id: 11,
+      category: 'technology',
+    };
+
+    await request(app)
+      .get('/api/v1/events/39')
+      .set('Cookie', [`token=${process.env.token}`])
+      .send(data)
+      .expect(200);
+  });
+
+  test('DELETE /events 401 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/46')
+      .expect(401);
+  });
+
+  test('DELETE /events 403 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/46')
+      .expect(401);
+  });
+
+  test('DELETE /events 200 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/20')
+      .set('Cookie', [`token=${process.env.token}`])
+      .expect(200);
+  });
+
+  test('DELETE /events 400 test', async () => {
+    await request(app)
+      .delete('/api/v1/events/ghgh')
+      .set('Cookie', [`token=${process.env.token}`])
+      .expect(400);
+  });
 });
