@@ -26,7 +26,7 @@ const sendEmail = async ({
       <ul>
       <li> <strong>Event Name: </strong> ${name} </li>
       <li> <strong>Brief Description: </strong>${description} </li>
-      <li> <strong>Ticket Price:</strong> ${price}$ </li>
+      <li> <strong>Ticket Price:</strong> ${price ? `${price}$` : 'Free'} </li>
       <li> <strong>Start Date:</strong> ${start_date.toString().split('00')[0]} </li>
       <li> <strong>Expire Date: </strong>${expire_date.toString().split('00')[0]} </li>
       <li>  <strong>Location:</strong> ${location} </li>
