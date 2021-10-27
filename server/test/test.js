@@ -121,6 +121,7 @@ describe('Server Tests', () => {
     return expect(expected).toEqual(res.body);
   });
   describe('Authentication Tests', () => {
+    // signup tests
     test('test signup route with status 200', async () => {
       const res = await request(app)
         .post('/api/v1/signup')
@@ -173,6 +174,42 @@ describe('Server Tests', () => {
         status: 403,
         message: 'Email is already exists',
       });
+    });
+    // login tests
+    test('test login route with status 200 Logged in successfuly', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3@telegraph.co.uk',
+          password: '123456789',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Logged In Successfully' });
+    });
+    test('test login route with status 400 Bad Request', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3telegraph.co.uk',
+          password: '123456789',
+        })
+        .expect(400);
+      expect(res.body).toEqual({
+        error: {
+          message: '"email" must be a valid email',
+          status: 400,
+        },
+      });
+    });
+    test('test login route with status 401 Not Authorized', async () => {
+      const res = await request(app)
+        .post('/api/v1/login')
+        .send({
+          email: 'abaglin3@telegraph.co.uk',
+          password: '1234567',
+        })
+        .expect(401);
+      expect(res.body).toEqual({ message: 'invalid email or password' });
     });
   });
 });

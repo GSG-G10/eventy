@@ -21,7 +21,7 @@ const login = async (req, res, next) => {
     req.userId = rows[0].id;
     return next();
   } catch (err) {
-    err.status = 403; // for validation error
+    err.status = 400; // for validation error
     return next(err);
   }
 };
