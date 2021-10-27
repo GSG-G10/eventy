@@ -167,3 +167,23 @@ test('POST /events 400 test', async () => {
     .send(data)
     .expect(400);
 });
+
+test('POST /events 401 test', async () => {
+  const data = {
+    description: 'Tec training for developers in Gaza',
+    price: 3,
+    attendance: 4,
+    startDate: '2022-11-14',
+    expireDate: '2022-12-17',
+    location: 'online',
+    duration: '08:00:00',
+    details: 'Online tec training',
+    organizer_id: 23,
+    category: 'technology',
+  };
+
+  await request(app)
+    .post('/api/v1/events')
+    .send(data)
+    .expect(401);
+});
