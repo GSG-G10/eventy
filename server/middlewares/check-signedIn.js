@@ -1,4 +1,4 @@
-const { verify } = require('jsonwebtoken');
+const { verifyToken } = require('../utils/jwt');
 
 const {
   env: { SECRET_KEY },
@@ -9,16 +9,17 @@ module.exports = async (req, res, next) => {
     const {
       cookies: { token },
     } = req;
+
     if (token) {
-      const value = verify(token, SECRET_KEY);
+      const value = await verifyToken(token, SECRET_KEY);
       req.userId = value.userId;
       next();
     } else {
-      res.status(401).json({ status: 401, message: 'You are not registred yet' });
+      res.status(401).json({ message: 'You are not registred yet' });
     }
   } catch (err) {
     if (err.message.includes('invalid')) {
-      res.status(401).json({ status: 401, message: 'Invalid token' });
+      res.status(401).json({ message: 'Invalid token' });
     } else {
       next(err);
     }

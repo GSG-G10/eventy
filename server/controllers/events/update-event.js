@@ -8,20 +8,16 @@ module.exports = async (req, res, next) => {
 
     await updateEventValidation.validateAsync({ eventId, ...req.body });
 
-    const { rows } = await getEventByIdQuery(eventId);
-    if (!rows.length) {
-      return res.status(400).json({ status: 400, message: 'Event Doesnt Exist' });
+    const event = await getEventByIdQuery(eventId);
+    if (!event) {
+      return res.status(400).json({ message: 'Event Doesnt Exist' });
     }
 
-    if (rows[0].organizer_id === Number(userId)) {
-      await updateEventQuery(eventId, req.body);
-      return res
-        .json({
-          status: 200,
-          message: 'Event updated successfully',
-        });
+    if (event.organizer_id === Number(userId)) {
+      const updatedEvent = await updateEventQuery(eventId, req.body);
+      return res.json(updatedEvent);
     }
-    return res.status(400).json({ status: 400, message: 'Bad Request' });
+    return res.status(403).json({ message: 'You dont have permission to update this event.' });
   } catch (err) {
     if (err.details) {
       err.status = 400;

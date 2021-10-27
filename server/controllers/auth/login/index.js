@@ -1,29 +1,23 @@
 const { comparePassword } = require('../../../utils/b-crypt');
-
 const { checkAccount } = require('../../../database/queries');
 const { loginSchema } = require('../../../utils/validation');
 
-const login = async (req, res, next) => {
+module.exports = async (req, res, next) => {
   const { email, password } = req.body;
   try {
-    // input validation
     await loginSchema.validateAsync(req.body);
-    // check if user exists
-    const { rows } = await checkAccount(email);
-    if (!rows.length) {
+    const organization = await checkAccount(email);
+    const compared = await comparePassword(password, organization.password);
+
+    if (!compared || !organization) {
       return res.status(401).json({ message: 'invalid email or password' });
     }
-    // compare passwords
-    const compared = await comparePassword(password, rows[0].password);
-    if (!compared) {
-      return res.status(401).json({ message: 'invalid email or password' });
-    }
-    req.userId = rows[0].id;
+    req.userId = organization.id;
     return next();
   } catch (err) {
-    err.status = 400; // for validation error
+    if (err.details) {
+      err.status = 400;
+    }
     return next(err);
   }
 };
-
-module.exports = login;

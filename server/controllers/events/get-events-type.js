@@ -5,15 +5,12 @@ const getTopEvent = async (req, res, next) => {
   try {
     const { type } = req.query;
     const { date } = getDate();
+
     if (type === 'top') {
-      const { rows } = await getTopEventsQuery(date);
-      return res.json({
-        status: 200,
-        message: 'Events imported successfully',
-        data: rows,
-      });
+      const events = await getTopEventsQuery(date);
+      return res.json(events);
     }
-    return res.status(404).json({ message: 'Such type is not found!' });
+    return res.status(400).json({ message: `No events for type ${type}` });
   } catch (err) {
     return next(err);
   }

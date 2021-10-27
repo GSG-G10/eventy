@@ -6,12 +6,17 @@ const {
 const {
   events,
   getEvent,
+  createEvent,
   updateEvent,
   deleteEvent,
   getEventsByCategory,
 } = require('./events');
 
-const { login, signup } = require('./auth');
+const {
+  login,
+  signup,
+  signout,
+} = require('./auth');
 
 const {
   error404,
@@ -24,9 +29,11 @@ module.exports = {
   organizations,
   updateEvent,
   deleteEvent,
+  createEvent,
+  getEvent,
   serverError,
   error404,
-  getEvent,
+  signout,
   signup,
   events,
   login,

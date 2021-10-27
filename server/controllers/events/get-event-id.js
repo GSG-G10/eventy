@@ -1,17 +1,17 @@
 const { getEventByIdQuery } = require('../../database/queries');
 
-const getEvent = async (req, res, next) => {
+module.exports = async (req, res, next) => {
   try {
-    const { id } = req.params;
-    const { rows: data } = await getEventByIdQuery(id);
-    return res.json({
-      status: 200,
-      message: 'Event is imported successfully',
-      data,
-    });
+    const { id: eventId } = req.params;
+    if (eventId > 0) {
+      const event = await getEventByIdQuery(eventId);
+      if (!event) {
+        return res.json({ message: 'No Event Found' });
+      }
+      return res.json(event);
+    }
+    return res.status(400).json({ message: 'Bad Request' });
   } catch (err) {
     return next(err);
   }
 };
-
-module.exports = getEvent;

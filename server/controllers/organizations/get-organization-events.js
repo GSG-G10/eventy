@@ -2,19 +2,17 @@ const { getOrganizationEvents } = require('../../database/queries');
 
 module.exports = async (req, res, next) => {
   try {
-    const id = Number(req.query.organization);
-    if (id > 0) {
-      const {
-        rows,
-      } = await getOrganizationEvents(id);
+    const organizationId = Number(req.query.organization);
 
-      return res.json({
-        status: 200,
-        message: 'Events imported successfully',
-        data: rows,
-      });
+    if (organizationId > 0) {
+      const events = await getOrganizationEvents(organizationId);
+      if (!events?.length > 0) {
+        return res.json({ message: 'There is no events for this organization ' });
+      }
+      return res.json(events);
     }
-    return res.status(400).json({ status: 400, message: 'Bad Request' });
+
+    return res.status(400).json({ message: 'Bad Request' });
   } catch (err) {
     return next(err);
   }
