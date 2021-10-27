@@ -1,4 +1,9 @@
 const connection = require('../../connection');
 
-module.exports = (email) => connection
-  .query('SELECT * FROM organization WHERE email=$1;', [email]);
+module.exports = async (email) => {
+  const { rows } = await connection
+    .query('SELECT * FROM organization WHERE email=$1;',
+      [email]);
+
+  return rows[0];
+};

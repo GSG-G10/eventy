@@ -1,19 +1,19 @@
-const { getEventsCategory } = require('../../database/queries');
 const getDate = require('../../utils/get-date');
+const { getEventsCategory } = require('../../database/queries');
 
-async function getEventsByCategory(req, res, next) {
+module.exports = async (req, res, next) => {
   try {
     const { category } = req.query;
-    const { date, time } = getDate();
-    const { rows } = await getEventsCategory(category, date, time);
-    return res.json({
-      status: 200,
-      message: 'Events imported successfully',
-      data: rows,
-    });
+    const { date } = getDate();
+
+    const events = await getEventsCategory(category, date);
+
+    if (!events?.length > 0) {
+      return res.status(400).json({ message: `No events found for category ${category}` });
+    }
+
+    return res.json(events);
   } catch (err) {
     return next(err);
   }
-}
-
-module.exports = getEventsByCategory;
+};
