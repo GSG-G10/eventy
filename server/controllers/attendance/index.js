@@ -17,7 +17,6 @@ const addAttendence = async (req, res, next) => {
     const eventInfo = await getEventByIdQuery(eventId);
     // check if the user exists
     const existAttendant = await getAttendance(email);
-    console.log(existAttendant);
     if (!existAttendant) {
       // if the user is new, store his data and send a reminder
       const newAttendant = await addAttendant(req.body);
