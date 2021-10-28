@@ -1,10 +1,13 @@
 const { signupValidation } = require('../../../utils/validation');
+const { uploadImage } = require('../../../utils/cloudinary');
+
 const { addNewOrganization, checkAccount } = require('../../../database/queries');
 
 module.exports = async (req, res, next) => {
   try {
     await signupValidation.validateAsync(req.body);
     const organization = await checkAccount(req.body.email);
+    req.body.photo = await uploadImage(req.body.photo);
 
     if (organization) {
       return res.status(403).json({ message: 'Email is already exists' });
