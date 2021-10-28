@@ -18,6 +18,7 @@ const {
   updateEventQuery,
   getEventsCategory,
   getEventByIdQuery,
+  createEventQuery,
   getOrganizationEvents,
 } = require('./events');
 
@@ -29,6 +30,7 @@ module.exports = {
   getAllEvents,
   getAttendance,
   getEventAttendant,
+  createEventQuery,
   updateEventQuery,
   getEventByIdQuery,
   getEventsCategory,

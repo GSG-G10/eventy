@@ -1,26 +1,25 @@
 const { deleteQuery, getEventByIdQuery } = require('../../database/queries');
 
-const deleteEvent = async (req, res, next) => {
+module.exports = async (req, res, next) => {
   try {
-    const { id } = req.params;
+    const { id: eventId } = req.params;
     const { userId } = req;
-    // check if the event exist
-    const { rows } = await getEventByIdQuery(id);
-    if (!rows.length) {
-      return res.status(400).json({ status: 400, message: 'Event Doesn\'t Exist' });
+
+    if (eventId > 0) {
+      const event = await getEventByIdQuery(eventId);
+      if (!event) {
+        return res.status(400).json({ status: 400, message: 'Event Doesn\'t Exist' });
+      }
+
+      if (event.organizer_id === Number(userId)) {
+        await deleteQuery(eventId);
+        return res.json({ message: 'Event Deleted Successfully' });
+      }
+
+      return res.status(403).json({ message: 'You dont have permission to delete this event.' });
     }
-    // check if this is the owner of the event
-    if (rows[0].organizer_id === Number(userId)) {
-      await deleteQuery(id);
-      return res.json({
-        status: 200,
-        message: 'Event Deleted Successfully',
-      });
-    }
-    return res.status(403).json({ message: 'Forbidden User' });
+    return res.status(400).json({ message: 'Bad Request' });
   } catch (err) {
     return next(err);
   }
 };
-
-module.exports = deleteEvent;

@@ -34,7 +34,7 @@ VALUES (
     (
         'Browsebug',
         'abaglin3@telegraph.co.uk',
-        'xTRCYE4kepD',
+        '$2a$10$9hFb703hGGntkbqXdeYNAe3aZbzXk40SVfrBxmxUsR2QdesHRGqDO',
         'http://dummyimage.com/127x100.png/dddddd/000000',
         'This is the organization description which should include a breif information about this organization and its activities',
         'art'
