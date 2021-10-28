@@ -33,7 +33,7 @@ CREATE TABLE attendance(
     email VARCHAR(150) UNIQUE NOT NULL,
     age INTEGER NOT NULL,
     gender VARCHAR(50) NOT NULL,
-    isSubscriber BOOLEAN NOT NULL,
+    isSubscriber BOOLEAN DEFAULT false,
     phone VARCHAR(25)
 );
 CREATE TABLE event_attendance(

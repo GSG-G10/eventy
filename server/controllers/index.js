@@ -18,6 +18,8 @@ const {
   signout,
 } = require('./auth');
 
+const addAttendence = require('./attendance');
+
 const {
   error404,
   serverError,
@@ -26,6 +28,7 @@ const {
 module.exports = {
   getEventsByCategory,
   getOrganization,
+  addAttendence,
   organizations,
   updateEvent,
   deleteEvent,

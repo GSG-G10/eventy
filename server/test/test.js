@@ -93,15 +93,65 @@ describe('Server Tests', () => {
       .expect(200)
       .expect('Content-Type', /json/);
     const expected = {
-      id: 5,
-      name: 'Ooba',
-      email: 'twindmill4@stanford.edu',
-      password: 'gIHLa6Fecs9j',
-      image: 'http://dummyimage.com/201x100.png/cc0000/ffffff',
-      description: 'This is the organization description whitch should include a breif information about this organization and its activities',
-      categories: 'technology',
+      status: 200,
+      message: 'Organization is imported successfully',
+      data: [
+        {
+          id: 5,
+          name: 'Ooba',
+          email: 'twindmill4@stanford.edu',
+          password: 'gIHLa6Fecs9j',
+          image: 'http://dummyimage.com/201x100.png/cc0000/ffffff',
+          description: 'This is the organization description which should include a breif information about this organization and its activities',
+          categories: 'technology',
+        },
+      ],
     };
     return expect(expected).toEqual(res.body);
+  });
+  describe('Post attendance Test', () => {
+    test('test 200 status and message to be Joined Event Successfuly', async () => {
+      const id = 6;
+      const res = await request(app)
+        .post(`/api/v1/events/${id}/attendance`)
+        .send({
+          name: 'ahmad sabbah',
+          email: 'new-email@email.com',
+          age: 25,
+          gender: 'gender',
+          phone: '65465465465',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Joined Event Successfuly' });
+    });
+    test('test 400 status for input validation on gender post attendance', async () => {
+      const id = 6;
+      const res = await request(app)
+        .post(`/api/v1/events/${id}/attendance`)
+        .send({
+          name: 'ahmad sabbah',
+          email: 'exists-email@email.com',
+          age: 25,
+          gender: 22,
+          phone: '65465465465',
+        })
+        .expect(400);
+      expect(res.body).toEqual({ error: { message: '"gender" must be a string', status: 400 } });
+    });
+    test('test 200 status for already joined message when post existed attendance', async () => {
+      const id = 34;
+      const res = await request(app)
+        .post(`/api/v1/events/${id}/attendance`)
+        .send({
+          name: 'ahmad sabbah',
+          email: 'oantonsen3@columbia.edu',
+          age: 25,
+          gender: 'male',
+          phone: '65465465465',
+        })
+        .expect(200);
+      expect(res.body).toEqual({ message: 'Already joined' });
+    });
   });
   describe('Authentication Tests', () => {
     // signup tests
