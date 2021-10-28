@@ -26,12 +26,12 @@ const addAttendence = async (req, res, next) => {
       return res.json({ message: 'Joined Event Successfuly' });
     }
     // if the user exists check if he is already joined
-    const attendent = await getEventAttendant(existAttendant.id, eventId);
+    const attendent = await getEventAttendant(existAttendant, eventId);
     if (attendent) {
       return res.json({ message: 'Already joined' });
     }
     // if the user exists and didn't join, add him and send him a reminder
-    await addEventAttendance(existAttendant.id, eventId);
+    await addEventAttendance(existAttendant, eventId);
     await sendEmail(eventInfo, email);
     return res.json({ message: 'Joined Event Successfuly' });
   } catch (err) {
