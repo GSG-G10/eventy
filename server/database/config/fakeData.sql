@@ -12,7 +12,7 @@ VALUES (
         'nalvares0@csmonitor.com',
         'Q0fTCwdxmR',
         'http://dummyimage.com/220x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'literature'
     ),
     (
@@ -20,7 +20,7 @@ VALUES (
         'kpeoples1@nba.com',
         'UqQBSPg',
         'http://dummyimage.com/132x100.png/dddddd/000000',
-        'This is the organization description whitch should include a breif information about this  organization and its activities',
+        'This is the organization description which should include a breif information about this  organization and its activities',
         'literature'
     ),
     (
@@ -28,15 +28,15 @@ VALUES (
         'jthorneloe2@sciencedaily.com',
         'DV4de1MN5X',
         'http://dummyimage.com/221x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'formal'
     ),
     (
         'Browsebug',
         'abaglin3@telegraph.co.uk',
-        'xTRCYE4kepD',
+        '$2a$10$9hFb703hGGntkbqXdeYNAe3aZbzXk40SVfrBxmxUsR2QdesHRGqDO',
         'http://dummyimage.com/127x100.png/dddddd/000000',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'art'
     ),
     (
@@ -44,7 +44,7 @@ VALUES (
         'twindmill4@stanford.edu',
         'gIHLa6Fecs9j',
         'http://dummyimage.com/201x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'technology'
     ),
     (
@@ -52,7 +52,7 @@ VALUES (
         'bamyes5@examiner.com',
         'QpDOF7HIG',
         'http://dummyimage.com/200x100.png/dddddd/000000',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'technology'
     ),
     (
@@ -60,7 +60,7 @@ VALUES (
         'apurchon6@thetimes.co.uk',
         'GU2kf5jOdF',
         'http://dummyimage.com/227x100.png/dddddd/000000',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'literature'
     ),
     (
@@ -68,7 +68,7 @@ VALUES (
         'loakshott7@quantcast.com',
         '20fvqHFap',
         'http://dummyimage.com/174x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this  organization and its activities',
+        'This is the organization description which should include a breif information about this  organization and its activities', 
         'medicine'
     ),
     (
@@ -76,7 +76,7 @@ VALUES (
         'mbartalini8@seesaa.net',
         'M08UqQrHG6h',
         'http://dummyimage.com/181x100.png/dddddd/000000',
-        'This is the organization description whitch should include a breif information about this  organization and its activities',
+        'This is the organization description which should include a breif information about this  organization and its activities',
         'literature'
     ),
     (
@@ -84,7 +84,7 @@ VALUES (
         'dinkpin9@kickstarter.com',
         'HFZvhYcADi',
         'http://dummyimage.com/135x100.png/cc0000/ffffff',
-        'This is the organization description whitch should include a breif information about this organization and its activities',
+        'This is the organization description which should include a breif information about this organization and its activities',
         'medicine'
     );
 /*********************** events ************************************/
@@ -105,7 +105,7 @@ INSERT INTO events (
 VALUES (
         'BlackRock California Municipal Income Trust',
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
-        26,
+        0,
         46,
         '2021-10-26',
         '2022-03-10',
@@ -123,7 +123,7 @@ In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
     (
         'Aramark',
         'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
-        53,
+        0,
         6,
         '2021-11-11',
         '2022-05-09',
@@ -139,7 +139,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
     (
         'First Trust High Income Long Short Fund',
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
-        2,
+        0,
         80,
         '2021-12-13',
         '2022-04-30',
@@ -153,7 +153,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
     (
         'Precision Drilling Corporation',
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
-        75,
+        0,
         86,
         '2022-01-16',
         '2022-05-19',
@@ -167,7 +167,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
     (
         'Stanley Black & Decker, Inc.',
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
-        24,
+        0,
         18,
         '2022-01-04',
         '2022-05-16',
@@ -185,7 +185,7 @@ In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat n
     (
         'Constellation Brands Inc',
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
-        34,
+        0,
         97,
         '2021-12-05',
         '2022-03-20',
@@ -203,7 +203,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
     (
         'TD Ameritrade Holding Corporation',
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
-        59,
+        0,
         34,
         '2021-12-18',
         '2022-04-11',
@@ -217,7 +217,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
     (
         'Prudential Financial, Inc.',
         'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-        2,
+        0,
         29,
         '2021-11-10',
         '2022-03-23',
@@ -233,7 +233,7 @@ Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscip
     (
         'Nustar Energy L.P.',
         'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.',
-        51,
+        0,
         45,
         '2021-10-29',
         '2022-03-25',
@@ -247,7 +247,7 @@ Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscip
     (
         'Gulf Island Fabrication, Inc.',
         'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.',
-        16,
+        0,
         75,
         '2021-12-22',
         '2022-03-01',
@@ -265,7 +265,7 @@ Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luc
     (
         'EOG Resources, Inc.',
         'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-        58,
+        0,
         91,
         '2021-12-09',
         '2022-04-22',
@@ -281,7 +281,7 @@ Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspend
     (
         'First Trust Specialty Finance and Financial Opportunities Fund',
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
-        9,
+        0,
         22,
         '2021-11-14',
         '2022-04-02',
@@ -317,7 +317,7 @@ In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
     (
         'QuickLogic Corporation',
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
-        48,
+        0,
         64,
         '2021-12-04',
         '2022-05-07',
@@ -417,7 +417,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
     (
         'Seneca Foods Corp.',
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
-        44,
+        0,
         98,
         '2021-12-20',
         '2022-03-24',
@@ -503,7 +503,7 @@ Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luc
     (
         'DigitalGlobe, Inc',
         'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
-        54,
+        0,
         28,
         '2021-12-14',
         '2022-04-29',
@@ -551,7 +551,7 @@ In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat n
     (
         'Exxon Mobil Corporation',
         'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
-        40,
+        0,
         7,
         '2022-01-09',
         '2022-05-14',
@@ -585,7 +585,7 @@ Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare
     (
         'Independence Holding Company',
         'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.',
-        82,
+        0,
         93,
         '2021-12-11',
         '2022-02-11',
@@ -599,7 +599,7 @@ Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare
     (
         'People''s United Financial, Inc.',
         'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.',
-        47,
+        0,
         51,
         '2021-12-02',
         '2022-04-27',
@@ -617,7 +617,7 @@ Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula
     (
         'Reliance Steel & Aluminum Co.',
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
-        30,
+        0,
         73,
         '2021-12-24',
         '2022-04-24',
@@ -667,7 +667,7 @@ Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integ
     (
         'CHS Inc',
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.',
-        3,
+        0,
         85,
         '2021-11-06',
         '2022-03-13',
@@ -699,7 +699,7 @@ Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.'
     (
         'Under Armour, Inc.',
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
-        10,
+        0,
         22,
         '2022-01-22',
         '2022-04-23',
@@ -733,7 +733,7 @@ Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, t
     (
         'IF Bancorp, Inc.',
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
-        37,
+        0,
         44,
         '2021-11-09',
         '2022-05-17',

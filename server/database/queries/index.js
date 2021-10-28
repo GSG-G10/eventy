@@ -6,6 +6,13 @@ const {
 } = require('./organizations');
 
 const {
+  addAttendant,
+  getAttendance,
+  addEventAttendance,
+  getEventAttendant,
+} = require('./attendance');
+
+const {
   deleteQuery,
   getAllEvents,
   updateEventQuery,
@@ -19,11 +26,15 @@ module.exports = {
   getAllOrgs,
   deleteQuery,
   checkAccount,
+  addAttendant,
   getAllEvents,
+  getAttendance,
+  getEventAttendant,
   createEventQuery,
   updateEventQuery,
   getEventByIdQuery,
   getEventsCategory,
+  addEventAttendance,
   addNewOrganization,
   getOrganizationEvents,
   getOrganizationByIdQuery,

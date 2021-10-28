@@ -7,11 +7,12 @@ const {
   error404,
   getEvent,
   deleteEvent,
+  createEvent,
   updateEvent,
   serverError,
+  addAttendence,
   organizations,
   getOrganization,
-  createEvent,
 } = require('../controllers');
 
 const {
@@ -31,6 +32,8 @@ router.get('/signout', checkIsSignedIn, signout);
 
 router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
+
+router.post('/events/:id/attendance', addAttendence);
 
 router.use(error404);
 router.use(serverError);
