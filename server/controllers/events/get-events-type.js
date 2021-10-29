@@ -15,18 +15,19 @@ module.exports = async (req, res, next) => {
     switch (type) {
       case 'top': {
         events = await getTopEventsQuery(date);
-        return res.json(events);
+        break;
       }
       case 'online': {
         events = await getOnlineEventsQuery(date);
-        return res.json(events);
+        break;
       }
       case 'exlusive': {
         events = await getExlusiveEventsQuery(date);
-        return res.json(events);
+        break;
       }
-      default: return res.status(400).json({ message: 'No events with the specified type' });
+      default: events = [];
     }
+    return events.length > 0 ? res.json(events) : res.status(400).json({ message: 'No events with the specified type' });
   } catch (err) {
     return next(err);
   }

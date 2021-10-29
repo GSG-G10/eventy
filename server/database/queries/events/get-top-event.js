@@ -5,7 +5,7 @@ module.exports = async (date) => {
   connection.query(`
     SELECT * FROM events
     WHERE expire_date >= $1 
-    ORDER BY attendance DESC ;`,
+    ORDER BY attendance DESC LIMIT 9 ;`,
   [date]);
 
   return rows;
