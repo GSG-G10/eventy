@@ -14,7 +14,7 @@ const getStepContent = (step, event, setEvent) => {
         type="name"
         name="name"
         label="Event Name"
-        variant="outlined"
+        variant="standard"
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
