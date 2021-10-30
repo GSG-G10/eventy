@@ -104,7 +104,7 @@ const getStepContent = (step, event, setEvent) => {
       <h2>Is there any age restriction for the event?</h2>
       <TextField
         fullWidth
-        label="type 0 if there is no age restriction"
+        label="Enter Age"
         name="age"
         type="number"
         defaultValue=""
@@ -150,7 +150,7 @@ const getStepContent = (step, event, setEvent) => {
         type="number"
         defaultValue= '0'
         name="price"
-        label="type 0 if there is no privce"
+        label="Enter price"
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         startAdornment={<InputAdornment position="start">$</InputAdornment>}
       />

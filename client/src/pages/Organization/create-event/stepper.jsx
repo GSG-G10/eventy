@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import axios from 'axios';
 import {
   Box, Stepper, Step, Button, StepLabel, Snackbar, Alert,
 } from '@mui/material';
@@ -35,11 +36,7 @@ function MyStepper() {
     setActiveStep(steps.length);
 
     try {
-      await fetch('/api/v1/events', {
-        method: 'POST',
-        body: JSON.stringify(event),
-        headers: { 'Content-Type': 'application/json' },
-      });
+      await axios.post('/api/v1/events', event);
     } catch (err) {
       setMessage(err.message);
     }
