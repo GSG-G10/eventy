@@ -4,11 +4,15 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/lab": "^5.0.0-alpha.53",
+    "@mui/material": "^5.0.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.23.0",
-    "daisyui": "^1.14.6",
+    "date-fns": "^2.25.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -46,8 +50,6 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17"
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

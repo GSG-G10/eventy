@@ -1,8 +1,9 @@
 import './App.css';
+import EventStepper from './pages/Organization/create-event';
 
 function App() {
   return (
-    <div className="App"></div>
+    <EventStepper />
   );
 }
 
