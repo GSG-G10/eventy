@@ -21,7 +21,6 @@
     ],
     "rules": {
         "indent": ["error", 2]
-
     },
     "settings": {
         "import/resolver": {

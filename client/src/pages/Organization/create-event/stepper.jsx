@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import {
   Box, Stepper, Step, Button, Typography, StepLabel, Snackbar, Alert,
 } from '@mui/material';
