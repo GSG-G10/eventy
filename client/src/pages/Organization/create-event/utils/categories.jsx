@@ -62,7 +62,8 @@ export default function MultipleSelectChip({ event, setEventState }) {
           id="demo-multiple-chip"
           multiple
           value={categories}
-          name="categories"
+          name="category"
+          required
           onChange={handleChange}
           input={<OutlinedInput id="select-multiple-chip" label="Categories" />}
           renderValue={(selected) => (

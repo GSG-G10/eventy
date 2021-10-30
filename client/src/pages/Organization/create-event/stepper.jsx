@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import {
-  Box, Stepper, Step, Button, Typography, StepLabel, Snackbar, Alert,
+  Box, Stepper, Step, Button, StepLabel, Snackbar, Alert,
 } from '@mui/material';
 
 import getStepContent from './utils/get-step-content';
@@ -11,10 +11,11 @@ function MyStepper() {
   const [event, setEvent] = useState({});
   const [open, setOpen] = useState(false);
   const [validate, setValidate] = useState('success');
+  // const [message, setMessage] = useState('');
   const [activeStep, setActiveStep] = useState(0);
   const myForm = useRef(null);
 
-  const steps = ['Name', 'Time', 'Location', 'Categories', 'Image', 'Age', 'Descreption', 'Details'];
+  const steps = ['Name', 'Time', 'Location', 'Categories', 'Image', 'Age', 'Descreption', 'Details', 'price'];
 
   const handleNext = () => {
     if (!myForm.current.checkValidity()) {
@@ -30,9 +31,23 @@ function MyStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setActiveStep(steps.length);
-    // console.log(event);
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setEvent({ ...event, image: reader.result });
+    };
+
+    try {
+      await fetch('/api/v1/events', {
+        method: 'POST',
+        body: JSON.stringify(event),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      // .then((res) => setMessage(res.message));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -50,9 +65,9 @@ function MyStepper() {
         })}
       </Stepper>
       {activeStep === steps.length ? (
-        <Typography sx={{ mt: 2, mb: 1 }}>
-          All steps completed - Your Event is published
-        </Typography>
+        <h1>
+          {'All steps completed - Your Event is published'}
+        </h1>
       ) : (
         <form ref={myForm}>
           {getStepContent(activeStep, event, setEvent)}
