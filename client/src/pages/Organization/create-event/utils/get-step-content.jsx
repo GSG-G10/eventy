@@ -23,6 +23,7 @@ const getStepContent = (step, event, setEvent) => {
         type="name"
         name="name"
         label="Event Name"
+        value={event.name}
         variant="standard"
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
@@ -43,6 +44,7 @@ const getStepContent = (step, event, setEvent) => {
           required
           type="date"
           name="startDate"
+          value={event.startDate}
           onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         />
         <input
@@ -50,6 +52,7 @@ const getStepContent = (step, event, setEvent) => {
           required
           type="date"
           name="expireDate"
+          value={event.expireDate}
           onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         />
         <input
@@ -57,6 +60,7 @@ const getStepContent = (step, event, setEvent) => {
           required
           type="time"
           name="duration"
+          value={event.duration}
           onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         />
       </div>
@@ -72,6 +76,7 @@ const getStepContent = (step, event, setEvent) => {
         name="location"
         label="Event Location"
         variant="outlined"
+        value={event.location}
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
@@ -107,8 +112,9 @@ const getStepContent = (step, event, setEvent) => {
         label="Enter Age"
         name="age"
         type="number"
-        defaultValue=""
+        value={event.age}
         required
+        variant="standard"
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
     </>
@@ -121,7 +127,7 @@ const getStepContent = (step, event, setEvent) => {
         label="Description"
         name="description"
         type="text"
-        defaultValue=""
+        value={event.description}
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
@@ -135,8 +141,9 @@ const getStepContent = (step, event, setEvent) => {
         label="Type here"
         name="details"
         type="text"
-        defaultValue=""
+        value={event.details}
         required
+        variant="filled"
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
     </>
@@ -151,6 +158,7 @@ const getStepContent = (step, event, setEvent) => {
         defaultValue= '0'
         name="price"
         label="Enter price"
+        value={event.price}
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         startAdornment={<InputAdornment position="start">$</InputAdornment>}
       />

@@ -61,7 +61,7 @@ export default function MultipleSelectChip({ event, setEventState }) {
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
-          value={categories}
+          value={event.category ? event.category : categories}
           name="category"
           required
           onChange={handleChange}
