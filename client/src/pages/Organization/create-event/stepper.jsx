@@ -11,7 +11,7 @@ function MyStepper() {
   const [event, setEvent] = useState({});
   const [open, setOpen] = useState(false);
   const [validate, setValidate] = useState('success');
-  // const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
   const [activeStep, setActiveStep] = useState(0);
   const myForm = useRef(null);
 
@@ -33,10 +33,6 @@ function MyStepper() {
 
   const handleSubmit = async () => {
     setActiveStep(steps.length);
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setEvent({ ...event, image: reader.result });
-    };
 
     try {
       await fetch('/api/v1/events', {
@@ -44,9 +40,8 @@ function MyStepper() {
         body: JSON.stringify(event),
         headers: { 'Content-Type': 'application/json' },
       });
-      // .then((res) => setMessage(res.message));
     } catch (err) {
-      console.error(err);
+      setMessage(err.message);
     }
   };
 
@@ -66,7 +61,7 @@ function MyStepper() {
       </Stepper>
       {activeStep === steps.length ? (
         <h1>
-          {'All steps completed - Your Event is published'}
+          {message || 'All steps completed - Your Event is published'}
         </h1>
       ) : (
         <form ref={myForm}>

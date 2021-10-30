@@ -4,6 +4,15 @@ import {
 import MultipleSelectChip from './categories';
 
 const getStepContent = (step, event, setEvent) => {
+  const handleUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    // eslint-disable-next-line func-names
+    reader.onload = function (evt) {
+      setEvent({ ...event, image: (evt.target.result) });
+    };
+    reader.readAsDataURL(file);
+  };
   switch (step) {
   case 0: return (
     <>
@@ -84,7 +93,7 @@ const getStepContent = (step, event, setEvent) => {
           type="file"
           name="image"
           required
-          onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
+          onChange={handleUpload}
         />
         <Button variant="contained" component="span">Upload</Button>
       </label>
@@ -98,6 +107,7 @@ const getStepContent = (step, event, setEvent) => {
         label="type 0 if there is no age restriction"
         name="age"
         type="number"
+        defaultValue=""
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
@@ -111,6 +121,7 @@ const getStepContent = (step, event, setEvent) => {
         label="Description"
         name="description"
         type="text"
+        defaultValue=""
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
@@ -124,6 +135,7 @@ const getStepContent = (step, event, setEvent) => {
         label="Type here"
         name="details"
         type="text"
+        defaultValue=""
         required
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
@@ -136,7 +148,7 @@ const getStepContent = (step, event, setEvent) => {
         fullWidth
         id="outlined-adornment-amount"
         type="number"
-        default= '0'
+        defaultValue= '0'
         name="price"
         label="type 0 if there is no privce"
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}

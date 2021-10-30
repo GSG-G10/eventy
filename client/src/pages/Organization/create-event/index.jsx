@@ -24,7 +24,7 @@ const EventStepper = () => {
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 26,
-    backgroundColor: 'rgba(255,255,255,.45)',
+    backgroundColor: 'rgba(255,255,255)',
     color: 'rgba(0,0,0)',
     borderRadius: '20px',
     p: 10,
