@@ -3,8 +3,10 @@ const connection = require('../../connection');
 module.exports = async (id) => {
   const { rows } = await connection
     .query(`
-   SELECT * FROM events
-   WHERE organizer_id=$1;`,
+    SELECT events.*, organization.name
+    FROM events INNER JOIN organization
+    ON events.organizer_id = organization.id
+    WHERE events.organizer_id=$1;`,
     [id]);
 
   return rows;
