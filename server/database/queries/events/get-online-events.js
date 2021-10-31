@@ -6,7 +6,7 @@ module.exports = async (date) => {
    SELECT events.*, organization.name
    FROM events INNER JOIN organization
    ON events.organizer_id = organization.id 
-   WHERE events.location = 'Online' AND events.expire_date >= $1 
+   WHERE events.location = 'online' AND events.expire_date >= $1 
    ORDER BY events.expire_date DESC; 
     `,
   [date]);
