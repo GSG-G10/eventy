@@ -89,13 +89,13 @@ function MyStepper() {
             )
             }
           </Box>
+          <Snackbar open={open} >
+            <Alert variant="filled" severity="error" sx={{ width: '100%' }}>
+              This is a required field !
+            </Alert>
+          </Snackbar>
         </form>
       )}
-      <Snackbar open={open} >
-        <Alert variant="filled" severity="error" sx={{ width: '100%' }}>
-              This is a required field !
-        </Alert>
-      </Snackbar>
     </Box>
   );
 }

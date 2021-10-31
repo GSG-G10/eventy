@@ -9,14 +9,14 @@ import './style .css';
 
 const EventStepper = () => {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(!open);
 
   const style = {
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -37,7 +37,7 @@ const EventStepper = () => {
       <Modal
         style={{ display: 'flex', width: '100%' }}
         open={open}
-        onClose={handleClose}
+        onClose={handleOpen}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >

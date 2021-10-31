@@ -1,9 +1,11 @@
 import './App.css';
-import EventStepper from './pages/Organization/create-event';
+import Organization from './pages/Organization';
 
 function App() {
   return (
-    <EventStepper />
+    <>
+      <Organization />
+    </>
   );
 }
 

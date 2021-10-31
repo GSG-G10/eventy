@@ -19,15 +19,9 @@ const MenuProps = {
 };
 
 const categoriesArray = [
-  'Art',
-  'Sport',
-  'Technology',
-  'Formal',
-  'Workshops',
-  'Music',
-  'Food',
-  'Networking',
-  'Business',
+  'Art', 'Sport', 'Technology', 'Formal',
+  'Workshops', 'Music', 'Food', 'Networking', 'Business',
+  'Literature', 'Politics', 'Social', 'Entertainment', 'Education',
 ];
 
 function getStyles(name, personName, theme) {
