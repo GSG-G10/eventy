@@ -1,8 +1,11 @@
 import './App.css';
+import Organization from './pages/Organization';
 
 function App() {
   return (
-    <div className="App"></div>
+    <>
+      <Organization />
+    </>
   );
 }
 
