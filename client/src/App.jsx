@@ -1,10 +1,9 @@
 import './App.css';
-import OrganizationCard from './components/organization-card';
 
-function App() {
+const App=()=> {
   return (
-    <OrganizationCard/>
-  );
+    <div>Hello</div>
+   );
 }
 
 export default App;
