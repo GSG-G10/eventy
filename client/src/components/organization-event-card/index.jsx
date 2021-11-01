@@ -9,7 +9,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
-const OrganizationCard = ({ isAdmin, event }) => (
+const OrganizationEventCard = ({ isAdmin, event }) => (
   <Grid flexDirection={{ sm: 'column', lg: 'row' }} bgcolor="rgba(255, 255, 255, .87)" maxWidth="50%" container >
     <Grid maxWidth={{ sm: '100%' }} item xs={5} >
       <img
@@ -53,9 +53,9 @@ const OrganizationCard = ({ isAdmin, event }) => (
     </Grid>
   </Grid>
 );
-OrganizationCard.propTypes = {
+OrganizationEventCard.propTypes = {
   isAdmin: PropTypes.bool.isRequired,
   event: PropTypes.object.isRequired,
 };
 
-export default OrganizationCard;
+export default OrganizationEventCard;

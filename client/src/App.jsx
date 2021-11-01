@@ -1,7 +1,8 @@
 import './App.css';
+import Organization from './pages/Organization';
 
 const App = () => (
-  <div>Hello</div>
+  <Organization />
 );
 
 export default App;
