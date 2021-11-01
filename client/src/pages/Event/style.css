@@ -1,0 +1,90 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.event-container {
+  width: 75%;
+  height: 80%;
+  background-color: #fff;
+  opacity: 87%;
+  color: black;
+  border-radius: 30px;
+  box-shadow: 4px 9px 9px 10px #121212;
+}
+.event-image {
+  width: 100%;
+  height: 25%;
+  overflow: hidden;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.distributer {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+}
+.info-card {
+  background-color: #000;
+  height: 70%;
+  opacity: 85%;
+  border-radius: 8px;
+  box-shadow: 2.5px 5px 4px 5px #888888;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+}
+.info-card h4 {
+  text-align: center;
+}
+.info-card a,
+.info-card a:active,
+.info-card a:visited {
+  color: #03dac5;
+}
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  opacity: 80%;
+}
+.event-details {
+  padding: 0 10px;
+}
+.event-details h2 {
+  color: #121212;
+  opacity: 87%;
+  font-size: 30px;
+  font-weight: 700;
+}
+.event-details h3 {
+  color: #187f75;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.description,
+.details h4 {
+  color: #121212;
+}
+.description,
+.details p {
+  color: #121212;
+  font-weight: 300;
+  padding-right: 18px;
+}
