@@ -1,0 +1,49 @@
+.MuiPaper-root {
+    background-color: #FFFEFE;
+    border-radius: 15px;
+}
+
+.price-container {
+    background-color: rgba(3, 218, 197, 1);
+    width: 20%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    margin-left: 80%;
+    color: white;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.css-o69gx8-MuiCardMedia-root {
+    position: relative;
+}
+
+.css-ahj2mt-MuiTypography-root {
+    font-weight: 600;
+    font-size: 0.99rem;
+    padding: 4%;
+    line-height: unset;
+    display: flex;
+    align-items: center;
+}
+
+.css-e784if-MuiTypography-root {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-anmq6p-MuiTypography-root {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+span {
+    margin-left: 7%;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
