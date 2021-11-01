@@ -10,11 +10,12 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 const OrganizationEventCard = ({ isAdmin, event }) => (
-  <Grid flexDirection={{ sm: 'column', lg: 'row' }} bgcolor="rgba(255, 255, 255, .87)" maxWidth="50%" container >
+  <Grid style={{ marginBottom: '5vh' }} flexDirection={{ sm: 'column', lg: 'row' }} bgcolor="rgba(255, 255, 255, .87)" maxWidth={{ sm: '40%', lg: '55%' }} container >
     <Grid maxWidth={{ sm: '100%' }} item xs={5} >
       <img
         style={{ maxWidth: '100%' }}
-        src={event.image}
+        // src={event.image}
+        src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg"
       />
     </Grid>
     <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
@@ -35,19 +36,19 @@ const OrganizationEventCard = ({ isAdmin, event }) => (
           <IconButton size="large" aria-label="edit" color="inherit">
             <DateRangeIcon />
           </IconButton>
-          <Typography variant="body2"> {event.start_date}</Typography>
+          <Typography variant="body1"> {event.start_date.split('T')[0]}</Typography>
         </Stack>
         <Stack direction="rows" alignItems="center">
           <IconButton size="large" aria-label="edit" color="inherit">
             <AccessTimeIcon />
           </IconButton>
-          <Typography variant="body2" >{event.duration}</Typography>
+          <Typography variant="body1" >{event.duration}</Typography>
         </Stack>
         <Stack direction="rows" alignItems="center">
           <IconButton size="large" aria-label="edit" color="inherit">
             <AddLocationIcon />
           </IconButton>
-          <Typography variant="body2" >{event.place}</Typography>
+          <Typography variant="body1" >{event.location}</Typography>
         </Stack>
       </Stack>
     </Grid>
