@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import EventStepper from './create-event';
-import OrganizationCard from '../../components/organization-event-card';
+import Cover from './cover';
+import OrganizationEventCard from '../../components/organization-event-card';
 
 const Organization = ({ organizationId }) => (
   <>
-    <OrganizationCard/>
+    <Cover />
     <EventStepper />
+    <OrganizationEventCard />
   </>
 );
 Organization.propTypes = {
