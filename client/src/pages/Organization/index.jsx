@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import EventStepper from './create-event';
+import OrganizationCard from '../../components/organization-event-card';
 
 const Organization = ({ organizationId }) => (
   <>
+    <OrganizationCard/>
     <EventStepper />
   </>
 );

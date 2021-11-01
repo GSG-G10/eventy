@@ -1,12 +1,8 @@
 import './App.css';
 import Organization from './pages/Organization';
 
-function App() {
-  return (
-    <>
-      <Organization />
-    </>
-  );
-}
+const App = () => (
+  <Organization />
+);
 
 export default App;
