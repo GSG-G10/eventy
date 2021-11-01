@@ -1,15 +1,18 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
-import DateRangeIcon from '@mui/icons-material/DateRange';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  CardActionArea,
+} from '@mui/material';
+import {
+  LocationOnIcon,
+  GroupOutlinedIcon,
+  DateRangeIcon,
+} from '@mui/icons-material';
 import './style.css';
 
-const EventsCard = ({event}) => (
+const EventsCard = ({ event }) => (
   <Card sx={{ maxWidth: 300, maxHeight: 400 }}>
     <CardActionArea>
       <div className="price-container">$20.00</div>
