@@ -50,7 +50,13 @@ const Header = () => (
             >
               log in
             </Link>
-            <Link component={RouterLink} to="/signup">
+            <Link
+              component={RouterLink}
+              to="/signup"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
               <Button
                 variant="contained"
                 className="register-button"
@@ -59,9 +65,10 @@ const Header = () => (
                   height: '31px',
                   fontWeight: '500',
                   width: '82%',
+                  textDecoration: 'none',
                 }}
               >
-              Register
+                Register
               </Button>
             </Link>
           </Stack>
