@@ -16,6 +16,7 @@ const {
   login,
   signup,
   signout,
+  getUserId,
 } = require('./auth');
 
 const addAttendence = require('./attendance');
@@ -33,8 +34,9 @@ module.exports = {
   updateEvent,
   deleteEvent,
   createEvent,
-  getEvent,
   serverError,
+  getUserId,
+  getEvent,
   error404,
   signout,
   signup,
