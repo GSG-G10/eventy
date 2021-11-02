@@ -1,29 +1,29 @@
-import './App.css';
 import { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Organization from './pages/Organization';
 import SingleEventCard from './pages/Event';
+import './App.css';
 
-function App() {
-  const [event, setEvent] = useState({ eventId: 7 });
-  const [organization, setOrganization] = useState('f');
+const App = () => {
+  const [event, setEvent] = useState('');
+  const [organization, setOrganization] = useState('');
 
   return (
     <Router>
       <Switch>
         <Route exact path={`/organizations/${organization.name}`}>
-          <Organization setEventId={setEvent} />
+          <Organization organizationId={organization.id} setEventInfo={setEvent} />
         </Route>
         <Route exact path={'/organizations'}>
-          <div>Organizations</div>
+          {/* <Organizations setOrganization={setOrganization} /> */}
+          <h1>Organizations Page</h1>
         </Route>
-        <Route exact path={'/'}>
+        <Route exact path={`/events/${event.name}`}>
           <SingleEventCard eventId={event.eventId} setOrganization={setOrganization} />
         </Route>
       </Switch>
     </Router>
-
   );
-}
+};
 
 export default App;

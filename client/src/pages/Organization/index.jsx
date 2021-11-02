@@ -1,15 +1,122 @@
+import axios from 'axios';
 import PropTypes from 'prop-types';
-import EventStepper from './create-event';
-import OrganizationCard from '../../components/organization-event-card';
+import { makeStyles } from '@mui/styles';
+import { useState, useEffect } from 'react';
+import {
+  Typography, Pagination, Skeleton, Snackbar, Alert,
+} from '@mui/material';
 
-const Organization = ({ organizationId }) => (
-  <>
-    <OrganizationCard/>
-    <EventStepper />
-  </>
-);
+import Cover from './cover';
+import EventStepper from './create-event';
+import OrganizationEventCard from './organization-event-card';
+
+const useStyles = makeStyles(() => ({
+  ul: {
+    '& .MuiPaginationItem-root': {
+      color: 'white',
+      fontWeight: 'bold',
+      marginBottom: '5vh',
+      backgroundColor: '#187F75',
+      padding: '1.3rem',
+    },
+  },
+}));
+
+const Organization = async ({ organizationId, setEventInfo }) => {
+  const classes = useStyles();
+  const [page, setPage] = useState(1);
+  const [error, setError] = useState('');
+  const [isAdmin, setAdmin] = useState(true);
+  const [userId, setUserId] = useState(0);
+  const [organization, setOrganization] = useState({});
+  const [organizationEvents, setOrganizationEvents] = useState([]);
+  const [deleted, setDeleted] = useState(false);
+
+  if (document.cookie.token) {
+    try {
+      const { data: { id } } = await axios.get('/api/v1/isAdmin');
+      setUserId(id);
+    } catch (err) {
+      setError(err.message);
+    }
+  }
+
+  useEffect(() => {
+    const organizationDataAPI = axios.get(`/api/v1/organizations/${organizationId}`);
+    const organizationEventsAPI = axios.get(`/api/v1/events?organization=${organizationId}`);
+    axios
+      .all([organizationDataAPI, organizationEventsAPI])
+      .then(axios.spread((...responses) => {
+        setOrganization(responses[0].data);
+        setOrganizationEvents(responses[1].data);
+      }))
+      .catch(() => {
+        setError('Something went wrong');
+      });
+  }, [deleted]);
+
+  return (
+    <>
+      <Cover organization={organization}/>
+      <div style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginBottom: '8vh', width: '100%',
+      }}>
+        <Typography
+          sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
+          {organization.name ? organization.name : 'Organization'} Events:
+        </Typography>
+        {isAdmin && <EventStepper />}
+      </div>
+      <div style={{
+        display: 'flex', flexDirection: 'column', alignItems: 'center',
+      }}>
+        {organizationEvents.length > 0
+          ? (organizationEvents.map((event, index) => {
+            if (index + 1 > page * 3 - 3 && index + 1 <= page * 3) {
+              return <OrganizationEventCard setDeleted={setDeleted}
+                deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
+                setEventInfo={setEventInfo} userId={userId} setAdmin={setAdmin}
+              />;
+            } return '';
+          }))
+          : (
+            <>
+              {[1, 2, 3].map((i) => <Skeleton
+                key={i}
+                style={{ marginBottom: '3vh' }}
+                variant="rectangular"
+                width={ 1000 }
+                height={300} />)}
+            </>
+          )
+        }
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+        {organizationEvents.length > 3 ? (
+          <Pagination
+            classes={{ ul: classes.ul }}
+            size="large"
+            count={Math.ceil(organizationEvents.length / 3)}
+            variant="outlined"
+            color="secondary"
+            page={page}
+            onChange={(e, value) => setPage(value)}
+          />
+        ) : (
+          ''
+        )}
+      </div>
+      {error && <Snackbar open={true} autoHideDuration={4000} >
+        <Alert severity={ 'error' } sx={{ width: '100%' }}>
+          {error}
+        </Alert>
+      </Snackbar>}
+    </>
+  );
+};
 Organization.propTypes = {
   organizationId: PropTypes.number.isRequired,
+  setEventInfo: PropTypes.func.isRequired,
 };
 
 export default Organization;
