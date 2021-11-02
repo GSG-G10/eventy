@@ -1,3 +1,12 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  max-height: 100%;
+}
 .main-container {
   width: 100vw;
   height: 100vh;
@@ -17,7 +26,7 @@
 }
 .event-image {
   width: 100%;
-  height: 25%;
+  height: 35%;
   overflow: hidden;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -30,7 +39,7 @@ img {
 .distributer {
   display: flex;
   flex-direction: row;
-  padding: 3%;
+  padding: 0 30px;
 }
 .info-card {
   background-color: #000;
@@ -40,7 +49,10 @@ img {
   box-shadow: 2.5px 5px 4px 5px #888888;
   color: #fff;
   font-size: 17px;
-  padding: 10px 30px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .info-card h4 {
   text-align: center;
@@ -55,6 +67,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  height: 50vh;
 }
 .price {
   font-size: 25px;
@@ -64,27 +77,36 @@ img {
   opacity: 80%;
 }
 .event-details {
-  padding: 0 10px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .event-details h2 {
   color: #121212;
   opacity: 87%;
-  font-size: 30px;
-  font-weight: 700;
 }
-.event-details h3 {
+.event-details .org-link {
   color: #187f75;
-  font-size: 25px;
-  font-weight: 700;
   cursor: pointer;
 }
-.description,
+.description h4,
 .details h4 {
   color: #121212;
+  padding: 10px 0;
 }
 .description,
 .details p {
   color: #121212;
   font-weight: 300;
   padding-right: 18px;
+}
+
+@media (max-width: 768px) {
+  /* .distributer {
+    flex-direction: column;
+  } */
+  /* .event-card {
+    height: auto;
+  } */
 }
