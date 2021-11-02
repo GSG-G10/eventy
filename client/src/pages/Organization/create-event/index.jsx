@@ -34,7 +34,7 @@ const EventStepper = () => {
   return (
     <>
       <Button sx={{
-        p: 2, minWidth: 300, fontSize: '1.3rem', fontWeight: 'bold', borderRadius: '10px',
+        p: 1.5, minWidth: 300, fontSize: '1.3rem', fontWeight: 'bold', borderRadius: '10px',
       }} variant="contained" style={{ backgroundColor: '#187F75' }} onClick={handleOpen}> +  Create Event</Button>
       <Modal
         style={{ display: 'flex', width: '100%' }}

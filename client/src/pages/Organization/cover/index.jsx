@@ -8,7 +8,7 @@ const Cover = ({ organization }) => {
     <div className="cover">
       {image ? <img className="img"
         src=
-          'https://thumbs.dreamstime.com/b/cosmos-beauty-deep-space-elements-image-furnished-nasa-science-fiction-art-102581846.jpg'/>
+          'https://image.freepik.com/free-vector/businessman-planning-events-deadlines-agenda_74855-6274.jpg'/>
         : <Skeleton
           style={{ marginBottom: '3vh' }}
           variant="rectangular"

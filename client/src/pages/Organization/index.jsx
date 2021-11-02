@@ -2,7 +2,9 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@mui/styles';
 import { useState, useEffect } from 'react';
-import { Typography, Pagination, Skeleton } from '@mui/material';
+import {
+  Typography, Pagination, Skeleton, Snackbar, Alert,
+} from '@mui/material';
 
 import Cover from './cover';
 import EventStepper from './create-event';
@@ -15,7 +17,7 @@ const useStyles = makeStyles(() => ({
       fontWeight: 'bold',
       marginBottom: '5vh',
       backgroundColor: '#187F75',
-      padding: '1.5rem',
+      padding: '1.3rem',
     },
   },
 }));
@@ -27,6 +29,7 @@ const Organization = ({ organizationId }) => {
   const [isAdmin, setAdmin] = useState(false);
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
+  const [deleted, setDeleted] = useState(false);
 
   useEffect(() => {
     const organizationDataAPI = axios.get(`/api/v1/organizations/${organizationId}`);
@@ -40,7 +43,7 @@ const Organization = ({ organizationId }) => {
       .catch(() => {
         setError('Something went wrong');
       });
-  }, []);
+  }, [deleted]);
 
   return (
     <>
@@ -50,7 +53,7 @@ const Organization = ({ organizationId }) => {
       }}>
         <Typography
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
-          {organization.name} Events:
+          {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
         {isAdmin && <EventStepper />}
       </div>
@@ -60,7 +63,9 @@ const Organization = ({ organizationId }) => {
         {organizationEvents.length > 0
           ? (organizationEvents.map((event, index) => {
             if (index + 1 > page * 3 - 3 && index + 1 <= page * 3) {
-              return <OrganizationEventCard key={event.id} event={event} />;
+              return <OrganizationEventCard setDeleted={setDeleted}
+                deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
+              />;
             } return '';
           }))
           : (
@@ -71,7 +76,6 @@ const Organization = ({ organizationId }) => {
                 variant="rectangular"
                 width={ 1000 }
                 height={300} />)}
-              <p>{error}</p>
             </>
           )
         }
@@ -91,6 +95,11 @@ const Organization = ({ organizationId }) => {
           ''
         )}
       </div>
+      {error && <Snackbar open={true} autoHideDuration={4000} >
+        <Alert severity={ 'error' } sx={{ width: '100%' }}>
+          {error}
+        </Alert>
+      </Snackbar>}
     </>
   );
 };
