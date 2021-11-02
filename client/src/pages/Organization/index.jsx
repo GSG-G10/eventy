@@ -22,14 +22,24 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Organization = ({ organizationId }) => {
+const Organization = async ({ organizationId, setEventInfo }) => {
   const classes = useStyles();
   const [page, setPage] = useState(1);
   const [error, setError] = useState('');
-  const [isAdmin, setAdmin] = useState(false);
+  const [isAdmin, setAdmin] = useState(true);
+  const [userId, setUserId] = useState(0);
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
   const [deleted, setDeleted] = useState(false);
+
+  if (document.cookie.token) {
+    try {
+      const { data: { id } } = await axios.get('/api/v1/isAdmin');
+      setUserId(id);
+    } catch (err) {
+      setError(err.message);
+    }
+  }
 
   useEffect(() => {
     const organizationDataAPI = axios.get(`/api/v1/organizations/${organizationId}`);
@@ -65,6 +75,7 @@ const Organization = ({ organizationId }) => {
             if (index + 1 > page * 3 - 3 && index + 1 <= page * 3) {
               return <OrganizationEventCard setDeleted={setDeleted}
                 deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
+                setEventInfo={setEventInfo} userId={userId} setAdmin={setAdmin}
               />;
             } return '';
           }))
@@ -105,6 +116,7 @@ const Organization = ({ organizationId }) => {
 };
 Organization.propTypes = {
   organizationId: PropTypes.number.isRequired,
+  setEventInfo: PropTypes.func.isRequired,
 };
 
 export default Organization;

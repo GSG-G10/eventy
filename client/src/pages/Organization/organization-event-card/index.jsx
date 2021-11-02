@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import {
   Typography, Grid, IconButton, Stack, Modal, Box, Alert, AlertTitle, Button, Snackbar,
 } from '@mui/material';
 
+import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -42,13 +42,16 @@ const style = {
 };
 
 const OrganizationEventCard = ({
-  isAdmin, event, deleted, setDeleted,
+  isAdmin, setAdmin, event, deleted, setDeleted, setEventInfo, userId,
 }) => {
   const [id, setId] = useState(0);
   const [message, setMessage] = useState('');
   const [statusCode, setStatusCode] = useState(0);
   const [open, setOpen] = useState(false);
-  const history = useHistory();
+
+  if (userId === Number(event.organizer_id)) {
+    setAdmin(true);
+  }
 
   const handleOpen = () => setOpen(!open);
 
@@ -66,7 +69,7 @@ const OrganizationEventCard = ({
 
   const handleClick = (e) => {
     const eventId = e.target.value;
-    history.push(`/events/${eventId}`);
+    setEventInfo({ eventId, name: event.name });
   };
   return (
     <>
@@ -77,8 +80,8 @@ const OrganizationEventCard = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style.box}>
-          <Alert style={style.alert} variant="filled" severity="warning">
-            <AlertTitle>Warning</AlertTitle>
+          <Alert style={style.alert} variant="filled" severity="info">
+            <AlertTitle>Attention</AlertTitle>
             Are you sure you want to  <strong>Delete This Event ? </strong>
           </Alert>
           <Button style={style.button} variant="contained" color="error" onClick={handleDelete}>
@@ -102,14 +105,16 @@ const OrganizationEventCard = ({
         </Grid>
         <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
           <Stack direction="row" spacing={2} mt={4} alignItems="center" justifyContent="space-between" >
-            <Button
-              style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
-              variant="outlined"
-              value={event.id}
-              onClick={handleClick}
-            >
-              {event.name}
-            </Button>
+            <Link to={`/events/${event.name}`}>
+              <Button
+                style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
+                variant="outlined"
+                value={event.id}
+                onClick={handleClick}
+              >
+                {event.name}
+              </Button>
+            </Link>
             {isAdmin && <Stack direction="row" spacing={2}>
               <IconButton size="large" aria-label="edit" color="inherit">
                 <EditRoundedIcon />
@@ -145,7 +150,7 @@ const OrganizationEventCard = ({
           </Stack>
         </Grid>
       </Grid>
-      {message && <Snackbar open={true} autoHideDuration={4000} >
+      {message && <Snackbar open={true} >
         <Alert severity={statusCode === 400 ? 'error' : 'success'} sx={{ width: '100%' }}>
           {message}
         </Alert>
@@ -158,6 +163,9 @@ OrganizationEventCard.propTypes = {
   event: PropTypes.object.isRequired,
   deleted: PropTypes.bool.isRequired,
   setDeleted: PropTypes.func.isRequired,
+  setEventInfo: PropTypes.func.isRequired,
+  userId: PropTypes.number.isRequired,
+  setAdmin: PropTypes.func.isRequired,
 };
 
 export default OrganizationEventCard;
