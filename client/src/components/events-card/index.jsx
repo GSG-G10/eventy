@@ -5,11 +5,10 @@ import {
   Typography,
   CardActionArea,
 } from '@mui/material';
-import {
-  LocationOnIcon,
-  GroupOutlinedIcon,
-  DateRangeIcon,
-} from '@mui/icons-material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import PropTypes from 'prop-types';
 import './style.css';
 
 const EventsCard = ({ event }) => (
@@ -19,6 +18,7 @@ const EventsCard = ({ event }) => (
       <CardMedia
         component="img"
         height="140"
+        width='200'
         image={event.image}
         alt="green iguana"
       ></CardMedia>
@@ -45,5 +45,8 @@ const EventsCard = ({ event }) => (
     </CardActionArea>
   </Card>
 );
+EventsCard.propTypes = {
+  event: PropTypes.object.isRequired,
+};
 
 export default EventsCard;
