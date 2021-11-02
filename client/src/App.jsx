@@ -1,8 +1,8 @@
 import './App.css';
-import Organization from './pages/Organization';
+import Organizations from './pages/Organizations';
 
 const App = () => (
-  <Organization />
+  <Organizations />
 );
 
 export default App;

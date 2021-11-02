@@ -1,17 +1,17 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import EventStepper from './create-event';
 import Cover from './cover';
 import OrganizationEventCard from '../../components/organization-event-card';
 
-const Organization = ({ organizationId }) => (
+const Organization = () => (
   <>
     <Cover />
     <EventStepper />
     <OrganizationEventCard />
   </>
 );
-Organization.propTypes = {
-  organizationId: PropTypes.number.isRequired,
-};
+// Organization.propTypes = {
+//   organizationId: PropTypes.number.isRequired,
+// };
 
 export default Organization;
