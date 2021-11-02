@@ -4,7 +4,9 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const InfoCard = ({ eventInfo }) => {
-  const { start_date: startDate, expire_date: endDate, location, duration } = eventInfo;
+  const {
+    start_date: startDate, expire_date: endDate, location, duration,
+  } = eventInfo;
 
   return <div className="info-card">
     <h4 >
