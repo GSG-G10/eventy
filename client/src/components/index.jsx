@@ -1,3 +1,4 @@
 import Header from './Header';
+import EventsCard from './events-card';
 
-export default Header;
+export default { Header, EventsCard };
