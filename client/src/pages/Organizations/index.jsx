@@ -89,15 +89,16 @@ const Organizations = () => {
       }}>
 
         {organizations?.length > 0
-          ? organizations.map((organization, index) => {
-            if (index + 1 > page * 3 - 3 && index + 1 <= page * 3) {
-              return <OrganizationCard
-                key={organization.id}
-                organization={organization}
-              />;
-            }
-            return '';
-          }) : (
+          ? organizations
+            .map((organizationData, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
+              ? (
+                <OrganizationCard
+                  key={organizationData.id}
+                  organizationData={organizationData}
+                />)
+              : ''
+            ))
+          : (
             <>
               {[1, 2, 3].map((i) => <Skeleton
                 key={i}

@@ -33,7 +33,9 @@ const EventStepper = () => {
 
   return (
     <>
-      <Button onClick={handleOpen}>Create Event</Button>
+      <Button sx={{
+        p: 1.5, minWidth: 300, fontSize: '1.3rem', fontWeight: 'bold', borderRadius: '10px',
+      }} variant="contained" style={{ backgroundColor: '#187F75' }} onClick={handleOpen}> +  Create Event</Button>
       <Modal
         style={{ display: 'flex', width: '100%' }}
         open={open}
@@ -42,7 +44,7 @@ const EventStepper = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography variant='h3'>Create Your Event </Typography>
+          <Typography variant='h3'> Create Your Event </Typography>
           <MyStepper />
         </Box>
       </Modal>
