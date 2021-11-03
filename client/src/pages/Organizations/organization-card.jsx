@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {
   Grid, Button,
 } from '@mui/material';
@@ -22,18 +23,20 @@ const OrganizationCard = ({ organization }) => (
         display: 'flex', flexDirection: 'column', justufyContent: 'space-between',
       }}
     >
-      <Button
-        variant="outlined"
-        sx={{
-          mb: 2,
-          color: '#187F75',
-          fontSize: '1.3rem',
-          fontWeight: 'bold',
-          maxWidth: { sm: '100%', lg: '80%' },
-        }}
-      >
-        {organization.name}
-      </Button>
+      <Link to={`/organizations/${organization.name}`}>
+        <Button
+          variant="outlined"
+          sx={{
+            mb: 2,
+            color: '#187F75',
+            fontSize: '1.3rem',
+            fontWeight: 'bold',
+            maxWidth: { sm: '100%', lg: '80%' },
+          }}
+        >
+          {organization.name}
+        </Button>
+      </Link>
       <h3 style={{ fontSize: '1.3rem' }}>
         {organization.description}
       </h3>
