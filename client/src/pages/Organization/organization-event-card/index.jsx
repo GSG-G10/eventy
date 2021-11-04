@@ -106,7 +106,7 @@ const OrganizationEventCard = ({
           />
         </Grid>
         <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
-          <Stack direction="row" spacing={2} mt={4} alignItems="center" justifyContent="space-between" >
+          <Stack flexDirection="row" spacing={1} mt={4} alignItems="center" justifyContent="space-between" >
             <Button
               style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
               variant="outlined"
@@ -115,7 +115,7 @@ const OrganizationEventCard = ({
             >
               {event.name}
             </Button>
-            {isAdmin && <Stack direction="row" spacing={2}>
+            {isAdmin && <Stack direction= 'row' alignItems= 'baseline' spacing={1}>
               <IconButton size="large" aria-label="edit" color="inherit">
                 <EditRoundedIcon />
               </IconButton>
@@ -129,19 +129,19 @@ const OrganizationEventCard = ({
             }
           </Stack>
           <Stack direction="column" mt={2} >
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <DateRangeIcon />
               </IconButton>
               <Typography variant="body1"> {event.start_date.split('T')[0]}</Typography>
             </Stack>
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <AccessTimeIcon />
               </IconButton>
               <Typography variant="body1" >{event.duration}</Typography>
             </Stack>
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <AddLocationIcon />
               </IconButton>

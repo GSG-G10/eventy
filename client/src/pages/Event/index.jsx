@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
+import { Skeleton, Button, Stack } from '@mui/material';
 import axios from 'axios';
 import InfoCard from './InfoCard';
 import './style.css';
@@ -28,10 +26,10 @@ const SingleEventCard = () => {
     width: 300,
     backgroundColor: '#03DAC5',
     color: '#000',
-    opacity: '68%',
+    opacity: '70%',
     borderRadius: 11,
-    fontSize: '20px',
-    fontWeight: '500',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
   };
   return <section className='main-container'>
     <div className="event-container">
@@ -47,11 +45,13 @@ const SingleEventCard = () => {
                 <h2>
                   {eventInfo.name}
                 </h2>
-                <button
-                  onClick={() => history.push(`/organization/${eventInfo.organizer_id}/${eventInfo.organizer}`)}>
+                <Button variant="text" style={{
+                  maxWidth: '13%', color: '#03DAC5', fontSize: '1rem', fontWeight: 'bold',
+                }}
+                onClick={() => history.push(`/organization/${eventInfo.organizer_id}/${eventInfo.organizer}`)}>
                   {eventInfo.organizer}
-                </button>
-                <div className="description">
+                </Button>
+                <div className="descriptionEvent">
                   <h4>
                 Description
                   </h4>
@@ -68,7 +68,7 @@ const SingleEventCard = () => {
               </div>
               <div className="event-card">
                 <p className='price'>
-                  {eventInfo.price === 0 ? 'Free' : eventInfo.price}
+                  {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
                 </p>
                 <Button variant="contained" sx={butnStyle}>GET TICKET</Button>
                 <InfoCard eventInfo={eventInfo} />

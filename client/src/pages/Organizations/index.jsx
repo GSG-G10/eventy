@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
 const styles = {
   container: {
     width: '100%',
-    backgroundColor: 'rgba(250,250,0,.1)',
+    backgroundColor: 'rgba(250,250,250,.8)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'space-around',
@@ -45,7 +45,7 @@ const styles = {
     borderRadius: '20px',
     dropShadow: '75%',
     boxShadow: '4px 4px 4px 4px  rgba(250,250,250,.3)',
-    fontSize: '1.8rem',
+    fontSize: '1.5rem',
     padding: '1rem',
 
   },
@@ -54,6 +54,7 @@ const styles = {
 const Organizations = () => {
   const classes = useStyles();
   const [organizations, setOrganizations] = useState([]);
+  const [filter, setFiltered] = useState('');
   const [search, setSearch] = useState('');
   const [error, setError] = useState('');
   const [page, setPage] = useState(1);
@@ -62,17 +63,27 @@ const Organizations = () => {
     try {
       const { data } = await axios.get('./api/v1/organizations');
       setOrganizations(data);
+      setFiltered(data);
     } catch (err) {
       setError(err.message);
     }
   }, []);
+
+  useEffect(() => {
+    const filtered = organizations.filter(
+      (org) => org.name.toLowerCase().includes(search.toLowerCase()),
+    );
+    setFiltered(filtered.length > 0 ? filtered : organizations);
+  }, [search]);
 
   return (
     <>
       <div style={styles.container}>
         <img
           className="img"
-          style={{ height: '20vh', position: 'relative' }}
+          style={{
+            position: 'relative', objectFit: 'cover',
+          }}
           src='https://www.seekpng.com/png/full/291-2917400_on-the-periphery-of-the-periphery-household-archaeology.png'
         />
         <div style={styles.searchContainer}>
@@ -88,8 +99,8 @@ const Organizations = () => {
         display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8vh', marginTop: '10vh', width: '100%',
       }}>
 
-        {organizations?.length > 0
-          ? organizations
+        {organizations.length > 0
+          ? filter
             .map((organizationData, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
               ? (
                 <OrganizationCard
@@ -108,11 +119,11 @@ const Organizations = () => {
                 height={300} />)}
             </>
           )}
-        {organizations.length > 3 ? (
+        {filter.length > 3 ? (
           <Pagination
             classes={{ ul: classes.ul }}
             size="large"
-            count={Math.ceil(organizations.length / 3)}
+            count={Math.ceil(filter.length / 3)}
             variant="outlined"
             color="secondary"
             page={page}
