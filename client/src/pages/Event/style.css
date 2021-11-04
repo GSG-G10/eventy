@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.event-container {
+  width: 55%;
+  height: 75%;
+  background-color: #fff;
+  opacity: 87%;
+  color: black;
+  border-radius: 30px;
+  box-shadow: 4px 9px 9px 10px #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.event-image {
+  width: 100%;
+  height: 35%; 
+  object-fit: cover;
+  overflow: hidden;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.distributer {
+  display: flex;
+  justify-content:space-around;
+  width: 90%;
+  height: 75%;
+}
+.info-card {
+  background-color: #000;
+  height: 70%;
+  opacity: 85%;
+  border-radius: 8px;
+  box-shadow: 2.5px 5px 4px 5px #888888;
+  color: #fff;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.info-card h4 {
+  text-align: center;
+}
+.info-card a,
+.info-card a:active,
+.info-card a:visited {
+  color: #03dac5;
+}
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+}
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 80%;
+}
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+}
+.event-details h2 {
+  color: #121212;
+  opacity: 87%;
+}
+.event-details .org-link {
+  color: #187f75;
+  cursor: pointer;
+}
+.description h4,
+.details h4 {
+  color: #121212;
+  opacity: 87%;
+}
+.descriptionEvent,
+.details p {
+  color: #121212;
+  font-weight: 300;
+  width: 75%;
+}

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   Card,
   CardContent,
@@ -49,4 +50,7 @@ EventsCard.propTypes = {
   event: PropTypes.object.isRequired,
 };
 
+EventsCard.propTypes = {
+  event: PropTypes.object.isRequired,
+};
 export default EventsCard;
