@@ -20,6 +20,9 @@ function App() {
         <Route exact path={'/events'}>
           <EventsPage />
         </Route>
+        <Route exact path={'/events'}>
+          <EventsPage />
+        </Route>
       </Switch>
     </Router>
 
