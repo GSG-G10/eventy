@@ -25,6 +25,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 const EventsPage = () => {
+  // States
   const classes = useStyles();
   const [events, setEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -38,7 +39,9 @@ const EventsPage = () => {
   const [errorMessage, setErrorMessage] = useState('There is no events with this filter');
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState();
+  // Handle Change
   const handleSearchChange = (e) => setSearch(e.target.value);
+
   const handleOpen = () => {
     setOpen(true);
     setFilters({
@@ -48,6 +51,18 @@ const EventsPage = () => {
     });
   };
 
+  // handling filters
+  const submitFilter = () => {
+    setIsLoaded(false);
+    const newData = events.filter((ele) => (ele.price <= filters.price
+      && filters.category === 'all'
+      ? true : ele.category.includes(filters.category)));
+    setIsLoaded(true);
+    setPage(1);
+    setFilteredEvents(newData);
+    setOpen(false);
+  };
+  // Fetch Data from server
   useEffect(async () => {
     try {
       const { data } = await axios.get('/api/v1/events');
@@ -63,6 +78,7 @@ const EventsPage = () => {
     // eslint-disable-next-line no-console
     return () => console.log('done');
   }, []);
+  // search useEffect
   useEffect(() => {
     const filtered = events.filter(
       (org) => org.name.toLowerCase().includes(search.toLowerCase()),
@@ -70,17 +86,7 @@ const EventsPage = () => {
     setFilteredEvents(filtered.length > 0 ? filtered : events);
     setPage(1);
   }, [search]);
-
-  const submitFilter = () => {
-    setIsLoaded(false);
-    const newData = events.filter((ele) => (ele.price <= filters.price
-    && filters.category === 'all'
-      ? true : ele.category.includes(filters.category)));
-    setIsLoaded(true);
-    setPage(1);
-    setFilteredEvents(newData);
-    setOpen(false);
-  };
+  // style for button
   const btnStyle = {
     height: '70%',
     fontSize: '15px',
@@ -89,9 +95,11 @@ const EventsPage = () => {
   };
   return <>
     <section className="filter-container">
+      {/* {Header Image} */}
       <div className="header-img">
         <img src="https://bevents.co/wp-content/uploads/2020/02/events.jpg" alt="event" />
       </div>
+      {/* {Filter Nav} */}
       <Paper
         component="form"
         sx={{
@@ -107,6 +115,7 @@ const EventsPage = () => {
           </IconButton>
         </div>
       </Paper>
+      {/* {Filter Modal} */}
       <FilterModal
         open={open}
         setOpen={setOpen}
@@ -116,7 +125,7 @@ const EventsPage = () => {
     </section>
     <section className='events-section'>
       <div className="events-container">
-        {
+        { // Present Events
           // eslint-disable-next-line no-nested-ternary
           isLoaded
             ? events.length > 0
@@ -128,7 +137,7 @@ const EventsPage = () => {
         }
       </div>
       <div>
-
+        {/* Pagination */}
         {events.length > 9 ? (
           <Pagination
             classes={{ ul: classes.ul }}
