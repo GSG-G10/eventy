@@ -14,7 +14,7 @@ import './style.css';
 const EventsCard = ({ event }) => (
   <Card sx={{ maxWidth: 300, maxHeight: 400 }}>
     <CardActionArea>
-      <div className="price-container">$20.00</div>
+      <div className="price-container">{`${event.price}$`}</div>
       <CardMedia
         component="img"
         height="140"
