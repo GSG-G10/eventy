@@ -8,25 +8,30 @@ body {
   max-height: 100%;
 }
 .main-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 .event-container {
-  width: 75%;
-  height: 80%;
+  width: 55%;
+  height: 75%;
   background-color: #fff;
   opacity: 87%;
   color: black;
   border-radius: 30px;
   box-shadow: 4px 9px 9px 10px #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .event-image {
   width: 100%;
-  height: 35%;
+  height: 35%; 
+  object-fit: cover;
   overflow: hidden;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -38,8 +43,9 @@ img {
 }
 .distributer {
   display: flex;
-  flex-direction: row;
-  padding: 0 30px;
+  justify-content:space-around;
+  width: 90%;
+  height: 75%;
 }
 .info-card {
   background-color: #000;
@@ -49,10 +55,10 @@ img {
   box-shadow: 2.5px 5px 4px 5px #888888;
   color: #fff;
   font-size: 17px;
-  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .info-card h4 {
   text-align: center;
@@ -65,22 +71,20 @@ img {
 .event-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  height: 50vh;
+  justify-content: space-around;
+  height: 90%;
 }
 .price {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  margin: 0;
   opacity: 80%;
 }
 .event-details {
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  height: 90%;
 }
 .event-details h2 {
   color: #121212;
@@ -93,20 +97,11 @@ img {
 .description h4,
 .details h4 {
   color: #121212;
-  padding: 10px 0;
+  opacity: 87%;
 }
-.description,
+.descriptionEvent,
 .details p {
   color: #121212;
   font-weight: 300;
-  padding-right: 18px;
-}
-
-@media (max-width: 768px) {
-  /* .distributer {
-    flex-direction: column;
-  } */
-  /* .event-card {
-    height: auto;
-  } */
+  width: 75%;
 }

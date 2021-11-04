@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
+import { useHistory, useParams } from 'react-router-dom';
+import { Skeleton, Button, Stack } from '@mui/material';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import InfoCard from './InfoCard';
 import './style.css';
 
-const SingleEventCard = ({ eventId, setOrganization }) => {
-  const [eventInfo, setEventInfo] = useState(null);
+const SingleEventCard = () => {
+  const [eventInfo, setEventInfo] = useState({});
   const [isLoaded, setIsLoded] = useState(false);
+
+  const history = useHistory();
+  const { eventId } = useParams();
 
   useEffect(async () => {
     if (eventId > 0) {
@@ -26,14 +26,13 @@ const SingleEventCard = ({ eventId, setOrganization }) => {
     width: 300,
     backgroundColor: '#03DAC5',
     color: '#000',
-    opacity: '68%',
+    opacity: '70%',
     borderRadius: 11,
-    fontSize: '20px',
-    fontWeight: '500',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
   };
   return <section className='main-container'>
     <div className="event-container">
-
       {
         isLoaded // loader
           ? <>
@@ -46,17 +45,13 @@ const SingleEventCard = ({ eventId, setOrganization }) => {
                 <h2>
                   {eventInfo.name}
                 </h2>
-                <h3
-                  onClick={() => setOrganization({
-                    name: eventInfo.organizer,
-                    id: eventInfo.organizer_id,
-                  })}
-                >
-                  <Link to={`/organizations/${eventInfo.organizer}`} className='org-link'>
-                    {eventInfo.organizer}
-                  </Link>
-                </h3>
-                <div className="description">
+                <Button variant="text" style={{
+                  maxWidth: '13%', color: '#03DAC5', fontSize: '1rem', fontWeight: 'bold',
+                }}
+                onClick={() => history.push(`/organization/${eventInfo.organizer_id}/${eventInfo.organizer}`)}>
+                  {eventInfo.organizer}
+                </Button>
+                <div className="descriptionEvent">
                   <h4>
                 Description
                   </h4>
@@ -73,7 +68,7 @@ const SingleEventCard = ({ eventId, setOrganization }) => {
               </div>
               <div className="event-card">
                 <p className='price'>
-                  {eventInfo.price === 0 ? 'Free' : eventInfo.price}
+                  {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
                 </p>
                 <Button variant="contained" sx={butnStyle}>GET TICKET</Button>
                 <InfoCard eventInfo={eventInfo} />
@@ -88,10 +83,6 @@ const SingleEventCard = ({ eventId, setOrganization }) => {
       }
     </div>
   </section>;
-};
-SingleEventCard.propTypes = {
-  eventId: PropTypes.number.isRequired,
-  setOrganization: PropTypes.func.isRequired,
 };
 
 export default SingleEventCard;

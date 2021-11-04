@@ -1,6 +1,6 @@
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@mui/styles';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
   Typography, Pagination, Skeleton, Snackbar, Alert,
@@ -22,24 +22,28 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Organization = async ({ organizationId, setEventInfo }) => {
+const Organization = () => {
   const classes = useStyles();
   const [page, setPage] = useState(1);
   const [error, setError] = useState('');
-  const [isAdmin, setAdmin] = useState(true);
+  const [isAdmin, setAdmin] = useState(false);
   const [userId, setUserId] = useState(0);
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
   const [deleted, setDeleted] = useState(false);
 
-  if (document.cookie.token) {
-    try {
-      const { data: { id } } = await axios.get('/api/v1/isAdmin');
-      setUserId(id);
-    } catch (err) {
-      setError(err.message);
+  const { organizationId } = useParams();
+
+  useEffect(async () => {
+    if (document.cookie.token) {
+      try {
+        const { data: { id } } = axios.get('/api/v1/isAdmin');
+        setUserId(id);
+      } catch (err) {
+        setError(err.message);
+      }
     }
-  }
+  }, []);
 
   useEffect(() => {
     const organizationDataAPI = axios.get(`/api/v1/organizations/${organizationId}`);
@@ -53,7 +57,7 @@ const Organization = async ({ organizationId, setEventInfo }) => {
       .catch(() => {
         setError('Something went wrong');
       });
-  }, [deleted]);
+  }, []);
 
   return (
     <>
@@ -70,15 +74,16 @@ const Organization = async ({ organizationId, setEventInfo }) => {
       <div style={{
         display: 'flex', flexDirection: 'column', alignItems: 'center',
       }}>
-        {organizationEvents.length > 0
-          ? (organizationEvents.map((event, index) => {
-            if (index + 1 > page * 3 - 3 && index + 1 <= page * 3) {
-              return <OrganizationEventCard setDeleted={setDeleted}
-                deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
-                setEventInfo={setEventInfo} userId={userId} setAdmin={setAdmin}
-              />;
-            } return '';
-          }))
+        {organizationEvents?.length > 0
+          ? (organizationEvents
+            .map((event, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
+              ? (
+                <OrganizationEventCard setDeleted={setDeleted}
+                  deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
+                  userId={userId} setAdmin={setAdmin}
+                />)
+              : ''
+            )))
           : (
             <>
               {[1, 2, 3].map((i) => <Skeleton
@@ -113,10 +118,6 @@ const Organization = async ({ organizationId, setEventInfo }) => {
       </Snackbar>}
     </>
   );
-};
-Organization.propTypes = {
-  organizationId: PropTypes.number.isRequired,
-  setEventInfo: PropTypes.func.isRequired,
 };
 
 export default Organization;

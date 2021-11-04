@@ -5,7 +5,7 @@ import {
   Typography, Grid, IconButton, Stack, Modal, Box, Alert, AlertTitle, Button, Snackbar,
 } from '@mui/material';
 
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -42,12 +42,14 @@ const style = {
 };
 
 const OrganizationEventCard = ({
-  isAdmin, setAdmin, event, deleted, setDeleted, setEventInfo, userId,
+  isAdmin, setAdmin, event, deleted, setDeleted, userId,
 }) => {
   const [id, setId] = useState(0);
   const [message, setMessage] = useState('');
   const [statusCode, setStatusCode] = useState(0);
   const [open, setOpen] = useState(false);
+
+  const history = useHistory();
 
   if (userId === Number(event.organizer_id)) {
     setAdmin(true);
@@ -69,7 +71,7 @@ const OrganizationEventCard = ({
 
   const handleClick = (e) => {
     const eventId = e.target.value;
-    setEventInfo({ eventId, name: event.name });
+    history.push(`/event/${eventId}/${event.name}`);
   };
   return (
     <>
@@ -104,18 +106,16 @@ const OrganizationEventCard = ({
           />
         </Grid>
         <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
-          <Stack direction="row" spacing={2} mt={4} alignItems="center" justifyContent="space-between" >
-            <Link to={`/events/${event.name}`}>
-              <Button
-                style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
-                variant="outlined"
-                value={event.id}
-                onClick={handleClick}
-              >
-                {event.name}
-              </Button>
-            </Link>
-            {isAdmin && <Stack direction="row" spacing={2}>
+          <Stack flexDirection="row" spacing={1} mt={4} alignItems="center" justifyContent="space-between" >
+            <Button
+              style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
+              variant="outlined"
+              value={event.id}
+              onClick={handleClick}
+            >
+              {event.name}
+            </Button>
+            {isAdmin && <Stack direction= 'row' alignItems= 'baseline' spacing={1}>
               <IconButton size="large" aria-label="edit" color="inherit">
                 <EditRoundedIcon />
               </IconButton>
@@ -129,19 +129,19 @@ const OrganizationEventCard = ({
             }
           </Stack>
           <Stack direction="column" mt={2} >
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <DateRangeIcon />
               </IconButton>
               <Typography variant="body1"> {event.start_date.split('T')[0]}</Typography>
             </Stack>
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <AccessTimeIcon />
               </IconButton>
               <Typography variant="body1" >{event.duration}</Typography>
             </Stack>
-            <Stack direction="rows" alignItems="center">
+            <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <AddLocationIcon />
               </IconButton>
@@ -163,7 +163,6 @@ OrganizationEventCard.propTypes = {
   event: PropTypes.object.isRequired,
   deleted: PropTypes.bool.isRequired,
   setDeleted: PropTypes.func.isRequired,
-  setEventInfo: PropTypes.func.isRequired,
   userId: PropTypes.number.isRequired,
   setAdmin: PropTypes.func.isRequired,
 };
