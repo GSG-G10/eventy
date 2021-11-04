@@ -23,13 +23,8 @@
   },
   "scripts": {
     "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-<<<<<<< HEAD
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
-    "test": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
-=======
     "build": "react-scripts build",
     "test": "react-scripts test",
->>>>>>> 7272518790c91ae01c0887f95a12167f814c6bab
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
