@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Organization from './pages/Organization';
 import Organizations from './pages/Organizations';
 import SingleEventCard from './pages/Event';
+import Login from './pages/Register/Login';
 import EventsPage from './pages/Events';
 
 const App = () => (
@@ -22,6 +23,9 @@ const App = () => (
       </Route>
       <Route exact path= '/events' >
         <EventsPage />
+      </Route>
+      <Route exact path={'/register'}>
+        <Login />
       </Route>
     </Switch>
   </Router>
