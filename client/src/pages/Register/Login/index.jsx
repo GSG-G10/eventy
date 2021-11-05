@@ -15,7 +15,7 @@ const Login = () => {
     try {
       if (value.email && value.password) {
         if (value.password.length >= 7) {
-          const { data } = await axios.post('api/v1/iloguyiml', value);
+          const { data } = await axios.post('api/v1/login', value);
           const { organization } = data;
           return history.push(`/organization/${organization.id}/${organization.name}`);
         }
@@ -25,9 +25,6 @@ const Login = () => {
     } catch (error) {
       if (error.response.status === 500) {
         return history.push('/error500');
-      }
-      if (error.response.status === 404) {
-        return history.push('/error404');
       }
       return setErrorMessage(error.response.data.error.message);
     }
