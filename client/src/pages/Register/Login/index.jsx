@@ -15,23 +15,26 @@ const Login = () => {
     try {
       if (value.email && value.password) {
         if (value.password.length >= 7) {
-          await axios.post('api/v1/login', value);
-          history.push('/');
-        } else {
-          setErrorMessage('Password length must be more than 7 characters');
+          const { data } = await axios.post('api/v1/iloguyiml', value);
+          const { organization } = data;
+          return history.push(`/organization/${organization.id}/${organization.name}`);
         }
-      } else {
-        setErrorMessage('Email and Password field must be filled');
+        return setErrorMessage('Password length must be more than 7 characters');
       }
+      return setErrorMessage('Email and Password field must be filled');
     } catch (error) {
-      setErrorMessage(error.response.data.error.message);
+      if (error.response.status === 500) {
+        return history.push('/error500');
+      }
+      if (error.response.status === 404) {
+        return history.push('/error404');
+      }
+      return setErrorMessage(error.response.data.error.message);
     }
   };
   const handleInputChange = (e) => {
     setErrorMessage('');
-    const newValue = e.target.value;
-    const inputName = e.target.name;
-    setValue((prevState) => ({ ...prevState, [inputName]: newValue }));
+    setValue((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
   };
 
   const inputStyle = {

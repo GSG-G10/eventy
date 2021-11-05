@@ -20,7 +20,7 @@ const App = () => (
       <Route exact path={'/event/:eventId/:name'}>
         <SingleEventCard />
       </Route>
-      <Route exact path={'/login'}>
+      <Route exact path={'/register'}>
         <Login />
       </Route>
     </Switch>
