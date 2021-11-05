@@ -26,7 +26,7 @@ const Organization = () => {
   const classes = useStyles();
   const [page, setPage] = useState(1);
   const [error, setError] = useState('');
-  const [isAdmin, setAdmin] = useState(true);
+  const [isAdmin, setAdmin] = useState(false);
   const [userId, setUserId] = useState(0);
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);

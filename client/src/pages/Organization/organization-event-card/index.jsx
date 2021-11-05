@@ -12,6 +12,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
+import { maxHeight } from '@mui/system';
 import EditEvent from '../edit-event';
 
 const style = {
@@ -131,8 +132,10 @@ const OrganizationEventCard = ({
       >
         <Grid maxWidth={{ sm: '100%' }} item xs={5} >
           <img
-            style={{ maxWidth: '100%' }}
-            src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg"
+            style={{ maxWidth: '100%', maxHeight: '29vh' }}
+            src={event.image.includes('dummyimage')
+              ? 'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg'
+              : event.image}
           />
         </Grid>
         <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
