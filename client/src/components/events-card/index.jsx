@@ -6,20 +6,20 @@ import {
   Typography,
   CardActionArea,
 } from '@mui/material';
-import {
-  LocationOnIcon,
-  GroupOutlinedIcon,
-  DateRangeIcon,
-} from '@mui/icons-material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import PropTypes from 'prop-types';
 import './style.css';
 
 const EventsCard = ({ event }) => (
   <Card sx={{ maxWidth: 300, maxHeight: 400 }}>
     <CardActionArea>
-      <div className="price-container">$20.00</div>
+      <div className="price-container">{`${event.price}$`}</div>
       <CardMedia
         component="img"
         height="140"
+        width='200'
         image={event.image}
         alt="green iguana"
       ></CardMedia>
@@ -46,6 +46,9 @@ const EventsCard = ({ event }) => (
     </CardActionArea>
   </Card>
 );
+EventsCard.propTypes = {
+  event: PropTypes.object.isRequired,
+};
 
 EventsCard.propTypes = {
   event: PropTypes.object.isRequired,

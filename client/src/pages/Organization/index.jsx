@@ -30,7 +30,7 @@ const Organization = () => {
   const [userId, setUserId] = useState(0);
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
-  const [deleted, setDeleted] = useState(false);
+  const [sendRequest, setSendRequest] = useState(false);
 
   const { organizationId } = useParams();
 
@@ -57,7 +57,7 @@ const Organization = () => {
       .catch(() => {
         setError('Something went wrong');
       });
-  }, []);
+  }, [sendRequest]);
 
   return (
     <>
@@ -69,7 +69,7 @@ const Organization = () => {
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
-        {isAdmin && <EventStepper />}
+        {isAdmin && <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />}
       </div>
       <div style={{
         display: 'flex', flexDirection: 'column', alignItems: 'center',
@@ -78,21 +78,18 @@ const Organization = () => {
           ? (organizationEvents
             .map((event, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
               ? (
-                <OrganizationEventCard setDeleted={setDeleted}
-                  deleted={deleted} key={event.id} isAdmin={isAdmin} event={event}
+                <OrganizationEventCard setSendRequest={setSendRequest}
+                  sendRequest={sendRequest} key={event.id} isAdmin={isAdmin} event={event}
                   userId={userId} setAdmin={setAdmin}
                 />)
               : ''
             )))
           : (
-            <>
-              {[1, 2, 3].map((i) => <Skeleton
-                key={i}
-                style={{ marginBottom: '3vh' }}
-                variant="rectangular"
-                width={ 1000 }
-                height={300} />)}
-            </>
+            <Skeleton
+              style={{ marginBottom: '3vh' }}
+              variant="rectangular"
+              width={ 1000 }
+              height={300} />
           )
         }
       </div>

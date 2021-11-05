@@ -3,11 +3,12 @@ import {
   Button, Typography, Modal, Box,
 } from '@mui/material';
 
+import PropTypes from 'prop-types';
 import MyStepper from './stepper';
 
 import './style .css';
 
-const EventStepper = () => {
+const EventStepper = ({ setSendRequest, sendRequest }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
 
@@ -27,8 +28,8 @@ const EventStepper = () => {
     backgroundColor: 'rgba(255,255,255)',
     color: 'rgba(0,0,0)',
     borderRadius: '20px',
-    p: 10,
-    height: '40vh',
+    p: 5,
+    height: '50vh',
   };
 
   return (
@@ -45,10 +46,16 @@ const EventStepper = () => {
       >
         <Box sx={style}>
           <Typography variant='h3'> Create Your Event </Typography>
-          <MyStepper />
+          <MyStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />
         </Box>
       </Modal>
     </>
   );
 };
+
+EventStepper.propTypes = {
+  setSendRequest: PropTypes.func.isRequired,
+  sendRequest: PropTypes.bool.isRequired,
+};
+
 export default EventStepper;
