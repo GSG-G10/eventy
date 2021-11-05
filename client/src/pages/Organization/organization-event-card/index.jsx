@@ -12,8 +12,10 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
+import EditEvent from '../edit-event';
+
 const style = {
-  box: {
+  box1: {
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
@@ -30,6 +32,22 @@ const style = {
     borderTopRightRadius: '15px',
 
   },
+  box2: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: '53%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: { sm: 400, lg: 500 },
+    height: { sm: 900, lg: 800 },
+    bgcolor: 'rgb(255, 255, 255)',
+    boxShadow: 30,
+    borderTopLeftRadius: '15px',
+    borderTopRightRadius: '15px',
+  },
   alert: {
     width: { sm: 200 },
     height: '60%',
@@ -45,9 +63,9 @@ const OrganizationEventCard = ({
   isAdmin, setAdmin, event, deleted, setDeleted, userId,
 }) => {
   const [id, setId] = useState(0);
-  const [message, setMessage] = useState('');
-  const [statusCode, setStatusCode] = useState(0);
-  const [open, setOpen] = useState(false);
+  const [statusCode, setStatusCode] = useState();
+  const [OpenModelDelete, setOpenModeDelete] = useState(false);
+  const [OpenModelEdit, setOpenModeEdit] = useState(false);
 
   const history = useHistory();
 
@@ -55,17 +73,16 @@ const OrganizationEventCard = ({
     setAdmin(true);
   }
 
-  const handleOpen = () => setOpen(!open);
+  const handleOpenModelDelete = () => setOpenModeDelete(!OpenModelDelete);
+  const handleOpenModelEdit = () => setOpenModeEdit(!OpenModelEdit);
 
   const handleDelete = () => {
-    axios.delete(`/api/v1/events/${id}`).then((res) => {
-      setMessage(res.data.message);
-      setOpen(false);
+    axios.delete(`/api/v1/events/${id}`).then(() => {
+      setOpenModeDelete(false);
       setDeleted(!deleted);
     }).catch(() => {
-      setMessage('Something Error Happened, Please try again later');
       setStatusCode(400);
-      setOpen(false);
+      setOpenModeDelete(false);
     });
   };
 
@@ -76,19 +93,29 @@ const OrganizationEventCard = ({
   return (
     <>
       <Modal
-        open={open}
-        onClose={handleOpen}
+        open={OpenModelDelete}
+        onClose={handleOpenModelDelete}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style.box}>
-          <Alert style={style.alert} variant="filled" severity="info">
+        <Box sx={style.box1}>
+          <Alert style={style.alert} variant="filled" severity="error">
             <AlertTitle>Attention</AlertTitle>
-            Are you sure you want to  <strong>Delete This Event ? </strong>
+            Are you sure you want to  <strong> Delete This Event ? </strong>
           </Alert>
           <Button style={style.button} variant="contained" color="error" onClick={handleDelete}>
           yes
           </Button>
+        </Box>
+      </Modal>
+      <Modal
+        open={OpenModelEdit}
+        onClose={handleOpenModelEdit}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style.box2}>
+          <EditEvent event={event} />
         </Box>
       </Modal>
       <Grid
@@ -101,7 +128,6 @@ const OrganizationEventCard = ({
         <Grid maxWidth={{ sm: '100%' }} item xs={5} >
           <img
             style={{ maxWidth: '100%' }}
-            // src={event.image}
             src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg"
           />
         </Grid>
@@ -116,11 +142,14 @@ const OrganizationEventCard = ({
               {event.name}
             </Button>
             {isAdmin && <Stack direction= 'row' alignItems= 'baseline' spacing={1}>
-              <IconButton size="large" aria-label="edit" color="inherit">
+              <IconButton size="large" aria-label="edit" color="inherit"onClick={() => {
+                handleOpenModelEdit(true);
+                setId(event.id);
+              }}>
                 <EditRoundedIcon />
               </IconButton>
               <IconButton size="large" aria-label="delete" color="error" onClick={() => {
-                setOpen(!open);
+                handleOpenModelDelete(true);
                 setId(event.id);
               }}>
                 <DeleteIcon />
@@ -150,9 +179,9 @@ const OrganizationEventCard = ({
           </Stack>
         </Grid>
       </Grid>
-      {message && <Snackbar open={true} >
+      {statusCode && <Snackbar open={true} >
         <Alert severity={statusCode === 400 ? 'error' : 'success'} sx={{ width: '100%' }}>
-          {message}
+          {statusCode === 400 ? 'Something error happened please try again' : 'Event deleted succefully'}
         </Alert>
       </Snackbar>}
     </>
