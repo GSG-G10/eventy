@@ -2,13 +2,11 @@ const connection = require('../../connection');
 
 module.exports = async (
   id,
-  {
-    name,
-    description,
-    price, attendance,
-    startDate, expireDate, location,
-    image, duration, details, organizerId, category,
-  },
+  name,
+  description,
+  price, attendance,
+  startDate, expireDate, location,
+  image, duration, details, organizerId, category,
 ) => {
   const { rows } = await connection
     .query(

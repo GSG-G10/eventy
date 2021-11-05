@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
 const styles = {
   container: {
     width: '100%',
-    backgroundColor: 'rgba(250,250,250,.8)',
+    backgroundColor: 'rgba(250,250,250,.13)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'space-around',
