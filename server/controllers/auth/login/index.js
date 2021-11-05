@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
     if (!compared) {
       return res.status(401).json({ error: { message: 'invalid email or password' } });
     }
-    req.userId = organization.id;
+    req.organization = { id: organization.id, name: organization.name };
     return next();
   } catch (err) {
     if (err.details) {
