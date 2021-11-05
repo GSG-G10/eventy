@@ -4,11 +4,13 @@ import {
   Box, Stepper, Step, Button, StepLabel, Snackbar, Alert,
 } from '@mui/material';
 
+import PropTypes from 'prop-types';
+
 import getStepContent from './utils/get-step-content';
 
 import './style .css';
 
-function MyStepper() {
+function MyStepper({ setSendRequest, sendRequest }) {
   const [event, setEvent] = useState({});
   const [open, setOpen] = useState(false);
   const [validate, setValidate] = useState('success');
@@ -37,6 +39,7 @@ function MyStepper() {
 
     try {
       await axios.post('/api/v1/events', event);
+      setSendRequest(!sendRequest);
     } catch (err) {
       setMessage(err.message);
     }
@@ -99,5 +102,10 @@ function MyStepper() {
     </Box>
   );
 }
+
+MyStepper.propTypes = {
+  setSendRequest: PropTypes.func.isRequired,
+  sendRequest: PropTypes.bool.isRequired,
+};
 
 export default MyStepper;

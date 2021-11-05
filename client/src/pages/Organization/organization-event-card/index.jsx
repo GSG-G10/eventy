@@ -41,8 +41,8 @@ const style = {
     top: '53%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: { sm: 400, lg: 500 },
-    height: { sm: 900, lg: 800 },
+    width: { sm: 500, lg: 500 },
+    height: { sm: 750, lg: 800 },
     bgcolor: 'rgb(255, 255, 255)',
     boxShadow: 30,
     borderTopLeftRadius: '15px',
@@ -60,7 +60,7 @@ const style = {
 };
 
 const OrganizationEventCard = ({
-  isAdmin, setAdmin, event, deleted, setDeleted, userId,
+  isAdmin, setAdmin, event, sendRequest, setSendRequest, userId,
 }) => {
   const [id, setId] = useState(0);
   const [statusCode, setStatusCode] = useState();
@@ -79,7 +79,7 @@ const OrganizationEventCard = ({
   const handleDelete = () => {
     axios.delete(`/api/v1/events/${id}`).then(() => {
       setOpenModeDelete(false);
-      setDeleted(!deleted);
+      setSendRequest(!sendRequest);
     }).catch(() => {
       setStatusCode(400);
       setOpenModeDelete(false);
@@ -115,7 +115,11 @@ const OrganizationEventCard = ({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style.box2}>
-          <EditEvent event={event} />
+          <EditEvent
+            event={event}
+            sendRequest={sendRequest}
+            setSendRequest={setSendRequest}
+          />
         </Box>
       </Modal>
       <Grid
@@ -190,8 +194,8 @@ const OrganizationEventCard = ({
 OrganizationEventCard.propTypes = {
   isAdmin: PropTypes.bool.isRequired,
   event: PropTypes.object.isRequired,
-  deleted: PropTypes.bool.isRequired,
-  setDeleted: PropTypes.func.isRequired,
+  sendRequest: PropTypes.bool.isRequired,
+  setSendRequest: PropTypes.func.isRequired,
   userId: PropTypes.number.isRequired,
   setAdmin: PropTypes.func.isRequired,
 };
