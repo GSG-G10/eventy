@@ -35,7 +35,7 @@ const EditEvent = ({ event, setSendRequest, sendRequest }) => {
           setMessage('Event Updated Succefully');
           setSendRequest(!sendRequest);
         })
-        .catch(() => setMessage('Event Update Failed PLease try again later'));
+        .catch(() => setMessage('Event Update Failed please try again later'));
     }
   };
 
@@ -145,7 +145,7 @@ const EditEvent = ({ event, setSendRequest, sendRequest }) => {
         Submit Edit
         </button>
       </form>
-      {message && <Alert severity="error">{message}</Alert>}
+      {message && <Alert severity={message.includes('Failed') ? 'error' : 'success'}>{message}</Alert>}
     </>
 
   );

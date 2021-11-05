@@ -12,7 +12,6 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
-import { maxHeight } from '@mui/system';
 import EditEvent from '../edit-event';
 
 const style = {
