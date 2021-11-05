@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+.header {
+    height: 20%;
+    margin-bottom: 30px;
+}
+.header h1 {
+    padding: 20px;
+}
+.header a {
+    /* text-decoration: none; */
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+
+}
+.login-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    color: #fff;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#helper-text a {
+    color: #03DAC5;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .header p {
+        padding-left: 15px;
+    }
+}
