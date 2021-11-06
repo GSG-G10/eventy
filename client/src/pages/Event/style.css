@@ -16,7 +16,7 @@ body {
 
 }
 .event-container {
-  width: 55%;
+  width: 50%;
   height: 75%;
   background-color: #fff;
   opacity: 87%;
@@ -72,7 +72,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 90%;
+  height: 95%;
 }
 .price {
   font-size: 25px;
@@ -104,4 +104,28 @@ img {
   color: #121212;
   font-weight: 300;
   width: 75%;
+}
+@media only screen and (max-width: 1200px) {
+  .event-container{
+    width: 75%;
+    height: 90%;
+    font-size: larger;
+  }
+  .distributer{
+    flex-direction: column;
+    justify-content:space-evenly;
+  }
+  .event-details{
+    height: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .details{
+    width: 100%;
+  }
+  .price{
+    width: 10%;
+  }
 }

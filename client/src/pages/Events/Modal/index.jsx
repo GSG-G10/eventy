@@ -1,14 +1,14 @@
-import { useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 import PriceSlider from './PriceSlider';
 import LocationFilter from './LocationFilter';
 import CategoryFilter from './CategoryFilter';
+
 import './style.css';
 
 const FilterModal = ({
-  open, setOpen, filters, setFilters, submitFilter
+  open, setOpen, filters, setFilters, submitFilter,
 }) => {
   const handleClose = () => setOpen(false);
 
@@ -28,7 +28,8 @@ const FilterModal = ({
     </Modal>
   </>;
 };
-FilterModal.PropTypes = {
+
+FilterModal.propTypes = {
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
   filters: PropTypes.object.isRequired,

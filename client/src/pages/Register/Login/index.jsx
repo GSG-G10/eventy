@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import {
-  TextField, Button, Alert, FormHelperText,
-} from '@mui/material';
+import { useHistory } from 'react-router-dom';
+import { TextField, Button, Alert } from '@mui/material';
 import axios from 'axios';
 import './style.css';
 
@@ -10,6 +8,7 @@ const Login = () => {
   const [value, setValue] = useState({ email: '', password: '' });
   const [errorMessage, setErrorMessage] = useState('');
   const history = useHistory();
+
   const sendRequest = async (e) => {
     e.preventDefault();
     try {
@@ -29,6 +28,7 @@ const Login = () => {
       return setErrorMessage(error.response.data.error.message);
     }
   };
+
   const handleInputChange = (e) => {
     setErrorMessage('');
     setValue((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
@@ -49,9 +49,9 @@ const Login = () => {
 
     <div className="container">
       <div className="header">
-        <p>
+        <h1>
               Login to your account to see all events that you organize
-        </p>
+        </h1>
       </div>
       <form className='form-container' onSubmit={sendRequest}>
         {
@@ -82,9 +82,6 @@ const Login = () => {
           requiered />
         <Button type='submit' variant="contained" sx={btnStyle}>Log in</Button>
       </form>
-      <FormHelperText id="helper-text" sx={{ color: '#fff' }}>
-          You do not have account? <Link to='/signup'> Sign Up </Link>
-      </FormHelperText>
     </div>
   </section>;
 };

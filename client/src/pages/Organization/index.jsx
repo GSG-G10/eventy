@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { makeStyles } from '@mui/styles';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
 import {
   Typography, Pagination, Skeleton, Snackbar, Alert,
 } from '@mui/material';
@@ -31,17 +32,16 @@ const Organization = () => {
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
   const [sendRequest, setSendRequest] = useState(false);
+  const history = useHistory();
 
   const { organizationId } = useParams();
 
   useEffect(async () => {
-    if (document.cookie.token) {
-      try {
-        const { data: { id } } = axios.get('/api/v1/isAdmin');
-        setUserId(id);
-      } catch (err) {
-        setError(err.message);
-      }
+    try {
+      const { data: { id } } = await axios.get('/api/v1/isAdmin');
+      setUserId(id);
+    } catch (err) {
+      setError(err.message);
     }
   }, []);
 
@@ -55,7 +55,7 @@ const Organization = () => {
         setOrganizationEvents(responses[1].data);
       }))
       .catch(() => {
-        setError('Something went wrong');
+        history.push('/error500');
       });
   }, [sendRequest]);
 
