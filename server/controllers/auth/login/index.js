@@ -4,15 +4,18 @@ const { loginSchema } = require('../../../utils/validation');
 
 module.exports = async (req, res, next) => {
   const { email, password } = req.body;
+
   try {
     await loginSchema.validateAsync(req.body);
     const organization = await checkAccount(email);
-    const compared = await comparePassword(password, organization.password);
-
-    if (!compared || !organization) {
-      return res.status(401).json({ message: 'invalid email or password' });
+    if (!organization) {
+      return res.status(401).json({ error: { message: 'invalid email or password' } });
     }
-    req.userId = organization.id;
+    const compared = await comparePassword(password, organization.password);
+    if (!compared) {
+      return res.status(401).json({ error: { message: 'invalid email or password' } });
+    }
+    req.organization = { id: organization.id, name: organization.name };
     return next();
   } catch (err) {
     if (err.details) {
