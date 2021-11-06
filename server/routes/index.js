@@ -6,6 +6,7 @@ const {
   signout,
   error404,
   getEvent,
+  getUserId,
   deleteEvent,
   createEvent,
   updateEvent,
@@ -34,6 +35,8 @@ router.get('/organizations', organizations);
 router.get('/organizations/:id', getOrganization);
 
 router.post('/events/:id/attendance', addAttendence);
+
+router.get('/isAdmin', getUserId);
 
 router.use(error404);
 router.use(serverError);

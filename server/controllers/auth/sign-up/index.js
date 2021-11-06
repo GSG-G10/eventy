@@ -10,11 +10,11 @@ module.exports = async (req, res, next) => {
     req.body.photo = await uploadImage(req.body.photo);
 
     if (organization) {
-      return res.status(403).json({ message: 'Email is already exists' });
+      return res.status(403).json({ error: { message: 'Email is already exists' } });
     }
 
-    const newOrganizationId = await addNewOrganization(req.body);
-    req.userId = newOrganizationId;
+    const newOrganization = await addNewOrganization(req.body);
+    req.organization = newOrganization;
     return next();
   } catch (error) {
     if (error.details) {

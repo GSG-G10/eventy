@@ -10,8 +10,8 @@ module.exports = async ({
     INSERT INTO organization
     (name,email,password,image,description,categories)
     VALUES ($1,$2,$3,$4,$5,$6) 
-    RETURNING id;`,
+    RETURNING id, name;`,
     [name, email, hashedPassword, image, description, categories]);
 
-  return rows[0].id;
+  return rows[0];
 };

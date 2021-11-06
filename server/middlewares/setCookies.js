@@ -2,9 +2,9 @@ const { signToken } = require('../utils/jwt');
 
 const setCookies = async (req, res, next) => {
   const { SECRET_KEY } = process.env;
-  const { userId } = req;
+  const { organization } = req;
   try {
-    const token = await signToken({ userId }, SECRET_KEY);
+    const token = await signToken({ userId: organization.id }, SECRET_KEY);
     return res.cookie(
       'token',
       token,
@@ -14,7 +14,7 @@ const setCookies = async (req, res, next) => {
       },
     )
       .status(201).json(
-        { message: 'Logged In Successfully' },
+        { message: 'Logged In Successfully', organization },
       );
   } catch (err) {
     return next(err);
