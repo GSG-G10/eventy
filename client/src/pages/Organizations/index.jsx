@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-import {
-  Pagination, Skeleton, Snackbar, Alert,
-} from '@mui/material';
+import { Pagination, Skeleton } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 import OrganizationCard from './organization-card';
@@ -56,8 +55,9 @@ const Organizations = () => {
   const [organizations, setOrganizations] = useState([]);
   const [filter, setFiltered] = useState('');
   const [search, setSearch] = useState('');
-  const [error, setError] = useState('');
   const [page, setPage] = useState(1);
+
+  const history = useHistory();
 
   useEffect(async () => {
     try {
@@ -65,7 +65,7 @@ const Organizations = () => {
       setOrganizations(data);
       setFiltered(data);
     } catch (err) {
-      setError(err.message);
+      history.push('/error500');
     }
   }, []);
 
@@ -133,11 +133,6 @@ const Organizations = () => {
           ''
         )}
       </div>
-      {error && <Snackbar open={true} autoHideDuration={4000} >
-        <Alert severity={ 'error' } sx={{ width: '100%' }}>
-          {error}
-        </Alert>
-      </Snackbar>}
     </>
   );
 };
