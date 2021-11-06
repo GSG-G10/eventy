@@ -72,7 +72,7 @@ function JoinEvent({
         <CssBaseline />
         <form onSubmit={onFinish} >
           <Box sx={containerBox}>
-            <CloseIcon onClick={handleClose} sx={{ margin: '10px 20px' }} />
+            <CloseIcon onClick={handleClose} sx={{ margin: '10px 20px', cursor: 'pointer' }} />
             <Box
               sx={formContainer}
             >
