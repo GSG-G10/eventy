@@ -54,7 +54,7 @@ const SignUp = () => {
       if (value.name && value.email && value.password && value.confirmPassword && value.description
         && value.photo && value.categories) {
         if (value.password === value.confirmPassword) {
-          await axios.post('/api/v1/signup', value);
+          const { data } = await axios.post('/api/v1/signup', value);
           const { organization } = data;
           return history.push(
             `/organization/${organization.id}/${organization.name}`,
