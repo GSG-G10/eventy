@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { makeStyles } from '@mui/styles';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import {
@@ -32,6 +32,7 @@ const Organization = () => {
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
   const [sendRequest, setSendRequest] = useState(false);
+  const history = useHistory();
 
   const { organizationId } = useParams();
 
@@ -54,7 +55,7 @@ const Organization = () => {
         setOrganizationEvents(responses[1].data);
       }))
       .catch(() => {
-        setError('Something went wrong');
+        history.push('/error500');
       });
   }, [sendRequest]);
 

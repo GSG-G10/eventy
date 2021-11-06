@@ -5,7 +5,7 @@ module.exports = joi.object({
   email: joi.string().email().required(),
   password: joi.string().alphanum().min(6).required(),
   confirmPassword: joi.ref('password'),
-  categories: joi.string().required(),
-  photo: joi.string().required(),
+  categories: joi.array().required(),
+  photo: joi.string(),
   description: joi.string().required(),
 });

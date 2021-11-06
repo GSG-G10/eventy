@@ -60,7 +60,7 @@ const PriceSlider = ({ value, setValue }) => {
     />
   </div>;
 };
-PriceSlider.PropTypes = {
+PriceSlider.propTypes = {
   value: PropTypes.number.isRequired,
   setValue: PropTypes.func.isRequired,
 };
