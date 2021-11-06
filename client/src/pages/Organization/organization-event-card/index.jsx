@@ -124,7 +124,7 @@ const OrganizationEventCard = ({
         </Box>
       </Modal>
       <Grid
-        style={{ marginBottom: '5vh' }}
+        style={{ marginBottom: '5vh', maxHeight: '35vh' }}
         flexDirection={{ sm: 'column', lg: 'row' }}
         bgcolor="rgba(255, 255, 255, .87)"
         maxWidth={{ sm: '60%', lg: '55%' }}
@@ -132,14 +132,14 @@ const OrganizationEventCard = ({
       >
         <Grid maxWidth={{ sm: '100%' }} item xs={5} >
           <img
-            style={{ maxWidth: '100%', maxHeight: '29vh' }}
+            style={{ maxWidth: '100%', maxHeight: '35vh' }}
             src={event.image.includes('dummyimage')
               ? 'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg'
               : event.image}
           />
         </Grid>
-        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
-          <Stack flexDirection="row" spacing={1} mt={4} alignItems="center" justifyContent="space-between" >
+        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} >
+          <Stack flexDirection="row" spacing={1} mt={2} alignItems="center" justifyContent="space-between" >
             <Button
               style={{
                 fontWeight: 'bold', fontSize: '1rem', color: '#187F75', border: 0,

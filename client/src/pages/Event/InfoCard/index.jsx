@@ -32,7 +32,7 @@ const InfoCard = ({ eventInfo }) => {
         <AccessTimeIcon /> Time : {duration}
       </p>
       <p style={{
-        display: 'flex', width: '77%', alignItems: 'center', justifyContent: 'space-between',
+        display: 'flex', width: '86%', alignItems: 'center', justifyContent: 'space-between',
       }} >
         <LocationOnOutlinedIcon /> location : {location}
       </p>

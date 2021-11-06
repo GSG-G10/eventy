@@ -14,7 +14,7 @@ module.exports = async (req, res, next) => {
       const value = await verifyToken(token, SECRET_KEY);
       res.json({ id: value.userId });
     } else {
-      res.status(401).json({ message: 'You are not registred yet' });
+      res.json({ id: 0 });
     }
   } catch (error) {
     next(error);
