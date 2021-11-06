@@ -1,0 +1,30 @@
+#Form-container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+#Form{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 425px) {
+  #Form{
+    display: flex;
+    width: 70%;
+    border: solid;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 62vh;
+  }
+  #Form-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+  }
+}
