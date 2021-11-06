@@ -54,7 +54,7 @@ const EditEvent = ({ event, setSendRequest, sendRequest }) => {
         />
         <TextField
           variant='filled'
-          label='Descreption'
+          label='Description'
           name='description'
           multiline
           maxRows={4}

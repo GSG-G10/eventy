@@ -2,6 +2,7 @@ import axios from 'axios';
 import { makeStyles } from '@mui/styles';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+
 import {
   Typography, Pagination, Skeleton, Snackbar, Alert,
 } from '@mui/material';
@@ -35,13 +36,11 @@ const Organization = () => {
   const { organizationId } = useParams();
 
   useEffect(async () => {
-    if (document.cookie.token) {
-      try {
-        const { data: { id } } = axios.get('/api/v1/isAdmin');
-        setUserId(id);
-      } catch (err) {
-        setError(err.message);
-      }
+    try {
+      const { data: { id } } = await axios.get('/api/v1/isAdmin');
+      setUserId(id);
+    } catch (err) {
+      setError(err.message);
     }
   }, []);
 
