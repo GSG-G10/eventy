@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardContent,
@@ -9,10 +9,7 @@ import {
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import DateRangeIcon from '@mui/icons-material/DateRange';
-<<<<<<< HEAD
-=======
 import { useHistory } from 'react-router-dom';
->>>>>>> f3245fb58cb806e49acacb94a647415057681142
 import './style.css';
 
 const EventsCard = ({ event }) => {
@@ -48,15 +45,6 @@ const EventsCard = ({ event }) => {
               <span>{event.location}</span>
             </Typography>
           </Typography>
-<<<<<<< HEAD
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-  </Card>
-);
-EventsCard.propTypes = {
-  event: propTypes.object.isRequired,
-=======
         </CardContent>
       </CardActionArea>
     </Card>
@@ -64,7 +52,6 @@ EventsCard.propTypes = {
 };
 EventsCard.propTypes = {
   event: PropTypes.object.isRequired,
->>>>>>> f3245fb58cb806e49acacb94a647415057681142
 };
 
 export default EventsCard;
