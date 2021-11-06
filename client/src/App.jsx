@@ -5,6 +5,7 @@ import Organizations from './pages/Organizations';
 import SingleEventCard from './pages/Event';
 import Login from './pages/Register/Login';
 import EventsPage from './pages/Events';
+import { Error404, Error500 } from './pages/Errors';
 
 const App = () => (
   <Router>
@@ -26,6 +27,12 @@ const App = () => (
       </Route>
       <Route exact path={'/register'}>
         <Login />
+      </Route>
+      <Route exact path= '/error500'>
+        <Error500 />
+      </Route>
+      <Route>
+        <Error404 />
       </Route>
     </Switch>
   </Router>

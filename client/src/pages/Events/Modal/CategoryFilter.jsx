@@ -40,7 +40,7 @@ const CategoryFilter = ({ value, setValue }) => {
   );
 };
 
-CategoryFilter.PropTypes = {
+CategoryFilter.propTypes = {
   value: PropTypes.string.isRequired,
   setValue: PropTypes.func.isRequired,
 };

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import {
   Box, Stepper, Step, Button, StepLabel, Snackbar, Alert,
@@ -14,9 +15,10 @@ function MyStepper({ setSendRequest, sendRequest }) {
   const [event, setEvent] = useState({});
   const [open, setOpen] = useState(false);
   const [validate, setValidate] = useState('success');
-  const [message, setMessage] = useState('');
   const [activeStep, setActiveStep] = useState(0);
   const myForm = useRef(null);
+
+  const history = useHistory();
 
   const steps = ['Name', 'Time', 'Location', 'Categories', 'Image', 'Age', 'Descreption', 'Details', 'price'];
 
@@ -41,7 +43,7 @@ function MyStepper({ setSendRequest, sendRequest }) {
       await axios.post('/api/v1/events', event);
       setSendRequest(!sendRequest);
     } catch (err) {
-      setMessage(err.message);
+      history.push('/error500');
     }
   };
 
@@ -61,7 +63,7 @@ function MyStepper({ setSendRequest, sendRequest }) {
       </Stepper>
       {activeStep === steps.length ? (
         <h1>
-          {message || 'All steps completed - Your Event is published'}
+          All steps completed - Your Event is published
         </h1>
       ) : (
         <form ref={myForm}>
