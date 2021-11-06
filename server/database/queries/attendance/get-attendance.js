@@ -1,9 +1,8 @@
 const connection = require('../../connection');
 
 const getAttendance = async (email) => {
-  const { rows } = await connection
+  const { rowCount } = await connection
     .query('SELECT id FROM attendance WHERE email = $1', [email]);
-
-  return rows[0].id;
+  return rowCount;
 };
 module.exports = getAttendance;
