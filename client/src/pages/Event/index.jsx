@@ -28,7 +28,7 @@ const SingleEventCard = () => {
   }, []);
 
   const butnStyle = { // style object for the button
-    width: 300,
+    width: { lg: 300, sm: 200 },
     backgroundColor: '#03DAC5',
     color: '#000',
     opacity: '70%',
@@ -79,10 +79,12 @@ const SingleEventCard = () => {
                 </div>
               </div>
               <div className="event-card">
-                <p className='price'>
-                  {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
-                </p>
-                <Button onClick={handleOpen} variant="contained" sx={butnStyle}>GET TICKET</Button>
+                <div className="btn-price">
+                  <p className='price'>
+                    {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
+                  </p>
+                  <Button onClick={handleOpen} variant="contained" sx={butnStyle}>GET TICKET</Button>
+                </div>
                 <InfoCard eventInfo={eventInfo} />
               </div>
               <JoinEvent

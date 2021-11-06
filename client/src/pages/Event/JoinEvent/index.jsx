@@ -224,5 +224,6 @@ JoinEvent.propTypes = {
   eventId: PropTypes.number.isRequired,
   message: PropTypes.string.required,
   setMessage: PropTypes.func.isRequired,
+  setClosed: PropTypes.func.isRequired,
 };
 export default JoinEvent;
