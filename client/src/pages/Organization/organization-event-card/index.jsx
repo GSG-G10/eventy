@@ -6,6 +6,7 @@ import {
 } from '@mui/material';
 
 import { useHistory } from 'react-router-dom';
+import PeopleIcon from '@mui/icons-material/People';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -137,10 +138,12 @@ const OrganizationEventCard = ({
               : event.image}
           />
         </Grid>
-        <Grid item mt={0.5} ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
+        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }}>
           <Stack flexDirection="row" spacing={1} mt={4} alignItems="center" justifyContent="space-between" >
             <Button
-              style={{ fontWeight: 'bold', fontSize: '1rem', color: '#187F75' }}
+              style={{
+                fontWeight: 'bold', fontSize: '1rem', color: '#187F75', border: 0,
+              }}
               variant="outlined"
               value={event.id}
               onClick={handleClick}
@@ -163,7 +166,7 @@ const OrganizationEventCard = ({
             </Stack>
             }
           </Stack>
-          <Stack direction="column" mt={2} >
+          <Stack direction="column" mt={1} >
             <Stack direction="row" alignItems="center">
               <IconButton size="large" aria-label="edit" color="inherit">
                 <DateRangeIcon />
@@ -181,6 +184,12 @@ const OrganizationEventCard = ({
                 <AddLocationIcon />
               </IconButton>
               <Typography variant="body1" >{event.location}</Typography>
+            </Stack>
+            <Stack direction="row" alignItems="center">
+              <IconButton size="large" aria-label="edit" color="inherit">
+                <PeopleIcon />
+              </IconButton>
+              <Typography variant="body1" >{event.attendance}</Typography>
             </Stack>
           </Stack>
         </Grid>

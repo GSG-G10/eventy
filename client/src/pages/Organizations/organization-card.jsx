@@ -33,14 +33,22 @@ const OrganizationCard = ({ organizationData }) => {
         }}
       >
         <Button
-          variant="outlined"
+          variant="text"
           onClick={handleClick}
           sx={{
             mb: 2,
             color: '#187F75',
-            fontSize: '1.3rem',
+            fontSize: '1.75rem',
             fontWeight: 'bold',
+            border: 0,
             maxWidth: { sm: '100%', lg: '80%' },
+          }}
+          style= {{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            height: '25%',
+            marginLeft: '-.6vh',
           }}
         >
           {organizationData.name}
