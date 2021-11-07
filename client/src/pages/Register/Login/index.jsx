@@ -16,6 +16,7 @@ const Login = () => {
         if (value.password.length >= 7) {
           const { data } = await axios.post('api/v1/login', value);
           const { organization } = data;
+          localStorage.setItem('id', organization.id);
           localStorage.setItem('username', organization.name);
           return history.push(`/organization/${organization.id}/${organization.name}`);
         }
@@ -50,9 +51,9 @@ const Login = () => {
 
     <div className="container">
       <div className="header">
-        <h1>
+        <h2>
               Login to your account to see all events that you organize
-        </h1>
+        </h2>
       </div>
       <form className='form-container' onSubmit={sendRequest}>
         {
@@ -82,6 +83,8 @@ const Login = () => {
           onChange={handleInputChange}
           requiered />
         <Button type='submit' variant="contained" sx={btnStyle}>Log in</Button>
+        <Button variant="outlined" sx={{ width: '50%', color: 'white' }} onClick={() => history.push('/')}>  Return to home page</Button>
+
       </form>
     </div>
   </section>;

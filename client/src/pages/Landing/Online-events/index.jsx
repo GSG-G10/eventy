@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { EventsCard, Carousel } from '../../../components';
 
-const TopEvents = () => {
+const OnlineEvents = () => {
   const [eventData, setData] = useState([]);
   const { CancelToken } = axios;
   const source = CancelToken.source();
@@ -39,9 +39,9 @@ const TopEvents = () => {
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ padding: '2%' }}>Top events</h3>
+            <h3 style={{ padding: '2%' }}>Online events</h3>
             <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
-              Some of our favorite events around your location
+            Some of Online events
             </p>
           </div>
           <Link
@@ -65,4 +65,4 @@ const TopEvents = () => {
   );
 };
 
-export default TopEvents;
+export default OnlineEvents;
