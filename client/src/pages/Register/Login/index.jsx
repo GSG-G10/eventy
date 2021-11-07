@@ -16,6 +16,7 @@ const Login = () => {
         if (value.password.length >= 7) {
           const { data } = await axios.post('api/v1/login', value);
           const { organization } = data;
+          localStorage.setItem('username', organization.name);
           return history.push(`/organization/${organization.id}/${organization.name}`);
         }
         return setErrorMessage('Password length must be more than 7 characters');
