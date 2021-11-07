@@ -5,10 +5,19 @@ import { EventsCard, Carousel } from '../../../components';
 
 const TopEvents = () => {
   const [eventData, setData] = useState([]);
+  const { CancelToken } = axios;
+  const source = CancelToken.source();
 
-  useEffect(async () => {
-    const { data } = await axios.get('api/v1/events?type=top');
+  const getTopEvents = async () => {
+    const { data } = await axios.get('api/v1/events?type=top', {
+      cancelToken: source.token,
+    });
     setData(data);
+    source.cancel('Operation canceled by the user');
+  };
+
+  useEffect(() => {
+    getTopEvents();
   }, []);
 
   return (
