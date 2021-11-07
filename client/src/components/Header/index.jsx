@@ -16,14 +16,16 @@ import './style.css';
 const Header = () => {
   const [admin, setAdmin] = useState(false);
 
-  useEffect(async () => {
-    const { data } = await axios.get('/api/v1/isAdmin');
+  useEffect(() => {
+    const { data } = axios.get('/api/v1/isAdmin');
     if (data.id === 0) {
       setAdmin(false);
     } else {
       setAdmin(true);
     }
   }, []);
+
+
 
   const handleLogOut = async () => {
     await axios.get('/api/v1/signout');
@@ -97,7 +99,7 @@ const Header = () => {
                   </Link>
                 </>
                 : <div id="registerContainer">
-                  <Link component={RouterLink} to='/organization/:organizationId/:name' style={{
+                  <Link component={RouterLink} to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } style={{
                     color: 'white',
                     fontSize: '1.2rem',
                   }}>{localStorage.getItem('username')}</Link>
