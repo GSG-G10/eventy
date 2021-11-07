@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Landing from './pages/Landing';
 import Organization from './pages/Organization';
 import Organizations from './pages/Organizations';
 import SingleEventCard from './pages/Event';
@@ -11,7 +12,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route exact path='/'>
-        <h1>Home Page</h1>
+        <Landing />
       </Route>
       <Route exact path={'/organization/:organizationId/:name'}>
         <Organization />

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.radio-cont span {
+    font-size: 14px;
+} 
+.radio-cont legend {
+    font-size: 16px;
+} 
+
+.input-cont {
+    width: 70%;
+}
+.header-container {
+    width: 80%;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    color: #fff;
+}
+.header-container h2 {
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+}
+.header-container p {
+    font-size: 12px;
+}

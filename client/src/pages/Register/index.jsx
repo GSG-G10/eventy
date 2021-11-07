@@ -30,7 +30,7 @@ const Register = () => {
     }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} >
+          <TabList onChange={handleChange} textColor="white" >
             <Tab label="Sign Up" value="1" />
             <Tab label="Sign In" value="2" />
           </TabList>

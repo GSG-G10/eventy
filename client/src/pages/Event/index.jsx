@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { Skeleton, Button, Stack } from '@mui/material';
+import {
+  Skeleton, Button, Stack, Snackbar, Alert,
+} from '@mui/material';
 import axios from 'axios';
 import InfoCard from './InfoCard';
+import JoinEvent from './JoinEvent';
 import './style.css';
 
 const SingleEventCard = () => {
   const [eventInfo, setEventInfo] = useState({});
   const [isLoaded, setIsLoded] = useState(false);
-
+  const [open, setOpen] = useState(false);
+  const [closed, setClosed] = useState(false);
   const history = useHistory();
   const { eventId } = useParams();
+  const [message, setMessage] = useState('');
 
   useEffect(async () => {
     if (eventId > 0) {
@@ -23,7 +28,7 @@ const SingleEventCard = () => {
   }, []);
 
   const butnStyle = { // style object for the button
-    width: 300,
+    width: { lg: 300, sm: 200 },
     backgroundColor: '#03DAC5',
     color: '#000',
     opacity: '70%',
@@ -31,6 +36,8 @@ const SingleEventCard = () => {
     fontSize: '1.5rem',
     fontWeight: 'bold',
   };
+  const handleOpen = () => setOpen(true);
+  const handleClosed = () => setClosed(!closed);
   return <section className='main-container'>
     <div className="event-container">
       {
@@ -72,12 +79,27 @@ const SingleEventCard = () => {
                 </div>
               </div>
               <div className="event-card">
-                <p className='price'>
-                  {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
-                </p>
-                <Button variant="contained" sx={butnStyle}>GET TICKET</Button>
+                <div className="btn-price">
+                  <p className='price'>
+                    {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
+                  </p>
+                  <Button onClick={handleOpen} variant="contained" sx={butnStyle}>GET TICKET</Button>
+                </div>
                 <InfoCard eventInfo={eventInfo} />
               </div>
+              <JoinEvent
+                open={open}
+                setOpen={setOpen}
+                eventId={eventInfo.id}
+                message={message}
+                setMessage={setMessage}
+                setClosed={setClosed} />
+              {message
+              && <Snackbar open={closed} autoHideDuration={6000} onClose={handleClosed}>
+                <Alert onClose={handleClosed} severity="success" sx={{ width: '100%' }}>
+                  {message}
+                </Alert>
+              </Snackbar>}
             </div>
           </>
           : <Stack spacing={2} width='70vw' height='70vh'>
