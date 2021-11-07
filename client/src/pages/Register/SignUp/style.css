@@ -1,13 +1,8 @@
-#Form-container{
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
-
 #Form{
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: 85%;
+  height: 100%;
   justify-content: space-evenly;
 }
 

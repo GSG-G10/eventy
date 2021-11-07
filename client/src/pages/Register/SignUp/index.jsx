@@ -17,7 +17,7 @@ const SignUp = () => {
     confirmPassword: '',
     categories: [],
     description: '',
-    photo: '',
+    image: '',
   });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -43,7 +43,7 @@ const SignUp = () => {
     const reader = new FileReader();
     // eslint-disable-next-line func-names
     reader.onload = function (evt) {
-      setValue({ ...value, photo: evt.target.result });
+      setValue({ ...value, image: evt.target.result });
     };
     reader.readAsDataURL(file);
   };
@@ -52,7 +52,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       if (value.name && value.email && value.password && value.confirmPassword && value.description
-        && value.photo && value.categories) {
+        && value.image && value.categories) {
         if (value.password === value.confirmPassword) {
           const { data } = await axios.post('/api/v1/signup', value);
           const { organization } = data;
@@ -78,107 +78,89 @@ const SignUp = () => {
   };
 
   return (
-    <div id="Form-container">
-      <form id="Form" onSubmit={handleSubmit}>
-        <h2>
-          <span
-            style={{
-              textDecorationLine: 'underline',
-              textDecorationColor: '#A794C1',
-            }}
-          >
-          Register
-          </span>{' '}
-        / <span style={{ fontWeight: '100' }}>Login</span>
-        </h2>
-
-        <p style={{ fontWeight: '100', fontSize: '0.9rem' }}>
+    <form id="Form" onSubmit={handleSubmit} style={{ marginLeft: '3rem' }}>
+      <h4 style={{ fontWeight: 'bolder' }}>
         Create a new account. Once you‘ve set it up, you can take advantage of
         many benifits of membership.
-        </p>
-        {errorMessage ? <Alert severity="error">{errorMessage}!</Alert> : ''}
+      </h4>
+      {errorMessage ? <Alert severity="error">{errorMessage}!</Alert> : ''}
 
-        <TextField
-          id="filled-basic"
-          label="Organization Name"
-          name="name"
-          style={{ backgroundColor: '#d9d9d9', width: '100%' }}
-          required
-          variant="filled"
-          color="secondary"
-          size="small"
-          value={value.name}
-          onChange={handleChange}
-        />
+      <TextField
+        id="filled-basic"
+        label="Organization Name"
+        name="name"
+        style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+        required
+        variant="filled"
+        color="secondary"
+        value={value.name}
+        onChange={handleChange}
+      />
 
-        <TextField
-          id="filled-basic"
-          label="Email"
-          name="email"
-          type="email"
-          style={{ backgroundColor: '#d9d9d9', width: '100%' }}
-          required
-          variant="filled"
-          color="secondary"
-          size="small"
-          value={value.email}
-          onChange={handleChange}
-        />
+      <TextField
+        id="filled-basic"
+        label="Email"
+        name="email"
+        type="email"
+        style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+        required
+        variant="filled"
+        color="secondary"
+        value={value.email}
+        onChange={handleChange}
+      />
 
-        <Password
-          password={value.password}
-          confirmPassword={value.confirmPassword}
-          handleChange={handleChange}
-          handleClickShowPassword={handleClickShowPassword}
-          showPassword={showPassword}
-          setShowConfirmPassword={handleClickShowConfirmPassword}
-          showConfirmPassword={showConfirmPassword}
-        />
+      <Password
+        password={value.password}
+        confirmPassword={value.confirmPassword}
+        handleChange={handleChange}
+        handleClickShowPassword={handleClickShowPassword}
+        showPassword={showPassword}
+        setShowConfirmPassword={handleClickShowConfirmPassword}
+        showConfirmPassword={showConfirmPassword}
+      />
 
-        <CategoriesSelector
-          value={value.categories}
-          handleChange={handleChange}
-        />
+      <CategoriesSelector
+        value={value.categories}
+        handleChange={handleChange}
+      />
 
-        <TextField
-          style={{ backgroundColor: '#d9d9d9', height: '56px' }}
-          id="outlined-textarea"
-          name="description"
-          placeholder="Short words about your organization"
-          color="secondary"
-          required
-          multiline
-          value={value.description}
-          onChange={handleChange}
-        />
+      <TextField
+        style={{ backgroundColor: '#d9d9d9', height: '56px' }}
+        id="outlined-textarea"
+        name="description"
+        placeholder="Short words about your organization"
+        color="secondary"
+        required
+        multiline
+        value={value.description}
+        onChange={handleChange}
+      />
 
-        <label htmlFor="contained-button-file" style={{ color: '#d9d9d9', fontSize: '13px' }}>
+      <label htmlFor="contained-button-file" style={{ color: '#d9d9d9', fontSize: '13px' }}>
           Enter organization’s logo
-          <Input
-            accept="image/*"
-            id="contained-button-file"
-            type="file"
-            name="photo"
-            required
-            onChange={handleUpload}
-          />
-        </label>
+        <Input
+          accept="image/*"
+          id="contained-button-file"
+          type="file"
+          name="image"
+          required
+          onChange={handleUpload}
+        />
+      </label>
 
-        <Button
-          variant="contained"
-          type="submit"
-          style={{
-            backgroundColor: '#187F75',
-            fontWeight: '600',
-            fontSize: '1.2rem',
-          }}
-        >
-          {' '}
+      <Button
+        variant="contained"
+        type="submit"
+        style={{
+          backgroundColor: '#187F75',
+          fontWeight: '600',
+          fontSize: '1.2rem',
+        }}
+      >
         Sign up
-        </Button>
-      </form>
-    </div>
-
+      </Button>
+    </form>
   );
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import axios from 'axios';
 import { makeStyles } from '@mui/styles';
 import { useParams, useHistory } from 'react-router-dom';
@@ -32,6 +33,7 @@ const Organization = () => {
   const [organization, setOrganization] = useState({});
   const [organizationEvents, setOrganizationEvents] = useState([]);
   const [sendRequest, setSendRequest] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const history = useHistory();
 
   const { organizationId } = useParams();
@@ -53,9 +55,11 @@ const Organization = () => {
       .then(axios.spread((...responses) => {
         setOrganization(responses[0].data);
         setOrganizationEvents(responses[1].data);
+        setIsLoaded(true);
       }))
       .catch(() => {
         history.push('/error500');
+        setIsLoaded(true);
       });
   }, [sendRequest]);
 
@@ -69,21 +73,23 @@ const Organization = () => {
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
-        {isAdmin && <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />}
+        {userId === Number(organizationId) ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} /> : ''}
       </div>
       <div style={{
         display: 'flex', flexDirection: 'column', alignItems: 'center',
       }}>
-        {organizationEvents?.length > 0
-          ? (organizationEvents
-            .map((event, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
-              ? (
-                <OrganizationEventCard setSendRequest={setSendRequest}
-                  sendRequest={sendRequest} key={event.id} isAdmin={isAdmin} event={event}
-                  userId={userId} setAdmin={setAdmin}
-                />)
-              : ''
-            )))
+        {isLoaded
+          ? organizationEvents?.length > 0
+            ? (organizationEvents
+              .map((event, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
+                ? (
+                  <OrganizationEventCard setSendRequest={setSendRequest}
+                    sendRequest={sendRequest} key={event.id} isAdmin={isAdmin} event={event}
+                    userId={userId} setAdmin={setAdmin}
+                  />)
+                : ''
+              )))
+            : <h1>No events for this organization</h1>
           : (
             <Skeleton
               style={{ marginBottom: '3vh' }}

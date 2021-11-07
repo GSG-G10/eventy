@@ -8,8 +8,8 @@ const Advertisment1 = () => {
   const [admin, setAdmin] = useState(false);
   const history = useHistory();
 
-  useEffect(() => {
-    const { data } = axios.get('/api/v1/isAdmin');
+  useEffect(async () => {
+    const { data } = await axios.get('/api/v1/isAdmin');
     if (data.id === 0) {
       setAdmin(false);
     } else {
@@ -25,7 +25,7 @@ const Advertisment1 = () => {
         )}`,
       );
     } else {
-      history.push('/signup');
+      history.push('/register');
     }
   };
   return (

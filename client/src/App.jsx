@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Header } from './components';
 import Landing from './pages/Landing';
 import Organization from './pages/Organization';
 import Organizations from './pages/Organizations';
 import SingleEventCard from './pages/Event';
-import { Login, Signup } from './pages/Register';
+import Register from './pages/Register';
 import EventsPage from './pages/Events';
 import { Error404, Error500 } from './pages/Errors';
 
@@ -28,10 +29,7 @@ const App = () => (
         <EventsPage />
       </Route>
       <Route exact path={'/register'}>
-        <Login />
-      </Route>
-      <Route exact path={'/signup'}>
-        <Signup />
+        <Register />
       </Route>
       <Route exact path="/error500">
         <Error500 />

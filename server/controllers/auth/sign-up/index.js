@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
   try {
     await signupValidation.validateAsync(req.body);
     const organization = await checkAccount(req.body.email);
-    req.body.photo = await uploadImage(req.body.photo);
+    req.body.image = await uploadImage(req.body.image);
 
     if (organization) {
       return res.status(403).json({ error: { message: 'Email is already exists' } });

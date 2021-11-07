@@ -16,16 +16,14 @@ import './style.css';
 const Header = () => {
   const [admin, setAdmin] = useState(false);
 
-  useEffect(() => {
-    const { data } = axios.get('/api/v1/isAdmin');
+  useEffect(async () => {
+    const { data } = await axios.get('/api/v1/isAdmin');
     if (data.id === 0) {
       setAdmin(false);
     } else {
       setAdmin(true);
     }
   }, []);
-
-
 
   const handleLogOut = async () => {
     await axios.get('/api/v1/signout');
@@ -77,7 +75,7 @@ const Header = () => {
                   </Link>
                   <Link
                     component={RouterLink}
-                    to="/signup"
+                    to="/register"
                     style={{
                       textDecoration: 'none',
                     }}
