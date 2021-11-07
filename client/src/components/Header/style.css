@@ -1,3 +1,9 @@
 .MuiToolbar-root{
     background-color: #121212;
 }
+
+#registerContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

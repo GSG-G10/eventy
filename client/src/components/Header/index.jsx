@@ -25,24 +25,14 @@ const Header = () => {
     }
   }, []);
 
-  // useEffect(async () => {
-  //   const { data } = await axios.post('api/v1/login', value);
-  //   const { organization } = data;
-
-  // }),[];
-
-  // const handleOrganizationName = async() => {
-  //   const { data } = await axios.post('api/v1/login', value);
-  //   const { organization } = data;
-  // }
-
   const handleLogOut = async () => {
     await axios.get('/api/v1/signout');
+    localStorage.clear();
     setAdmin(false);
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} id="header">
       <AppBar position="static">
         <Toolbar>
           <Typography
@@ -56,7 +46,7 @@ const Header = () => {
             }}
           >
             <Link component={RouterLink} to="/">
-              <img src={logo} alt="eventy logo" style={{ height: '30px' }} />
+              <img src={logo} alt="eventy logo" style={{ height: '30px' }} id="logo" />
             </Link>
             <Stack
               spacing={2}
@@ -65,6 +55,7 @@ const Header = () => {
                 padding: '1%',
                 width: '17%',
                 justifyContent: 'space-around',
+                alignItems: 'center',
               }}
             >
               {!admin
@@ -99,25 +90,30 @@ const Header = () => {
                         width: '82%',
                         textDecoration: 'none',
                       }}
+                      id="SignUp"
                     >
              Register
                     </Button>
                   </Link>
                 </>
-                : <Button
-                  variant="contained"
-                  className="register-button"
-                  style={{
-                    backgroundColor: '#187F75',
-                    height: '31px',
-                    fontWeight: '500',
-                    width: '100%',
-                    textDecoration: 'none',
-                  }}
-                  onClick={handleLogOut}
-                >
+                : <div id="registerContainer">
+                  <Link component={RouterLink} to='/organization/:organizationId/:name' style={{
+                    color: 'white',
+                    fontSize: '1.2rem',
+                  }}>{localStorage.getItem('username')}</Link>
+                  <Button
+                    id="logOut"
+                    variant="contained"
+                    className="register-button"
+                    style={{
+                      backgroundColor: '#187F75',
+                      fontSize: '0.5rem',
+                    }}
+                    onClick={handleLogOut}
+                  >
            Log out
-                </Button>
+                  </Button>
+                </div>
 
               }
 
