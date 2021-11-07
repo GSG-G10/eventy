@@ -6,6 +6,6 @@ module.exports = joi.object({
   password: joi.string().alphanum().min(6).required(),
   confirmPassword: joi.ref('password'),
   categories: joi.array().required(),
-  photo: joi.string(),
+  image: joi.string(),
   description: joi.string().required(),
 });

@@ -23,7 +23,7 @@ const Password = ({
   };
   return (
     <>
-      <FormControl  variant="filled">
+      <FormControl variant="filled">
         <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
         <FilledInput
           id="filled-adornment-password"

@@ -69,7 +69,7 @@ const Organization = () => {
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
-        {isAdmin && <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />}
+        {userId === Number(organizationId) ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} /> : ''}
       </div>
       <div style={{
         display: 'flex', flexDirection: 'column', alignItems: 'center',
