@@ -77,11 +77,11 @@ const SignUp = () => {
   };
 
   return (
-    <form id="Form" onSubmit={handleSubmit}>
-      <h2 style={{ fontWeight: 'bolder' }}>
+    <form id="Form" onSubmit={handleSubmit} style={{ marginLeft: '3rem' }}>
+      <h4 style={{ fontWeight: 'bolder' }}>
         Create a new account. Once you‘ve set it up, you can take advantage of
         many benifits of membership.
-      </h2>
+      </h4>
       {errorMessage ? <Alert severity="error">{errorMessage}!</Alert> : ''}
 
       <TextField
