@@ -20,7 +20,7 @@ const Register = () => {
       bgcolor: '#404143',
       color: 'white',
       marginLeft: '20%',
-      marginTop: '4.5%',
+      marginTop: '2.5%',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

@@ -75,7 +75,7 @@ const Header = () => {
                   </Link>
                   <Link
                     component={RouterLink}
-                    to="/signup"
+                    to="/register"
                     style={{
                       textDecoration: 'none',
                     }}
@@ -97,7 +97,7 @@ const Header = () => {
                   </Link>
                 </>
                 : <div id="registerContainer">
-                  <Link component={RouterLink} to='/organization/:organizationId/:name' style={{
+                  <Link component={RouterLink} to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } style={{
                     color: 'white',
                     fontSize: '1.2rem',
                   }}>{localStorage.getItem('username')}</Link>

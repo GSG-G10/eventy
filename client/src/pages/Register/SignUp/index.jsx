@@ -56,6 +56,7 @@ const SignUp = () => {
         if (value.password === value.confirmPassword) {
           const { data } = await axios.post('/api/v1/signup', value);
           const { organization } = data;
+          localStorage.setItem('id', organization.id);
           localStorage.setItem('username', organization.name);
           return history.push(
             `/organization/${organization.id}/${organization.name}`,
