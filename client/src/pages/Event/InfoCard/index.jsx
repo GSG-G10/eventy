@@ -3,6 +3,7 @@ import EventIcon from '@mui/icons-material/Event';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PeopleIcon from '@mui/icons-material/People';
+import './style.css';
 
 const InfoCard = ({ eventInfo }) => {
   const {
@@ -13,35 +14,23 @@ const InfoCard = ({ eventInfo }) => {
     <h2>
         Event Information
     </h2>
-    <div style={{
-      display: 'flex', flexDirection: 'column', width: '87%', height: '75%', justifyContent: 'space-between', alignItems: 'baseline',
-    }}>
-      <p style={{
-        display: 'flex', width: '85%', alignItems: 'center', justifyContent: 'space-between',
-      }} >
-        <EventIcon /> Start Date : {startDate.split('T')[0]}
+    <div className='card-container'>
+      <p className='card-element' >
+        <EventIcon fontSize='15px' /> Start Date : {startDate.split('T')[0]}
       </p>
-      <p style={{
-        display: 'flex', width: '82%', alignItems: 'center', justifyContent: 'space-between',
-      }} >
-        <EventIcon /> End Date : {endDate.split('T')[0]}
+      <p className='card-element' >
+        <EventIcon fontSize='15px' /> End Date : {endDate.split('T')[0]}
       </p>
-      <p style={{
-        display: 'flex', width: '62%', alignItems: 'center', justifyContent: 'space-between',
-      }} >
-        <AccessTimeIcon /> Time : {duration}
+      <p className='card-element' >
+        <AccessTimeIcon fontSize='15px' /> Time : {duration}
       </p>
-      <p style={{
-        display: 'flex', width: '86%', alignItems: 'center', justifyContent: 'space-between',
-      }} >
-        <LocationOnOutlinedIcon /> location : {location}
+      <p className='card-element' >
+        <LocationOnOutlinedIcon fontSize='15px' /> location : {location}
       </p>
-      <p style={{
-        display: 'flex', width: '65%', alignItems: 'center', justifyContent: 'space-between',
-      }} >
-        <PeopleIcon /> Attendance : {attendance}
+      <p className='card-element' >
+        <PeopleIcon fontSize='15px' /> Attendance : {attendance}
       </p>
-      <a style={{ marginLeft: '2.5rem' }} href={'https://calendar.google.com/calendar/u/0/r'} target='_blank' rel="noreferrer"> Add To Calender </a>
+      <a href={'https://calendar.google.com/calendar/u/0/r'} target='_blank' rel="noreferrer"> Add To Calender </a>
     </div>
   </div>;
 };

@@ -1,17 +1,19 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import LandingPage from './pages/Landing';
 import Organization from './pages/Organization';
 import Organizations from './pages/Organizations';
 import SingleEventCard from './pages/Event';
-import Login from './pages/Register/Login';
+import { Login, Signup } from './pages/Register';
 import EventsPage from './pages/Events';
 import { Error404, Error500 } from './pages/Errors';
+
 
 const App = () => (
   <Router>
     <Switch>
       <Route exact path='/'>
-        <h1>Home Page</h1>
+        <LandingPage />
       </Route>
       <Route exact path={'/organization/:organizationId/:name'}>
         <Organization />
@@ -27,6 +29,9 @@ const App = () => (
       </Route>
       <Route exact path={'/register'}>
         <Login />
+      </Route>
+      <Route exact path={'/signup'}>
+        <Signup />
       </Route>
       <Route exact path= '/error500'>
         <Error500 />

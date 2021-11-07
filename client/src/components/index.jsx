@@ -1,4 +1,5 @@
+import Header from './Header';
 import EventsCard from './events-card';
 import Carousel from './Carousel';
 
-export { EventsCard, Carousel };
+export { Header, EventsCard, Carousel };
