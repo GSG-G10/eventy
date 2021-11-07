@@ -10,6 +10,7 @@ import EventsCard from '../../components/events-card';
 import Loader from './Loader';
 import FilterModal from './Modal';
 import './style.css';
+import Cover from '../Landing/Assets/Cover.png';
 // for pagination
 const useStyles = makeStyles(() => ({
   ul: {
@@ -97,7 +98,7 @@ const EventsPage = () => {
     <section className="filter-container">
       {/* {Header Image} */}
       <div className="header-img">
-        <img src="https://bevents.co/wp-content/uploads/2020/02/events.jpg" alt="event" />
+        <img src={Cover} alt="event" />
       </div>
       {/* {Filter Nav} */}
       <Paper
