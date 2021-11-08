@@ -11,7 +11,7 @@ VALUES (
         'Browsecat',
         'nalvares0@csmonitor.com',
         'Q0fTCwdxmR',
-        'http://dummyimage.com/220x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'literature'
     ),
@@ -19,7 +19,7 @@ VALUES (
         'Skipfire',
         'kpeoples1@nba.com',
         'UqQBSPg',
-        'http://dummyimage.com/132x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities',
         'literature'
     ),
@@ -27,7 +27,7 @@ VALUES (
         'Agivu',
         'jthorneloe2@sciencedaily.com',
         'DV4de1MN5X',
-        'http://dummyimage.com/221x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'formal'
     ),
@@ -35,7 +35,7 @@ VALUES (
         'Browsebug',
         'abaglin3@telegraph.co.uk',
         '$2a$10$9hFb703hGGntkbqXdeYNAe3aZbzXk40SVfrBxmxUsR2QdesHRGqDO',
-        'http://dummyimage.com/127x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'art'
     ),
@@ -43,7 +43,7 @@ VALUES (
         'Ooba',
         'twindmill4@stanford.edu',
         'gIHLa6Fecs9j',
-        'http://dummyimage.com/201x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'technology'
     ),
@@ -51,7 +51,7 @@ VALUES (
         'Skinix',
         'bamyes5@examiner.com',
         'QpDOF7HIG',
-        'http://dummyimage.com/200x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'technology'
     ),
@@ -59,7 +59,7 @@ VALUES (
         'Meetz',
         'apurchon6@thetimes.co.uk',
         'GU2kf5jOdF',
-        'http://dummyimage.com/227x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'literature'
     ),
@@ -67,7 +67,7 @@ VALUES (
         'Eamia',
         'loakshott7@quantcast.com',
         '20fvqHFap',
-        'http://dummyimage.com/174x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities', 
         'medicine'
     ),
@@ -75,7 +75,7 @@ VALUES (
         'Eimbee',
         'mbartalini8@seesaa.net',
         'M08UqQrHG6h',
-        'http://dummyimage.com/181x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities',
         'literature'
     ),
@@ -83,7 +83,7 @@ VALUES (
         'Thoughtblab',
         'dinkpin9@kickstarter.com',
         'HFZvhYcADi',
-        'http://dummyimage.com/135x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
         'medicine'
     );
@@ -110,7 +110,7 @@ VALUES (
         '2021-10-26',
         '2022-03-10',
         'Huo’erqi',
-        'http://dummyimage.com/134x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '6:59',
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
 
@@ -128,7 +128,7 @@ In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
         '2021-11-11',
         '2022-05-09',
         'Online',
-        'http://dummyimage.com/108x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '5:33',
         'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.
 
@@ -144,7 +144,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
         '2021-12-13',
         '2022-04-30',
         'Rājshāhi',
-        'http://dummyimage.com/233x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '1:39',
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         2,
@@ -158,7 +158,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
         '2022-01-16',
         '2022-05-19',
         'Online',
-        'http://dummyimage.com/166x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '20:40',
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         3,
@@ -172,7 +172,7 @@ Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci
         '2022-01-04',
         '2022-05-16',
         'Pangushan',
-        'http://dummyimage.com/145x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '11:42',
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
@@ -190,7 +190,7 @@ In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat n
         '2021-12-05',
         '2022-03-20',
         'Monastirákion',
-        'http://dummyimage.com/116x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '4:16',
         'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
@@ -208,7 +208,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-12-18',
         '2022-04-11',
         'Xinhua',
-        'http://dummyimage.com/206x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '6:17',
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         10,
@@ -222,7 +222,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-11-10',
         '2022-03-23',
         'Villa del Rosario',
-        'http://dummyimage.com/185x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '15:51',
         'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
@@ -238,7 +238,7 @@ Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscip
         '2021-10-29',
         '2022-03-25',
         'Alfeizerão',
-        'http://dummyimage.com/133x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '10:50',
         'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         5,
@@ -252,7 +252,7 @@ Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscip
         '2021-12-22',
         '2022-03-01',
         'Novoukrainskiy',
-        'http://dummyimage.com/250x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '8:32',
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
 
@@ -270,7 +270,7 @@ Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luc
         '2021-12-09',
         '2022-04-22',
         'Petaling Jaya',
-        'http://dummyimage.com/227x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '10:24',
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
@@ -286,7 +286,7 @@ Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspend
         '2021-11-14',
         '2022-04-02',
         'Esquipulas',
-        'http://dummyimage.com/242x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '6:22',
         'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.
 
@@ -304,7 +304,7 @@ Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vi
         '2021-11-20',
         '2022-03-26',
         'Online',
-        'http://dummyimage.com/107x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '20:13',
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.
 
@@ -322,7 +322,7 @@ In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
         '2021-12-04',
         '2022-05-07',
         'Xikou',
-        'http://dummyimage.com/152x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '3:11',
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
 
@@ -338,7 +338,7 @@ Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspend
         '2021-11-24',
         '2022-02-10',
         'Lugait',
-        'http://dummyimage.com/110x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '21:04',
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
@@ -354,7 +354,7 @@ Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integ
         '2022-01-07',
         '2022-05-16',
         'Na Khu',
-        'http://dummyimage.com/241x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '4:43',
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
@@ -370,7 +370,7 @@ Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non m
         '2021-12-02',
         '2022-04-29',
         'Hamburg Harvestehude',
-        'http://dummyimage.com/241x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '21:44',
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
@@ -388,7 +388,7 @@ Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non m
         '2021-11-08',
         '2022-05-09',
         'Shanxi',
-        'http://dummyimage.com/148x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '0:27',
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
@@ -404,7 +404,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-12-19',
         '2022-01-29',
         'Dal’neye Konstantinovo',
-        'http://dummyimage.com/161x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '16:04',
         'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.
 
@@ -422,7 +422,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-12-20',
         '2022-03-24',
         'Salon-de-Provence',
-        'http://dummyimage.com/123x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '16:55',
         'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
         5,
@@ -436,7 +436,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-11-08',
         '2022-03-15',
         'Xudat',
-        'http://dummyimage.com/195x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '16:33',
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         1,
@@ -450,7 +450,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-11-26',
         '2022-01-31',
         'Mendeleyevo',
-        'http://dummyimage.com/139x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '14:15',
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         4,
@@ -464,7 +464,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-11-13',
         '2022-01-25',
         'Lurut',
-        'http://dummyimage.com/179x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '16:41',
         'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         2,
@@ -478,7 +478,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-12-31',
         '2022-04-08',
         'Cikaso',
-        'http://dummyimage.com/134x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '3:43',
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         3,
@@ -492,7 +492,7 @@ Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat 
         '2021-11-02',
         '2022-02-24',
         'Taghazout',
-        'http://dummyimage.com/152x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '9:33',
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
 
@@ -508,7 +508,7 @@ Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luc
         '2021-12-14',
         '2022-04-29',
         'Shang Boingor',
-        'http://dummyimage.com/143x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '15:16',
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.
 
@@ -524,7 +524,7 @@ Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus 
         '2021-11-29',
         '2022-02-02',
         'Zhaigang',
-        'http://dummyimage.com/206x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '2:43',
         'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
         4,
@@ -538,7 +538,7 @@ Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus 
         '2021-12-06',
         '2022-04-04',
         'Hadabei',
-        'http://dummyimage.com/117x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '2:40',
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
@@ -556,7 +556,7 @@ In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat n
         '2022-01-09',
         '2022-05-14',
         'Pangrumasan',
-        'http://dummyimage.com/196x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '20:45',
         'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
@@ -574,7 +574,7 @@ Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 
         '2022-01-13',
         '2022-05-07',
         'Krotoszyn',
-        'http://dummyimage.com/106x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '4:48',
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
 
@@ -590,7 +590,7 @@ Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare
         '2021-12-11',
         '2022-02-11',
         'Mahdishahr',
-        'http://dummyimage.com/152x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '19:43',
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         5,
@@ -604,7 +604,7 @@ Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare
         '2021-12-02',
         '2022-04-27',
         'Aiguo',
-        'http://dummyimage.com/174x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '5:52',
         'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
 
@@ -622,7 +622,7 @@ Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula
         '2021-12-24',
         '2022-04-24',
         'Kunda',
-        'http://dummyimage.com/249x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '6:26',
         'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
 
@@ -640,7 +640,7 @@ Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-11-01',
         '2022-03-07',
         'Omaha',
-        'http://dummyimage.com/181x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '17:12',
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
@@ -656,7 +656,7 @@ Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum pri
         '2021-12-09',
         '2022-05-07',
         'Ilagan',
-        'http://dummyimage.com/205x100.png/ff4444/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '19:56',
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
@@ -672,7 +672,7 @@ Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integ
         '2021-11-06',
         '2022-03-13',
         'Araxá',
-        'http://dummyimage.com/228x100.png/cc0000/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '7:57',
         'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
@@ -688,7 +688,7 @@ Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-11-03',
         '2022-04-28',
         'Stockholm',
-        'http://dummyimage.com/143x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '18:18',
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.
 
@@ -704,7 +704,7 @@ Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.'
         '2022-01-22',
         '2022-04-23',
         'Truskavets',
-        'http://dummyimage.com/160x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '16:06',
         'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
@@ -720,7 +720,7 @@ Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-11-12',
         '2022-02-03',
         'Aubenas',
-        'http://dummyimage.com/118x100.png/dddddd/000000',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '22:50',
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
@@ -738,7 +738,7 @@ Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, t
         '2021-11-09',
         '2022-05-17',
         'Xiongbei',
-        'http://dummyimage.com/138x100.png/5fa2dd/ffffff',
+        'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '15:27',
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 

@@ -67,7 +67,10 @@ function MyStepper({ setSendRequest, sendRequest }) {
         </h1>
       ) : (
         <form ref={myForm}>
-          {getStepContent(activeStep, event, setEvent)}
+          <div style={{ padding: '15px' }}>
+            {getStepContent(activeStep, event, setEvent)}
+
+          </div>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               variant="outlined"

@@ -17,11 +17,14 @@ const styles = {
   },
 };
 
-const EditEvent = ({ event, setSendRequest, sendRequest }) => {
+const EditEvent = ({
+  event, setSendRequest, sendRequest, setOpenModeEdit,
+}) => {
   const [editedEvent, setEditedEvent] = useState(event);
   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
+    setMessage('');
     setEditedEvent({ ...editedEvent, [e.target.name]: e.target.value });
   };
 
@@ -34,6 +37,7 @@ const EditEvent = ({ event, setSendRequest, sendRequest }) => {
         .then(() => {
           setMessage('Event Updated Succefully');
           setSendRequest(!sendRequest);
+          setOpenModeEdit(false);
         })
         .catch(() => setMessage('Event Update Failed please try again later'));
     }
@@ -155,6 +159,7 @@ EditEvent.propTypes = {
   event: PropTypes.object.isRequired,
   sendRequest: PropTypes.bool.isRequired,
   setSendRequest: PropTypes.func.isRequired,
+  setOpenModeEdit: PropTypes.func.isRequired,
 };
 
 export default EditEvent;

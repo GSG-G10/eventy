@@ -1,5 +1,5 @@
 import {
-  TextField, Button, Input, OutlinedInput, InputAdornment,
+  TextField, Button, Input, OutlinedInput,
 } from '@mui/material';
 import MultipleSelectChip from './categories';
 
@@ -155,12 +155,10 @@ const getStepContent = (step, event, setEvent) => {
         fullWidth
         id="outlined-adornment-amount"
         type="number"
-        defaultValue= '0'
         name="price"
         label="Enter price"
         value={event.price}
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
-        startAdornment={<InputAdornment position="start">$</InputAdornment>}
       />
     </>
   );

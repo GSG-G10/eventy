@@ -29,7 +29,6 @@ const EventStepper = ({ setSendRequest, sendRequest }) => {
     color: 'rgba(0,0,0)',
     borderRadius: '20px',
     p: 5,
-    height: '50vh',
   };
 
   return (
@@ -45,7 +44,7 @@ const EventStepper = ({ setSendRequest, sendRequest }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography variant='h3'> Create Your Event </Typography>
+          <Typography variant='h4' sx={{ paddingBottom: '15px' }}> Create Your Event </Typography>
           <MyStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />
         </Box>
       </Modal>
