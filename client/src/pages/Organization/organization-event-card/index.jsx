@@ -42,8 +42,8 @@ const style = {
     top: '53%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: { sm: 500, lg: 500 },
-    height: { sm: 750, lg: 800 },
+    width: { sm: 500, lg: 450 },
+    height: { sm: 750, lg: '95vh' },
     bgcolor: 'rgb(255, 255, 255)',
     boxShadow: 30,
     borderTopLeftRadius: '15px',
@@ -117,6 +117,7 @@ const OrganizationEventCard = ({
       >
         <Box sx={style.box2}>
           <EditEvent
+            setOpenModeEdit={setOpenModeEdit}
             event={event}
             sendRequest={sendRequest}
             setSendRequest={setSendRequest}
@@ -132,10 +133,8 @@ const OrganizationEventCard = ({
       >
         <Grid maxWidth={{ sm: '100%' }} item xs={5} >
           <img
-            style={{ width: '100%', heigt: '100%' }}
-            src={event.image.includes('dummyimage')
-              ? 'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg'
-              : event.image}
+            style={{ width: '100%', height: '100%' }}
+            src={event.image}
           />
         </Grid>
         <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} >
