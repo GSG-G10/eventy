@@ -32,7 +32,7 @@ const Carousel = ({ children }) => {
     ],
   };
   return (
-    <Slider {...settings} style={{ marginTop: '2%' }}>
+    <Slider {...settings} style={{ paddingLeft: '2.5%', marginTop: '2%' }}>
       {children}
     </Slider>
   );

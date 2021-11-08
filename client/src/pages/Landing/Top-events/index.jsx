@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { EventsCard, Carousel } from '../../../components';
+import Loader from '../../Events/Loader';
 
 const TopEvents = () => {
   const [eventData, setData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const { CancelToken } = axios;
   const source = CancelToken.source();
 
@@ -13,6 +15,7 @@ const TopEvents = () => {
       cancelToken: source.token,
     });
     setData(data);
+    setIsLoaded(true);
     source.cancel('Operation canceled by the user');
   };
 
@@ -55,11 +58,15 @@ const TopEvents = () => {
             See all
           </Link>
         </div>
-        <Carousel>
-          {eventData.map((event) => (
-            <EventsCard key={event.id} event={event} />
-          ))}
-        </Carousel>
+        {isLoaded
+          ? <Carousel>
+            {eventData.map((event) => (
+              <EventsCard key={event.id} event={event} />
+            ))}
+          </Carousel>
+          : <Loader />
+        }
+
       </div>
     </div>
   );
