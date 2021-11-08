@@ -11,7 +11,7 @@ const ExclusiveEvents = () => {
   const source = CancelToken.source();
 
   const getTopEvents = async () => {
-    const { data } = await axios.get('api/v1/events?type=exclusive', {
+    const { data } = await axios.get('api/v1/events?type=exlusive', {
       cancelToken: source.token,
     });
     setData(data);
