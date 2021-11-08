@@ -4,21 +4,17 @@
     min-height: 100vh;
 }
 .footer-com {
-  height: 20vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   background-color: #000;
   justify-content: space-between;
   align-items: center;
   color: white;
-  margin-top: 30px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
   width: 100%;
   text-align: center;
-  height: 150px;
-  clear: both;
-  position: absolute;
-  bottom: -150px;
-  left: 0;
 }
 .sentence {
   height: 40%;
