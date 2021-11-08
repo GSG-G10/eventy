@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import { Header } from './components';
 import Landing from './pages/Landing';
@@ -10,9 +11,11 @@ import EventsPage from './pages/Events';
 import { Error404, Error500 } from './pages/Errors';
 import Footer from './components/Footer';
 
-const App = () => (
-  <Router>
-    <Header />
+const App = () => {
+  const [registerType, setRegisterType] = useState('1');
+
+  return <Router>
+    <Header setRegisterType={setRegisterType} />
     <Switch>
       <Route exact path="/">
         <Landing />
@@ -30,7 +33,7 @@ const App = () => (
         <EventsPage />
       </Route>
       <Route exact path={'/register'}>
-        <Register />
+        <Register registerType={registerType} setRegisterType={setRegisterType} />
       </Route>
       <Route exact path="/error500">
         <Error500 />
@@ -40,7 +43,7 @@ const App = () => (
       </Route>
     </Switch>
     <Footer />
-  </Router>
-);
+  </Router>;
+};
 
 export default App;

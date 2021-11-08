@@ -1,3 +1,8 @@
+import { useEffect, useState } from 'react';
+import { Link as RouterLink, useHistory } from 'react-router-dom';
+import axios from 'axios';
+import PropTypes from 'prop-types';
+
 import {
   AppBar,
   Box,
@@ -7,13 +12,10 @@ import {
   Stack,
   Link,
 } from '@mui/material';
-import { Link as RouterLink, useHistory } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import logo from './EVENTY_logo.png';
 import './style.css';
 
-const Header = () => {
+const Header = ({ setRegisterType }) => {
   const history = useHistory();
   const [admin, setAdmin] = useState(false);
 
@@ -35,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }} id="header">
+    <Box id="header">
       <AppBar position="static">
         <Toolbar>
           <Typography
@@ -56,8 +58,8 @@ const Header = () => {
               direction="row"
               style={{
                 padding: '1%',
-                width: '17%',
-                justifyContent: 'space-around',
+                width: '40%',
+                justifyContent: 'flex-end',
                 alignItems: 'center',
               }}
             >
@@ -73,6 +75,7 @@ const Header = () => {
                       fontSize: '1rem',
                       width: '39%',
                     }}
+                    onClick={() => setRegisterType('2')}
                   >
            log in
                   </Link>
@@ -94,6 +97,7 @@ const Header = () => {
                         textDecoration: 'none',
                       }}
                       id="SignUp"
+                      onClick={() => setRegisterType('1')}
                     >
              Register
                     </Button>
@@ -126,6 +130,10 @@ const Header = () => {
       </AppBar>
     </Box>
   );
+};
+
+Header.propTypes = {
+  setRegisterType: PropTypes.func.isRequired,
 };
 
 export default Header;
