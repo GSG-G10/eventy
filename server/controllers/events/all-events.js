@@ -19,7 +19,7 @@ module.exports = async (req, res, next) => {
     const events = await getAllEvents(date);
 
     if (!events?.length) {
-      res.json({ message: 'No events founded' });
+      return res.json({ message: 'No events founded' });
     }
 
     return res.json(events);

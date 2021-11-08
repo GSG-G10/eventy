@@ -5,7 +5,7 @@ module.exports = joi.object({
   name: joi.string().required(),
   description: joi.string().required(),
   price: joi.number().required(),
-  attendance: joi.number().positive().required(),
+  attendance: joi.number().required(),
   start_date: joi.date().required(),
   expire_date: joi.date().required(),
   location: joi.string().required(),
