@@ -10,12 +10,16 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import { useHistory } from 'react-router-dom';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PeopleIcon from '@mui/icons-material/People';
 import './style.css';
 
 const EventsCard = ({ event }) => {
   const history = useHistory();
   return (
-    <Card sx={{ maxWidth: 300, maxHeight: 400 }}>
+    <Card sx={{
+      width: 300, height: 370, borderRadius: 5, marginBottom: '20px',
+    }}>
       <CardActionArea>
         <div className="price-container">{`${event.price}$`}</div>
         <CardMedia
@@ -27,22 +31,37 @@ const EventsCard = ({ event }) => {
           onClick={() => history.push(`/event/${event.id}/${event.name}`)}
         ></CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="p" component="div">
-          Event Name:
-            <Typography>{event.name}</Typography>
+          <Typography gutterBottom variant="p" component="div" fontWeight='700'>
+          Title:
+            <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+              {event.name}</Typography>
           </Typography>
 
-          <Typography variant="body2">
+          <Typography variant="body2" fontSize='15px'>
             <Typography component="div">
-              <GroupOutlinedIcon /> <span>{event.organizer}</span>
+              <GroupOutlinedIcon fontSize='15px' /> <span>{event.organizer}</span>
             </Typography>
-            <Typography component="div">
-              <DateRangeIcon /> <span>{event.start_date.split('T')[0]}</span>
-              <span>{event.duration}</span>
+            <Typography component="div" sx={{
+              display: 'flex', width: '90%', justifyContent: 'space-around', alignItems: 'center',
+            }}>
+              <Typography component="div" sx={{ width: '50%' }}>
+                <DateRangeIcon fontSize='15px' />
+                <span>{event.start_date.split('T')[0]}</span>
+              </Typography>
+              <Typography component="div"> <AccessTimeIcon fontSize='15px' /> <span > {event.duration}</span> </Typography>
+
             </Typography>
-            <Typography component="div">
-              <LocationOnIcon />
-              <span>{event.location}</span>
+            <Typography component="div" sx={{
+              display: 'flex', width: '90%', justifyContent: 'space-around', alignItems: 'center',
+            }}>
+              <Typography component="div" sx={{ width: '60%', marginLeft: '-5px' }}>
+                <LocationOnIcon fontSize='15px' />
+                <span>{event.location}</span>
+              </Typography>
+              <Typography component="div">
+                <PeopleIcon fontSize='15px' />
+                <span>{event.attendance}</span>
+              </Typography>
             </Typography>
           </Typography>
         </CardContent>
