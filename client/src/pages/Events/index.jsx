@@ -2,10 +2,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import {
-  Button, Pagination, Paper, Divider, IconButton,
+  Button, Pagination, Paper, Divider,
 } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import SearchIcon from '@mui/icons-material/Search';
 import EventsCard from '../../components/events-card';
 import Loader from './Loader';
 import FilterModal from './Modal';
@@ -39,7 +38,7 @@ const EventsPage = () => {
   });
   const [errorMessage, setErrorMessage] = useState('There is no events with this filter');
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState('');
   // Handle Change
   const handleSearchChange = (e) => setSearch(e.target.value);
 
@@ -104,16 +103,21 @@ const EventsPage = () => {
       <Paper
         component="form"
         sx={{
-          p: '2px 4px', display: 'flex', alignItems: 'center', width: '80%', justifyContent: 'space-around', height: '50px', position: 'absolute', left: '10%', top: '25vh',
+          p: '.2rem',
+          display: 'flex',
+          alignItems: 'center',
+          width: '75%',
+          justifyContent: 'space-evenly',
+          height: '6vh',
+          position: 'absolute',
+          left: '12%',
+          top: '25vh',
         }}
       >
-        <Button size="small" variant="outlined" sx={btnStyle} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
-        <Divider sx={{ height: 40, m: 1 }} orientation="vertical" />
+        <Button size="medium" variant="outlined" sx={btnStyle} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
+        <Divider sx={{ height: 35 }} orientation="vertical" />
         <div className="search">
           <input type="text" name="search" id="search" placeholder='Search Events' onChange={handleSearchChange} />
-          <IconButton sx={{ positin: 'absolute', right: '10%' }}>
-            <SearchIcon />
-          </IconButton>
         </div>
       </Paper>
       {/* {Filter Modal} */}

@@ -30,28 +30,43 @@ const EventsCard = ({ event }) => {
           alt="green iguana"
         ></CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="p" component="div" fontWeight='700'>
-          Title:
-            <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
-              {event.name}</Typography>
+          <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+            {event.name}
           </Typography>
-
           <Typography variant="body2" fontSize='15px' sx={
             {
-              display: 'flex', flexDirection: 'column', justufyContent: 'space-between', height: '15vh', alignItems: 'stretch',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-around',
+              height: '15vh',
+              alignItems: 'stretch',
             }
           }>
-            <Typography component="div">
+            <Typography component="div" sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+            }}>
               <GroupOutlinedIcon fontSize='15px' /> <span>{event.organizer}</span>
             </Typography>
             <Typography component="div" sx={{
               display: 'flex', width: '90%', justifyContent: 'space-around', alignItems: 'center',
             }}>
-              <Typography component="div" sx={{ width: '50%' }}>
+              <Typography component="div" sx={{
+                width: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+              }}>
                 <DateRangeIcon fontSize='15px' />
                 <span>{event.start_date.split('T')[0]}</span>
               </Typography>
-              <Typography component="div" sx={{ width: '50%' }}>
+              <Typography component="div" sx={{
+                width: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+              }}>
                 <AccessTimeIcon fontSize='15px' />
                 <span > {event.duration} </span>
               </Typography>
@@ -60,11 +75,21 @@ const EventsCard = ({ event }) => {
             <Typography component="div" sx={{
               display: 'flex', width: '90%', justifyContent: 'space-around', alignItems: 'center',
             }}>
-              <Typography component="div" sx={{ width: '60%', marginLeft: '-5px' }}>
+              <Typography component="div" sx={{
+                width: '60%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+              }}>
                 <LocationOnIcon fontSize='15px' />
                 <span>{event.location}</span>
               </Typography>
-              <Typography component="div" sx={{ width: '50%' }}>
+              <Typography component="div" sx={{
+                width: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+              }}>
                 <PeopleIcon fontSize='15px' />
                 <span>{event.attendance}</span>
               </Typography>

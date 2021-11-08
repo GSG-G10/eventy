@@ -18,8 +18,7 @@ body {
 .event-container {
   width: 65%;
   height: 90%;
-  background-color: #fff;
-  opacity: 87%;
+  background-color: #E7E5E5;
   color: black;
   border-radius: 30px;
   box-shadow: 4px 9px 9px 10px #121212;
@@ -47,9 +46,8 @@ body {
   height: 75%;
 }
 .info-card {
-  background-color: #000;
+  background-color: #222222;
   height: 70%;
-  opacity: 85%;
   border-radius: 8px;
   box-shadow: 2.5px 5px 4px 5px #888888;
   color: #fff;
@@ -77,7 +75,7 @@ body {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  opacity: 80%;
+  color:#4e4e4e;
 }
 .event-details {
   display: flex;
@@ -86,17 +84,15 @@ body {
   height: 90%;
 }
 .event-details h2 {
-  color: #121212;
-  opacity: 87%;
+  color: #272727;
 }
 .event-details .org-link {
   color: #187f75;
   cursor: pointer;
 }
-.description h4,
+.descriptionEvent h4,
 .details h4 {
-  color: #121212;
-  opacity: 87%;
+  color: #383838;
 }
 .descriptionEvent,
 .details p {
