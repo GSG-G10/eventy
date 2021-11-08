@@ -77,7 +77,7 @@ const Header = ({ setRegisterType }) => {
                     }}
                     onClick={() => setRegisterType('2')}
                   >
-           log in
+                    Log In
                   </Link>
                   <Link
                     component={RouterLink}
