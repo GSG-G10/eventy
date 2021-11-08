@@ -20,7 +20,7 @@ const EventsCard = ({ event }) => {
     <Card sx={{
       width: 300, height: 370, borderRadius: 5, marginBottom: '20px',
     }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
         <div className="price-container">{`${event.price}$`}</div>
         <CardMedia
           component="img"
@@ -28,7 +28,6 @@ const EventsCard = ({ event }) => {
           width='200'
           image={event.image}
           alt="green iguana"
-          onClick={() => history.push(`/event/${event.id}/${event.name}`)}
         ></CardMedia>
         <CardContent>
           <Typography gutterBottom variant="p" component="div" fontWeight='700'>
