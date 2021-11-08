@@ -104,7 +104,7 @@ const EventsPage = () => {
       <Paper
         component="form"
         sx={{
-          p: '2px 4px', display: 'flex', alignItems: 'center', width: '80%', justifyContent: 'space-around', height: '50px', position: 'absolute', left: '10%', top: '15vh',
+          p: '2px 4px', display: 'flex', alignItems: 'center', width: '80%', justifyContent: 'space-around', height: '50px', position: 'absolute', left: '10%', top: '25vh',
         }}
       >
         <Button size="small" variant="outlined" sx={btnStyle} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
