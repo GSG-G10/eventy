@@ -36,7 +36,11 @@ const EventsCard = ({ event }) => {
               {event.name}</Typography>
           </Typography>
 
-          <Typography variant="body2" fontSize='15px'>
+          <Typography variant="body2" fontSize='15px' sx={
+            {
+              display: 'flex', flexDirection: 'column', justufyContent: 'space-between', height: '15vh', alignItems: 'stretch',
+            }
+          }>
             <Typography component="div">
               <GroupOutlinedIcon fontSize='15px' /> <span>{event.organizer}</span>
             </Typography>
@@ -47,7 +51,10 @@ const EventsCard = ({ event }) => {
                 <DateRangeIcon fontSize='15px' />
                 <span>{event.start_date.split('T')[0]}</span>
               </Typography>
-              <Typography component="div"> <AccessTimeIcon fontSize='15px' /> <span > {event.duration}</span> </Typography>
+              <Typography component="div" sx={{ width: '50%' }}>
+                <AccessTimeIcon fontSize='15px' />
+                <span > {event.duration} </span>
+              </Typography>
 
             </Typography>
             <Typography component="div" sx={{
@@ -57,7 +64,7 @@ const EventsCard = ({ event }) => {
                 <LocationOnIcon fontSize='15px' />
                 <span>{event.location}</span>
               </Typography>
-              <Typography component="div">
+              <Typography component="div" sx={{ width: '50%' }}>
                 <PeopleIcon fontSize='15px' />
                 <span>{event.attendance}</span>
               </Typography>
