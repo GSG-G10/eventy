@@ -33,7 +33,6 @@ const Header = ({ setRegisterType }) => {
     localStorage.clear();
     setAdmin(false);
     history.push('/');
-    history.go(0);
   };
 
   return (

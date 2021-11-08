@@ -58,9 +58,10 @@ const SignUp = () => {
           const { organization } = data;
           localStorage.setItem('id', organization.id);
           localStorage.setItem('username', organization.name);
-          return history.push(
+          history.push(
             `/organization/${organization.id}/${organization.name}`,
           );
+          return history.go(0);
         }
         return setErrorMessage(
           'Password value should be equal to confirmed password value',
