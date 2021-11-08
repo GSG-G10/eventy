@@ -58,3 +58,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+@media screen and (min-width: 1440px) {
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 30px;
+  }
+}

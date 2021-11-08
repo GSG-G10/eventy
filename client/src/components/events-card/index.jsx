@@ -38,8 +38,8 @@ const EventsCard = ({ event }) => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-around',
-              height: '15vh',
               alignItems: 'stretch',
+              height: '150px',
             }
           }>
             <Typography component="div" sx={{
