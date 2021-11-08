@@ -46,35 +46,34 @@ function About() {
             width: '100%',
           }}
         >
-          <img src={about} width={500} height={200} />
-          <div style={{ width: '100%' }}>
-            <Slider
-              {...settings}
-              style={{
-                height: '100%',
-                width: '75%',
-                backgroundColor: '#c8c9cd',
-                color: '#141510',
-                fontSize: '1.4rem',
-                padding: '6%',
-                fontWeight: 'bold',
-              }}
-            >
-              <div>
-                <h2 style={{ color: 'rgb(24, 127, 117)' }}>
+          <img src={about} width={400} height={180} />
+          <Slider
+            {...settings}
+            style={{
+              height: '100%',
+              width: '75%',
+              backgroundColor: '#c8c9cd',
+              color: '#141510',
+              fontSize: '1.4rem',
+              padding: '6%',
+              fontWeight: 'bold',
+            }}
+          >
+            <div>
+              <h2 style={{ color: 'rgb(24, 127, 117)' }}>
                   Why we recommend using EVENTY?
-                </h2>
-              </div>
-              <div>
-                <p>Do you find its hard to find stuffs to do in your city?</p>
-              </div>
-              <p>Do you want to start living fully life of experiences?</p>
-              <p>Do you want to know different organizations in Gaza?</p>
-              <p>
+              </h2>
+            </div>
+            <div>
+              <p>Do you find its hard to find stuffs to do in your city?</p>
+            </div>
+            <p>Do you want to start living fully life of experiences?</p>
+            <p>Do you want to know different organizations in Gaza?</p>
+            <p>
                 Do you want to reach more audiunce and promote for your events?
-              </p>
-            </Slider>
-          </div>
+            </p>
+          </Slider>
+
         </div>
         <h2 style={{ padding: '2%', letterSpacing: '1px' }}>
           Eventy is the best place to build a wide networks around you!
