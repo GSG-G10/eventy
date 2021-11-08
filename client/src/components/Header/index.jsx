@@ -7,13 +7,14 @@ import {
   Stack,
   Link,
 } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import logo from './EVENTY_logo.png';
 import './style.css';
 
 const Header = () => {
+  const history = useHistory();
   const [admin, setAdmin] = useState(false);
 
   useEffect(async () => {
@@ -29,6 +30,8 @@ const Header = () => {
     await axios.get('/api/v1/signout');
     localStorage.clear();
     setAdmin(false);
+    history.push('/');
+    history.go(0);
   };
 
   return (
