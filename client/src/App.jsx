@@ -8,6 +8,7 @@ import SingleEventCard from './pages/Event';
 import Register from './pages/Register';
 import EventsPage from './pages/Events';
 import { Error404, Error500 } from './pages/Errors';
+import Footer from './components/Footer';
 
 const App = () => (
   <Router>
@@ -38,6 +39,7 @@ const App = () => (
         <Error404 />
       </Route>
     </Switch>
+    <Footer />
   </Router>
 );
 

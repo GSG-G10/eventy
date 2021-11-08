@@ -129,10 +129,10 @@ const EventsPage = () => {
         { // Present Events
           // eslint-disable-next-line no-nested-ternary
           isLoaded
-            ? events.length > 0
+            ? filteredEvents.length > 0
               ? filteredEvents.map((ele, i) => ((i + 1 > page * 9 - 9 && i + 1 <= page * 9)
                 ? <EventsCard event={ele} key={i} />
-                : '')) : <h2>{errorMessage}</h2>
+                : '')) : <h2 style={{ color: '#fff' }}>{errorMessage}</h2>
 
             : <Loader />
         }
