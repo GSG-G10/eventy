@@ -8,8 +8,9 @@ const {
 const {
   addAttendant,
   getAttendance,
-  addEventAttendance,
+  upadteAttendance,
   getEventAttendant,
+  addEventAttendance,
 } = require('./attendance');
 
 const {
@@ -29,9 +30,10 @@ module.exports = {
   addAttendant,
   getAllEvents,
   getAttendance,
-  getEventAttendant,
   createEventQuery,
+  upadteAttendance,
   updateEventQuery,
+  getEventAttendant,
   getEventByIdQuery,
   getEventsCategory,
   addEventAttendance,
