@@ -15,7 +15,7 @@ const Register = () => {
   return (
     <Box sx={{
       maxWidth: '60%',
-      height: '85vh',
+      height: '125vh',
       typography: 'body1',
       bgcolor: '#404143',
       color: 'white',
