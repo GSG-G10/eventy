@@ -125,4 +125,4 @@ Now you can view the app live in the Browser!
 - [Node Js](https://nodejs.org/en/)
 - [React Js](https://reactjs.org/)
 - [Express](http://expressjs.com/)
-- [TailWind](https://tailwindcss.com/)
+- [Material UI](https://mui.com/)
