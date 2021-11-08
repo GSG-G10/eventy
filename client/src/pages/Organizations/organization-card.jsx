@@ -23,7 +23,7 @@ const OrganizationCard = ({ organizationData }) => {
     >
       <Grid maxWidth={{ sm: '100%' }} item xs={5} >
         <img
-          style={{ maxWidth: '100%' }}
+          style={{ width: '100%', height: '100%' }}
           src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg"
         />
       </Grid>

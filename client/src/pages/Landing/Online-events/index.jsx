@@ -46,9 +46,9 @@ const OnlineEvents = () => {
               }}
             >
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ padding: '2%' }}>Exclusive events</h3>
+                <h3 style={{ padding: '2%' }}>Online Events</h3>
                 <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
-                  Some of exclusive events around your location
+                  Some of Online Events
                 </p>
               </div>
               <Link
