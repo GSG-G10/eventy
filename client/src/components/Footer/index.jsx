@@ -5,20 +5,23 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import './style.css';
 
 const Footer = () => (
-  <footer className='footer-com'>
-    <div className='sentence'>
-      <p>Follow Us</p>
-      <p>Follow us on our social accounts to find the best events.</p>
-    </div>
-    <div className='icons'>
-      <FacebookRoundedIcon />
-      <TwitterIcon />
-      <WhatsAppIcon />
-      <InstagramIcon />
-    </div>
-    <div className="last-div">
-      <p>Eventy , INC . 2021</p>
-      <p>Terms . Privacy . FAQs . Sitemap</p>
+  <footer>
+    <div className="footer-com">
+
+      <div className='sentence'>
+        <p>Follow Us</p>
+        <p>Follow us on our social accounts to find the best events.</p>
+      </div>
+      <div className='icons'>
+        <FacebookRoundedIcon />
+        <TwitterIcon />
+        <WhatsAppIcon />
+        <InstagramIcon />
+      </div>
+      <div className="last-div">
+        <p>Eventy , INC . 2021</p>
+        <p>Terms . Privacy . FAQs . Sitemap</p>
+      </div>
     </div>
   </footer>
 );
