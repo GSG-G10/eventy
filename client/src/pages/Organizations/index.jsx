@@ -22,15 +22,17 @@ const useStyles = makeStyles(() => ({
 const styles = {
   container: {
     width: '100%',
+    height: '250px',
     backgroundColor: 'rgba(250,250,250,.13)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'space-around',
+    position: 'relative',
   },
   searchContainer: {
-    position: 'relative',
-    top: '6vh',
-    maxWidth: '100%',
+    position: 'absolute',
+    top: '210px',
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -46,6 +48,7 @@ const styles = {
     boxShadow: '4px 4px 4px 4px  rgba(250,250,250,.3)',
     fontSize: '1.5rem',
     padding: '1rem',
+    outline: 'none',
 
   },
 };
