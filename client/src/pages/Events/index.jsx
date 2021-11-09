@@ -8,6 +8,8 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import EventsCard from '../../components/events-card';
 import Loader from './Loader';
 import FilterModal from './Modal';
+
+import styles from './styles';
 import './style.css';
 import Cover from '../Landing/Assets/Cover.png';
 // for pagination
@@ -86,13 +88,7 @@ const EventsPage = () => {
     setFilteredEvents(filtered.length > 0 ? filtered : events);
     setPage(1);
   }, [search]);
-  // style for button
-  const btnStyle = {
-    height: '70%',
-    fontSize: '15px',
-    color: '#797575',
-    border: '#797575 1px solid',
-  };
+
   return <>
     <section className="filter-container">
       {/* {Header Image} */}
@@ -102,19 +98,9 @@ const EventsPage = () => {
       {/* {Filter Nav} */}
       <Paper
         component="form"
-        sx={{
-          p: '.2rem',
-          display: 'flex',
-          alignItems: 'center',
-          width: '75%',
-          justifyContent: 'space-evenly',
-          height: '6vh',
-          position: 'absolute',
-          left: '12%',
-          top: '25vh',
-        }}
+        sx={styles.form}
       >
-        <Button size="medium" variant="outlined" sx={btnStyle} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
+        <Button size="medium" variant="outlined" sx={styles.button} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
         <Divider sx={{ height: 35 }} orientation="vertical" />
         <div className="search">
           <input type="text" name="search" id="search" placeholder='Search Events' onChange={handleSearchChange} />
