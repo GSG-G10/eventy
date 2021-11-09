@@ -16,10 +16,10 @@ const getStepContent = (step, event, setEvent) => {
   case 0: return (
     <>
       <h2>Enter your Event Name:</h2>
-      <TextField
+      <Input
         fullWidth
         id="outlined-basic"
-        type="name"
+        type="text"
         name="name"
         label="Event Name"
         value={event.name}

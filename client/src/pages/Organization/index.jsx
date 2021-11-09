@@ -12,6 +12,8 @@ import Cover from './cover';
 import EventStepper from './create-event';
 import OrganizationEventCard from './organization-event-card';
 
+import './style.css';
+
 const useStyles = makeStyles(() => ({
   ul: {
     '& .MuiPaginationItem-root': {
@@ -66,18 +68,14 @@ const Organization = () => {
   return (
     <>
       <Cover organization={organization}/>
-      <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginBottom: '8vh', width: '100%',
-      }}>
+      <div className="orgSection">
         <Typography
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
         {userId === Number(organizationId) ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} /> : ''}
       </div>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center',
-      }}>
+      <div className="resultsSection">
         {isLoaded
           ? organizationEvents?.length > 0
             ? (organizationEvents

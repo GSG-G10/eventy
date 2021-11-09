@@ -15,6 +15,8 @@ import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 import EditEvent from '../edit-event';
 
+import '../style.css';
+
 const style = {
   box1: {
     position: 'absolute',
@@ -125,19 +127,17 @@ const OrganizationEventCard = ({
         </Box>
       </Modal>
       <Grid
-        style={{ marginBottom: '5vh', color: 'black' }}
-        flexDirection={{ sm: 'column', lg: 'row' }}
         bgcolor="rgba(255, 255, 255, .87)"
-        maxWidth={{ sm: '60%', lg: '55%' }}
+        className="organizationEventCard"
         container
       >
-        <Grid maxWidth={{ sm: '100%' }} item xs={5} >
+        <Grid maxWidth={{ sm: '100%' }} item xs={5} className="eventOrgCover">
           <img
             style={{ width: '100%', height: '100%' }}
             src={event.image}
           />
         </Grid>
-        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} >
+        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} className="eventOrgDetails" >
           <Stack flexDirection="row" spacing={1} mt={2} alignItems="flex-start" justifyContent="space-between" >
             <Button
               style={{
@@ -146,6 +146,7 @@ const OrganizationEventCard = ({
               variant="outlined"
               value={event.id}
               onClick={handleClick}
+              className="eventOrgButton"
             >
               {event.name}
             </Button>

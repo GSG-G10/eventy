@@ -106,7 +106,7 @@ const Header = ({ setRegisterType }) => {
                   <Link component={RouterLink} to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } style={{
                     color: 'white',
                     fontSize: '1.2rem',
-                  }}>{localStorage.getItem('username')}</Link>
+                  }} id="orgHeader">{localStorage.getItem('username')}</Link>
                   <Button
                     id="logOut"
                     variant="contained"

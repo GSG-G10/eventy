@@ -1,0 +1,83 @@
+.orgSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    width: 100%,
+}
+
+.resultsSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.organizationEventCard {
+    color: black;
+    width: 70% !important;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width:700px) {
+    .orgSection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cover {
+        width: 100%;
+        height: auto;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: .7rem;
+        width: 80%;
+    }
+    #registerContainer {
+        font-size: .5rem;
+        width: 100%;
+    }
+    #logOut {
+        font-size: .7em;
+        height: fit-content;
+        width: fit-content;
+    }
+    #orgHeader {
+        display: none;
+    }
+    #logo {
+        margin-top: 10px;
+    }
+    .organizationEventCard {
+        flex-direction: column !important;
+        width: 80% !important;
+        height: 480px !important;
+    }
+    .eventOrgCover {
+        max-width: 100% !important;
+        height: auto;
+        max-height: 180px !important;
+    }
+    .eventOrgDetails {
+        max-width: 100% !important;
+        height: 100% !important;
+        margin-left: 0 !important;
+    }
+    .eventOrgButton {
+        font-size: .8rem !important;
+        width: 85% !important;
+        font-weight: bolder !important;
+        max-height: 50px !important;
+    }
+    .MuiBox-root {
+        width: 90% !important;
+        height: 30% !important;
+    }
+    .MuiBox-root h4{
+        display: none;
+    }
+}
