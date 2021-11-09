@@ -4,11 +4,12 @@ import About from './About';
 import { Advertisment1, Advertisment2 } from './Advertisments';
 import ExclusiveEvents from './Exclusive-events';
 import OnlineEvents from './Online-events';
+import './style.css';
 
 function Landing() {
   return (
     <div>
-      <img src={Cover} style={{ height: '32vh', width: '100%' }}/>
+      <img src={Cover} id='landing-head-image'/>
       <TopEvents />
       <About />
       <Advertisment1 />

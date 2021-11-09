@@ -1,0 +1,34 @@
+.landing-events-container {
+    display: flex;
+     justify-content: center; margin-top: 5%;
+}
+#landing-head-image {
+    height: 32vh;
+    width: 100%;
+}
+.landing-events-subCont {
+    display: flex;
+              flex-direction: column;
+              justify-content: center;
+              color: white;
+              width: 75%;
+}
+.landing-events-description-cont {
+    display: flex;
+                justify-content: space-between;
+                width: 96%;
+}
+.landing-events-description {
+    display: flex; flex-direction: column;
+}
+.landing-category-title {
+    padding: 2%;
+}
+.landing-category-subtitle {
+    padding: 2%; font-size: 0.8rem; width: 104%;
+}
+.landing-events-description-cont a {
+    padding: 2%;
+    color: white;
+    text-decoration-line: underline;
+}

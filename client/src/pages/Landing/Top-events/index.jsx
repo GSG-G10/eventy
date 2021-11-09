@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { EventsCard, Carousel } from '../../../components';
 
+import '../style.css';
+
 const TopEvents = () => {
   const [eventData, setData] = useState([]);
   const { CancelToken } = axios;
@@ -21,37 +23,16 @@ const TopEvents = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%' }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          color: 'white',
-          width: '75%',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            width: '96%',
-          }}
-        >
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ padding: '2%' }}>Top events</h3>
-            <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
+    <div className='landing-events-container'>
+      <div className='landing-events-subCont'>
+        <div className='landing-events-description-cont'>
+          <div className='landing-events-description'>
+            <h3 className='landing-category-title'>Top events</h3>
+            <p className='landing-category-subtitle'>
               Some of our favourite events around your location
             </p>
           </div>
-          <Link
-            style={{
-              padding: '2%',
-              color: 'white',
-              textDecorationLine: 'underline',
-            }}
-            to="/events"
-          >
+          <Link to="/events">
             See all
           </Link>
         </div>
