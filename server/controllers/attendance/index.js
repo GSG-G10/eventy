@@ -2,6 +2,7 @@ const { joinEventValidation } = require('../../utils/validation');
 const {
   addAttendant,
   getAttendance,
+  upadteAttendance,
   addEventAttendance,
   getEventAttendant,
   getEventByIdQuery,
@@ -22,6 +23,7 @@ const addAttendence = async (req, res, next) => {
       const newAttendant = await addAttendant(req.body);
       const attendantId = newAttendant.id;
       await addEventAttendance(attendantId, eventId);
+      await upadteAttendance(eventId);
       sendEmail(eventInfo, newAttendant.email, next);
       return res.json({ message: 'Joined Event Successfuly' });
     }
@@ -32,6 +34,7 @@ const addAttendence = async (req, res, next) => {
     }
     // if the user exists and didn't join, add him and send him a reminder
     await addEventAttendance(existAttendant, eventId);
+    await upadteAttendance(eventId);
     sendEmail(eventInfo, email);
     return res.json({ message: 'Joined Event Successfuly' });
   } catch (err) {

@@ -58,9 +58,10 @@ const SignUp = () => {
           const { organization } = data;
           localStorage.setItem('id', organization.id);
           localStorage.setItem('username', organization.name);
-          return history.push(
+          history.push(
             `/organization/${organization.id}/${organization.name}`,
           );
+          return history.go(0);
         }
         return setErrorMessage(
           'Password value should be equal to confirmed password value',
@@ -126,12 +127,13 @@ const SignUp = () => {
       />
 
       <TextField
-        style={{ backgroundColor: '#d9d9d9', height: '56px' }}
+        style={{ backgroundColor: '#d9d9d9' }}
         id="outlined-textarea"
         name="description"
         placeholder="Short words about your organization"
         color="secondary"
         required
+        minRows={1}
         multiline
         value={value.description}
         onChange={handleChange}

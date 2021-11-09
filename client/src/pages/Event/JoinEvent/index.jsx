@@ -23,7 +23,7 @@ import { BootstrapInput, containerBox, formContainer } from './styles';
 import './style.css';
 
 function JoinEvent({
-  open = true, setOpen, eventId, message, setMessage, setClosed,
+  open, setOpen, eventId, message, setMessage, setClosed,
 }) {
   const [value, setValue] = useState({
     name: '',

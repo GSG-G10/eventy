@@ -337,7 +337,7 @@ Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspend
         79,
         '2021-11-24',
         '2022-02-10',
-        'Lugait',
+        'Online',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         '21:04',
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.

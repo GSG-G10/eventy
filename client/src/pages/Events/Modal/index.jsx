@@ -21,8 +21,10 @@ const FilterModal = ({
     >
       <div className="filters">
         <PriceSlider value={filters.price} setValue={setFilters} />
-        <LocationFilter value={filters.location} setValue={setFilters} />
-        <CategoryFilter value={filters.category} setValue={setFilters}/>
+        <div className="secondRow">
+          <LocationFilter value={filters.location} setValue={setFilters} />
+          <CategoryFilter value={filters.category} setValue={setFilters}/>
+        </div>
         <Button variant="contained" onClick={submitFilter}>Submit</Button>
       </div>
     </Modal>

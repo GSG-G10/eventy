@@ -86,7 +86,7 @@ const Login = () => {
         <Button type='submit' variant="contained" sx={btnStyle}>Log in</Button>
       </form>
       <FormHelperText id="helper-text" sx={{ color: '#fff' }}>
-          You do not have account? <Link to='/signup'> Sign Up </Link>
+          Return to <Link to='/'> Home </Link>
       </FormHelperText>
     </div>
   </section>;

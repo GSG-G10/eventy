@@ -10,12 +10,13 @@ const LocationFilter = ({ setValue }) => {
     (prevState) => ({ ...prevState, location: newValue }),
   );
   return (
-    <FormControl component="fieldset" sx={{ width: '90%' }}>
+    <FormControl component="fieldset" sx={{ width: '40%' }}>
       <FormLabel component="legend">Location</FormLabel>
-      <RadioGroup row aria-label="location" name="row-radio-buttons-group" onChange={handleChange} >
-        <FormControlLabel value="online" control={<Radio />} label="Online" sx={{ width: '20%' }}/>
-        <FormControlLabel value="inPerson" control={<Radio />} label="In Person" sx={{ width: '20%' }}/>
-        <FormControlLabel value="all" control={<Radio />} label="All" sx={{ width: '20%' }}/>
+      <RadioGroup row aria-label="location" name="row-radio-buttons-group" onChange={handleChange}
+        sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
+        <FormControlLabel value="online" control={<Radio />} label="Online"/>
+        <FormControlLabel value="inPerson" control={<Radio />} label="In Person"/>
+        <FormControlLabel value="all" control={<Radio />} label="All" />
       </RadioGroup>
     </FormControl>
   );

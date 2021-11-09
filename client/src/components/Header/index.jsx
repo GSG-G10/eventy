@@ -33,7 +33,6 @@ const Header = ({ setRegisterType }) => {
     localStorage.clear();
     setAdmin(false);
     history.push('/');
-    history.go(0);
   };
 
   return (
@@ -71,13 +70,13 @@ const Header = ({ setRegisterType }) => {
                     style={{
                       color: '#ffff',
                       textDecorationColor: '#ffff',
-                      fontWeight: '400',
-                      fontSize: '1rem',
-                      width: '39%',
+                      fontWeight: '500',
+                      fontSize: '1.2rem',
+                      width: '30%',
                     }}
                     onClick={() => setRegisterType('2')}
                   >
-           log in
+                    Log In
                   </Link>
                   <Link
                     component={RouterLink}

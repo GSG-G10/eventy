@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 .footer-com {
-  height: 20vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   background-color: #000;
