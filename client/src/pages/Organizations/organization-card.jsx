@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-
 import { useHistory } from 'react-router-dom';
 
 import {
   Grid, Button,
 } from '@mui/material';
+
+import './style.css';
 
 const OrganizationCard = ({ organizationData }) => {
   const history = useHistory();
@@ -14,49 +15,38 @@ const OrganizationCard = ({ organizationData }) => {
   };
 
   return (
-    <Grid
-      style={{ marginBottom: '5vh', color: 'black' }}
-      flexDirection={{ sm: 'column', lg: 'row' }}
-      bgcolor="rgba(255, 255, 255, .87)"
-      maxWidth={{ sm: '60%', lg: '55%' }}
-      container
-    >
-      <Grid maxWidth={{ sm: '100%' }} item xs={5} >
+    <Grid className="organizationCard" container >
+      <Grid className="organization-cover" item xs={4} >
         <img
           style={{ width: '100%', height: '100%' }}
           src="https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg"
         />
       </Grid>
-      <Grid item mt={3} ml={2} xs={ 6 } sx={{ p: 3 }} maxWidth={{ sm: '75%' }}
-        style={{
-          display: 'flex', flexDirection: 'column', justufyContent: 'space-between',
-        }}
-      >
+      <Grid item className="organizationCardText">
         <Button
           variant="text"
           onClick={handleClick}
           sx={{
             mb: 2,
             color: '#187F75',
-            fontSize: '1.75rem',
+            fontSize: '1.5rem',
             fontWeight: 'bold',
             border: 0,
-            maxWidth: { sm: '100%', lg: '80%' },
           }}
           style= {{
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'flex-start',
-            height: '25%',
+            height: '40px',
             marginLeft: '-.6vh',
           }}
         >
           {organizationData.name}
         </Button>
-        <h3 style={{ fontSize: '1.3rem' }}>
+        <h3 className="organization-description">
           {organizationData.description}
         </h3>
-        <p style={{ fontSize: '1rem', marginTop: '2rem' }}>Catagories : {organizationData.categories}</p>
+        <p style={{ fontSize: '1rem', marginTop: '2rem' }}> Catagories : {organizationData.categories}</p>
       </Grid>
     </Grid>
   );

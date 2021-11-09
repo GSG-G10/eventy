@@ -3,55 +3,11 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 import { Pagination, Skeleton } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 
 import OrganizationCard from './organization-card';
 
-const useStyles = makeStyles(() => ({
-  ul: {
-    '& .MuiPaginationItem-root': {
-      color: 'white',
-      fontWeight: 'bold',
-      marginBottom: '5vh',
-      backgroundColor: '#187F75',
-      padding: '1.3rem',
-    },
-  },
-}));
-
-const styles = {
-  container: {
-    width: '100%',
-    height: '250px',
-    backgroundColor: 'rgba(250,250,250,.13)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'space-around',
-    position: 'relative',
-  },
-  searchContainer: {
-    position: 'absolute',
-    top: '210px',
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '2vh',
-  },
-  searchField: {
-    width: '75%',
-    height: '8vh',
-    backgroundColor: '#FFFBFB',
-    border: '0',
-    borderRadius: '20px',
-    dropShadow: '75%',
-    boxShadow: '4px 4px 4px 4px  rgba(250,250,250,.3)',
-    fontSize: '1.5rem',
-    padding: '1rem',
-    outline: 'none',
-
-  },
-};
+import { styles, useStyles } from './styles';
+import './style.css';
 
 const Organizations = () => {
   const classes = useStyles();
@@ -84,13 +40,12 @@ const Organizations = () => {
       <div style={styles.container}>
         <img
           className="img"
-          style={{
-            position: 'relative', objectFit: 'cover',
-          }}
+          style={{ position: 'relative', objectFit: 'cover' }}
           src='https://www.seekpng.com/png/full/291-2917400_on-the-periphery-of-the-periphery-household-archaeology.png'
         />
         <div style={styles.searchContainer}>
           <input
+            className="search"
             placeholder="Search For Organizations"
             style={styles.searchField}
             value={search}
@@ -98,10 +53,7 @@ const Organizations = () => {
           />
         </div>
       </div>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '8vh', marginTop: '10vh', width: '100%',
-      }}>
-
+      <div className="organization-container">
         {organizations.length > 0
           ? filter
             .map((organizationData, index) => ((index + 1 > page * 3 - 3 && index + 1 <= page * 3)
@@ -125,11 +77,12 @@ const Organizations = () => {
         {filter.length > 3 ? (
           <Pagination
             classes={{ ul: classes.ul }}
-            size="large"
+            size="medium"
             count={Math.ceil(filter.length / 3)}
             variant="outlined"
             color="secondary"
             page={page}
+            className="pagination"
             onChange={(e, value) => setPage(value)}
           />
         ) : (

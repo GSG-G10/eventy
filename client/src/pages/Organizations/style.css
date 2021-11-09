@@ -1,0 +1,77 @@
+.organization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10vh auto;
+}
+
+.organizationCard {
+    margin-bottom: 20px;
+    width: 75% !important;
+    height: 30vh;
+    background-color:rgba(255, 255, 255, .87);
+}
+
+.organizationCardText {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    margin-top: 24px !important;
+    margin-left: 16px !important;
+    max-width: 63%;
+    padding: 10px !important;
+    height: fit-content;
+}
+
+.organization-cover {
+    height: 100%;
+}
+
+.organization-description {
+    font-size: 1.2em;
+    width: 100%;
+    text-align: left;
+    height: 60px;
+}
+
+@media screen and (max-width: 700px) {
+    .organization-container {
+        width: 75% !important;
+        align-self: center;
+    }
+    .organizationCard {
+        width: 100% !important;
+        flex-direction: column !important;
+        height: auto !important;
+        margin-bottom: 10vh !important;
+    }
+    .css-cqsb0v-MuiGrid-root {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .organization-cover {
+        max-width: 100% !important;
+        height: 100%;
+    }
+    .organization-description {
+        height: 80px;
+        max-width: 100%;
+        font-weight: 500;
+    }
+    .organizationCardText {
+        max-width: 100% !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        font-size: .9rem;
+    }
+    .pagination{
+        margin-top: 5vh !important;
+    }
+    .pagination ul{
+        max-width: 100% !important;
+        flex-wrap:nowrap;
+        margin-top: auto !important;
+    }
+}

@@ -20,6 +20,13 @@
     margin-bottom: 25px;
 }
 
+.eventOrgButton {
+    font-size: 1.2rem !important;
+    font-weight: bolder !important;
+    max-height: 28px !important;
+    color: #187F75 !important;
+}
+
 @media screen and (max-width:700px) {
     .orgSection {
         flex-direction: column;
@@ -54,30 +61,66 @@
     }
     .organizationEventCard {
         flex-direction: column !important;
-        width: 80% !important;
-        height: 480px !important;
+        width: 60% !important;
     }
     .eventOrgCover {
         max-width: 100% !important;
-        height: auto;
-        max-height: 180px !important;
+        max-height: 35% !important;
     }
     .eventOrgDetails {
         max-width: 100% !important;
+        height: 65% !important;
+        margin: 0 !important;
+    }
+    .MuiBox-root h4 {
+        display: none;
+    }
+    .login-section {
+        height: 600px !important;
+    }
+    .orgSection span {
+        font-size: 1rem;
+    }
+    .form-container {
         height: 100% !important;
-        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    .css-u68rod {
+        max-width: 90% !important;
+        height: 80vh !important;
+        margin: 50px auto !important;
+    }
+    .css-10pgvii-MuiTabPanel-root {
+        height: 100% !important;
+        width: 370px !important;
+    }
+    .css-1d9cypr-MuiStack-root {
+        height: 16%;
+    }
+    .MuiTextField-root {
+        width: 88% !important;
+    }
+    .search {
+        width: 100% !important;
+    }
+    #filterButn {
+        display: none !important;
+    }
+    #divider {
+        display: none !important;
+    }
+    .filter-nav {
+        width: 90% !important;
+        left: 5vw !important;
+    }
+    .css-9ooee9-MuiStack-root {
+        margin-top: 1vh !important;
+        height: 100% !important;
+    }
+    .css-1d9cypr-MuiStack-root p {
+        font-size: .7rem !important;
     }
     .eventOrgButton {
         font-size: .8rem !important;
-        width: 85% !important;
-        font-weight: bolder !important;
-        max-height: 50px !important;
-    }
-    .MuiBox-root {
-        width: 90% !important;
-        height: 30% !important;
-    }
-    .MuiBox-root h4{
-        display: none;
     }
 }
