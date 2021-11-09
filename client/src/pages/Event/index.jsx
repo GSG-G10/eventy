@@ -52,15 +52,10 @@ const SingleEventCard = () => {
                 <h2>
                   {eventInfo.name}
                 </h2>
-                <Button variant="text" style={{
-                  maxWidth: '13%',
-                  color: '#03DAC5',
-                  fontSize: '1.5rem',
-                  fontWeight: 'bold',
-                  marginRight: '2.5rem',
-                  marginLeft: '2.3rem',
-                }}
-                onClick={() => history.push(`/organization/${eventInfo.organizer_id}/${eventInfo.organizer}`)}>
+                <Button
+                  variant="text"
+                  id='organizer-btn'
+                  onClick={() => history.push(`/organization/${eventInfo.organizer_id}/${eventInfo.organizer}`)}>
                   {eventInfo.organizer}
                 </Button>
                 <div className="descriptionEvent">
