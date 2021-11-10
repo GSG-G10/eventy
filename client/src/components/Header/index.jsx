@@ -61,13 +61,6 @@ const Header = ({ setRegisterType }) => {
                     to="/register"
                     component={RouterLink}
                     className='loginButn'
-                    style={{
-                      color: '#ffff',
-                      textDecorationColor: '#ffff',
-                      fontWeight: '500',
-                      fontSize: '1.2rem',
-                      width: '30%',
-                    }}
                     id='login-link'
                     onClick={() => setRegisterType('2')}
                   >
