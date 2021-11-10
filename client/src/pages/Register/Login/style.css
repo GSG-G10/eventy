@@ -42,7 +42,7 @@
         width: 100%;
     }
     .loginText p {
-        font-size: .7rem;
-        text-align: center;
+        font-size: .75rem;
+        width: 100%;
     }
 }

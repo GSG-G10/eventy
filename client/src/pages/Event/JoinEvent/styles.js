@@ -40,9 +40,11 @@ const formContainer = {
   justifyContent: 'space-around',
   alignItems: 'center',
 };
+const labelsStyle = { color: '#fff', fontWeight: 'bold' };
 
 export {
   BootstrapInput,
   containerBox,
   formContainer,
+  labelsStyle,
 };

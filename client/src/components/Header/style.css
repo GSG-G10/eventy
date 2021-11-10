@@ -1,18 +1,51 @@
 .MuiToolbar-root {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 #registerContainer {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #header {
     width: 100%
 }
-@media screen and (max-width: 600px) {
-    .loginButn{
-        display: none;
-    }
+#logo {
+  height: 30px;
+}
+#login-link {
+  color: #ffff;
+  text-decoration-color: #ffff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 30%;
+}
+
+#reg-link {
+  text-decoration: none;
+}
+#SignUp {
+  background-color: #187f75;
+  height: 31px;
+  font-weight: 500;
+  width: 82%;
+  text-decoration: none;
+}
+#username {
+    color: white;
+    font-size: 1.2rem;
+}
+#logOut {
+    background-color: #187F75;
+    font-size: 0.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .loginButn{
+      display: none;
+  }
+  #registerContainer a{
+    display: none;
+  }
 }
