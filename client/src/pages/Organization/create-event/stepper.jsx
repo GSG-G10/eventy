@@ -12,7 +12,18 @@ import getStepContent from './utils/get-step-content';
 import './style .css';
 
 function MyStepper({ setSendRequest, sendRequest }) {
-  const [event, setEvent] = useState({});
+  const [event, setEvent] = useState({
+    name: '',
+    duration: '',
+    startDate: '',
+    expireDate: '',
+    location: '',
+    description: '',
+    details: '',
+    age: 0,
+    price: 0,
+    image: '',
+  });
   const [open, setOpen] = useState(false);
   const [validate, setValidate] = useState('success');
   const [activeStep, setActiveStep] = useState(0);
@@ -48,14 +59,14 @@ function MyStepper({ setSendRequest, sendRequest }) {
   };
 
   return (
-    <Box className="box" sx={{ width: '95%' }}>
+    <Box className="box" sx={{ width: { sm: '100%', lg: '95%' } }}>
       <Stepper alternativeLabel activeStep={activeStep}>
         {steps.map((label) => {
           const stepProps = {};
           const labelProps = {};
 
           return (
-            <Step key={label} {...stepProps}>
+            <Step key={label} {...stepProps} className='stepsLabels'>
               <StepLabel {...labelProps}>{label}</StepLabel>
             </Step>
           );

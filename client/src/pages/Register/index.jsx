@@ -28,7 +28,7 @@ const Register = ({ registerType, setRegisterType }) => {
     }}>
       <TabContext value={registerType}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} textColor="white" >
+          <TabList onChange={handleChange} textColor="inherit">
             <Tab label="Sign Up" value="1" />
             <Tab label="Sign In" value="2" />
           </TabList>

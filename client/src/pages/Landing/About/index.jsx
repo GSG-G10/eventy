@@ -2,6 +2,7 @@ import Slider from 'react-slick';
 import about from '../Assets/about.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './style.css';
 
 function About() {
   const settings = {
@@ -15,37 +16,14 @@ function About() {
     pauseOnHover: true,
   };
   return (
-    <div
-      style={{
-        color: '#f0f0f0',
-        marginTop: '5%',
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <div
-        style={{
-          width: '75%',
-        }}
-      >
-        <h2 style={{ padding: '1.5%' }}>Welcome to EVENTY !</h2>
-        <p
-          style={{
-            padding: '1.5%',
-            fontWeight: 'lighter',
-            letterSpacing: '1px',
-          }}
-        >
+    <div className='about-section'>
+      <div className='about-container'>
+        <h2 className='about-welcome'>Welcome to EVENTY !</h2>
+        <p className='about-description'>
           Our passion is enabling people in Gaza to easily connect around the
           events they love.
         </p>
-        <div
-          style={{
-            padding: '1.5%',
-            display: 'flex',
-            width: '100%',
-          }}
-        >
+        <div className='about-slider-container'>
           <img src={about} width={400} height={180} />
           <Slider
             {...settings}
@@ -75,7 +53,7 @@ function About() {
           </Slider>
 
         </div>
-        <h2 style={{ padding: '2%', letterSpacing: '1px' }}>
+        <h2 className='about-h2'>
           Eventy is the best place to build a wide networks around you!
         </h2>
       </div>

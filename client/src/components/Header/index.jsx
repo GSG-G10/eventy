@@ -12,6 +12,9 @@ import {
   Stack,
   Link,
 } from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
+
+import styles from './styles';
 import logo from './EVENTY_logo.png';
 import './style.css';
 
@@ -42,38 +45,23 @@ const Header = ({ setRegisterType }) => {
           <Typography
             variant="h6"
             component="div"
-            sx={{
-              flexGrow: 1,
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
+            sx={styles.headerContainer}
           >
             <Link component={RouterLink} to="/">
-              <img src={logo} alt="eventy logo" style={{ height: '30px' }} id="logo" />
+              <img src={logo} alt="eventy logo" id="logo" />
             </Link>
             <Stack
               spacing={2}
               direction="row"
-              style={{
-                padding: '1%',
-                width: '40%',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-              }}
+              style={styles.stack}
             >
               {!admin
                 ? <>
                   <Link
                     to="/register"
                     component={RouterLink}
-                    style={{
-                      color: '#ffff',
-                      textDecorationColor: '#ffff',
-                      fontWeight: '500',
-                      fontSize: '1.2rem',
-                      width: '30%',
-                    }}
+                    className='loginButn'
+                    id='login-link'
                     onClick={() => setRegisterType('2')}
                   >
                     Log In
@@ -81,20 +69,11 @@ const Header = ({ setRegisterType }) => {
                   <Link
                     component={RouterLink}
                     to="/register"
-                    style={{
-                      textDecoration: 'none',
-                    }}
+                    id='reg-link'
                   >
                     <Button
                       variant="contained"
                       className="register-button"
-                      style={{
-                        backgroundColor: '#187F75',
-                        height: '31px',
-                        fontWeight: '500',
-                        width: '82%',
-                        textDecoration: 'none',
-                      }}
                       id="SignUp"
                       onClick={() => setRegisterType('1')}
                     >
@@ -103,21 +82,18 @@ const Header = ({ setRegisterType }) => {
                   </Link>
                 </>
                 : <div id="registerContainer">
-                  <Link component={RouterLink} to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } style={{
-                    color: 'white',
-                    fontSize: '1.2rem',
-                  }}>{localStorage.getItem('username')}</Link>
+                  <Link component={RouterLink}
+                    to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } id='username'>
+                    {localStorage.getItem('username')}
+                  </Link>
                   <Button
                     id="logOut"
                     variant="contained"
                     className="register-button"
-                    style={{
-                      backgroundColor: '#187F75',
-                      fontSize: '0.5rem',
-                    }}
                     onClick={handleLogOut}
                   >
-           Log out
+                    <LogoutIcon sx={{ marginRight: '5px' }} />
+                    Log out
                   </Button>
                 </div>
 

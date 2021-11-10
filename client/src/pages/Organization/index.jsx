@@ -1,28 +1,18 @@
 /* eslint-disable no-nested-ternary */
 import axios from 'axios';
-import { makeStyles } from '@mui/styles';
 import { useParams, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
 import {
   Typography, Pagination, Skeleton, Snackbar, Alert,
 } from '@mui/material';
+
+import useStyles from './styles';
 
 import Cover from './cover';
 import EventStepper from './create-event';
 import OrganizationEventCard from './organization-event-card';
 
-const useStyles = makeStyles(() => ({
-  ul: {
-    '& .MuiPaginationItem-root': {
-      color: 'white',
-      fontWeight: 'bold',
-      marginBottom: '5vh',
-      backgroundColor: '#187F75',
-      padding: '1.3rem',
-    },
-  },
-}));
+import './style.css';
 
 const Organization = () => {
   const classes = useStyles();
@@ -66,18 +56,14 @@ const Organization = () => {
   return (
     <>
       <Cover organization={organization}/>
-      <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginBottom: '8vh', width: '100%',
-      }}>
+      <div className="orgSection">
         <Typography
           sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
         {userId === Number(organizationId) ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} /> : ''}
       </div>
-      <div style={{
-        display: 'flex', flexDirection: 'column', alignItems: 'center',
-      }}>
+      <div className="resultsSection">
         {isLoaded
           ? organizationEvents?.length > 0
             ? (organizationEvents
@@ -103,11 +89,12 @@ const Organization = () => {
         {organizationEvents.length > 3 ? (
           <Pagination
             classes={{ ul: classes.ul }}
-            size="large"
+            size="medium"
             count={Math.ceil(organizationEvents.length / 3)}
             variant="outlined"
             color="secondary"
             page={page}
+            className="pagination"
             onChange={(e, value) => setPage(value)}
           />
         ) : (

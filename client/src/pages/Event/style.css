@@ -100,6 +100,14 @@ body {
   font-weight: 300;
   width: 75%;
 }
+#organizer-btn {
+  max-width: 13%;
+  color: #03DAC5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2.5rem;
+  margin-left: 2.3rem;
+}
 @media only screen and (max-width: 1200px) {
   .event-container{
     width: 75%;

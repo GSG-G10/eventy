@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import axios from 'axios';
@@ -5,7 +6,6 @@ import {
   Typography, Grid, IconButton, Stack, Modal, Box, Alert, AlertTitle, Button, Snackbar,
 } from '@mui/material';
 
-import { useHistory } from 'react-router-dom';
 import PeopleIcon from '@mui/icons-material/People';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DateRangeIcon from '@mui/icons-material/DateRange';
@@ -15,50 +15,8 @@ import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 import EditEvent from '../edit-event';
 
-const style = {
-  box1: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    top: '53%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: { sm: 250, lg: 400 },
-    height: { sm: 230, lg: 200 },
-    bgcolor: 'rgba(255, 255, 255, .87)',
-    boxShadow: 30,
-    borderTopLeftRadius: '15px',
-    borderTopRightRadius: '15px',
-
-  },
-  box2: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    top: '53%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: { sm: 500, lg: 450 },
-    height: { sm: 750, lg: '95vh' },
-    bgcolor: 'rgb(255, 255, 255)',
-    boxShadow: 30,
-    borderTopLeftRadius: '15px',
-    borderTopRightRadius: '15px',
-  },
-  alert: {
-    width: { sm: 200 },
-    height: '60%',
-    fontSize: '1.29rem',
-  },
-  button: {
-    width: '50%',
-    marginBottom: '1.5vh',
-  },
-};
+import style from './styles';
+import '../style.css';
 
 const OrganizationEventCard = ({
   isAdmin, setAdmin, event, sendRequest, setSendRequest, userId,
@@ -125,27 +83,23 @@ const OrganizationEventCard = ({
         </Box>
       </Modal>
       <Grid
-        style={{ marginBottom: '5vh', color: 'black' }}
-        flexDirection={{ sm: 'column', lg: 'row' }}
         bgcolor="rgba(255, 255, 255, .87)"
-        maxWidth={{ sm: '60%', lg: '55%' }}
+        className="organizationEventCard"
         container
       >
-        <Grid maxWidth={{ sm: '100%' }} item xs={5} >
+        <Grid maxWidth={{ sm: '100%' }} item xs={5} className="eventOrgCover">
           <img
             style={{ width: '100%', height: '100%' }}
             src={event.image}
           />
         </Grid>
-        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} >
+        <Grid item ml={2} xs={ 6 } maxWidth={{ sm: '85%' }} className="eventOrgDetails" >
           <Stack flexDirection="row" spacing={1} mt={2} alignItems="flex-start" justifyContent="space-between" >
             <Button
-              style={{
-                fontWeight: 'bold', fontSize: '1rem', color: '#187F75', border: 0, width: '100%', textAlign: 'left',
-              }}
-              variant="outlined"
+              variant="text"
               value={event.id}
               onClick={handleClick}
+              className="eventOrgButton"
             >
               {event.name}
             </Button>

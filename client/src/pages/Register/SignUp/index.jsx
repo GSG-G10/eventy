@@ -87,7 +87,7 @@ const SignUp = () => {
       {errorMessage ? <Alert severity="error">{errorMessage}!</Alert> : ''}
 
       <TextField
-        id="filled-basic"
+        className="filled-basic"
         label="Organization Name"
         name="name"
         style={{ backgroundColor: '#d9d9d9', width: '100%' }}
@@ -99,7 +99,7 @@ const SignUp = () => {
       />
 
       <TextField
-        id="filled-basic"
+        className="filled-basic"
         label="Email"
         name="email"
         type="email"
@@ -128,7 +128,7 @@ const SignUp = () => {
 
       <TextField
         style={{ backgroundColor: '#d9d9d9' }}
-        id="outlined-textarea"
+        className="outlined-textarea"
         name="description"
         placeholder="Short words about your organization"
         color="secondary"
@@ -143,7 +143,7 @@ const SignUp = () => {
           Enter organization’s logo
         <Input
           accept="image/*"
-          id="contained-button-file"
+          className="contained-button-file"
           type="file"
           name="image"
           required

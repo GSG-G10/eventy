@@ -26,7 +26,7 @@ const Password = ({
       <FormControl variant="filled">
         <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
         <FilledInput
-          id="filled-adornment-password"
+          className="filled-adornment-password"
           size="small"
           name="password"
           inputProps={{ minLength: 8 }}
@@ -55,7 +55,7 @@ const Password = ({
           Confirm Password
         </InputLabel>
         <FilledInput
-          id="filled-adornment-password"
+          className="filled-adornment-password"
           size="small"
           style={{ backgroundColor: '#d9d9d9', width: '100%' }}
           color="secondary"
@@ -88,6 +88,6 @@ Password.propTypes = {
   handleClickShowPassword: PropTypes.func,
   showPassword: PropTypes.bool,
   showConfirmPassword: PropTypes.bool,
-  setShowConfirmPassword: PropTypes.bool,
+  setShowConfirmPassword: PropTypes.func,
 };
 export default Password;

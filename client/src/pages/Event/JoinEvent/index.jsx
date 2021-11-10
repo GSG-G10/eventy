@@ -19,7 +19,9 @@ import {
   Alert,
 
 } from '@mui/material';
-import { BootstrapInput, containerBox, formContainer } from './styles';
+import {
+  BootstrapInput, containerBox, formContainer, labelsStyle,
+} from './styles';
 import './style.css';
 
 function JoinEvent({
@@ -94,7 +96,7 @@ function JoinEvent({
                 <FormControl variant="standard">
                   <InputLabel
                     shrink htmlFor="bootstrap-input"
-                    sx={{ color: '#fff', fontWeight: 'bold' }}>
+                    sx={labelsStyle}>
                     Your Name:
                   </InputLabel>
                   <BootstrapInput
@@ -111,7 +113,7 @@ function JoinEvent({
               <div className='input-cont'>
                 <FormControl variant="standard">
                   <InputLabel shrink htmlFor="bootstrap-input"
-                    sx={{ color: '#fff', fontWeight: 'bold' }}>
+                    sx={labelsStyle}>
                     Your E-mail:
                   </InputLabel>
                   <BootstrapInput
@@ -126,8 +128,8 @@ function JoinEvent({
                 </FormControl>
               </div>
               <div className='input-cont'>
-                <FormControl variant="standard" sx={{ color: '#fff', fontWeight: 'bold' }}>
-                  <InputLabel shrink htmlFor="bootstrap-input" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                <FormControl variant="standard" sx={labelsStyle}>
+                  <InputLabel shrink htmlFor="bootstrap-input" sx={labelsStyle}>
                     Your Phone Number:
                   </InputLabel>
                   <BootstrapInput
@@ -143,7 +145,7 @@ function JoinEvent({
               </div>
               <div className='input-cont'>
                 <FormControl variant="standard">
-                  <InputLabel shrink htmlFor="bootstrap-input" sx={{ color: '#fff', fontWeight: 'bold' }}>
+                  <InputLabel shrink htmlFor="bootstrap-input" sx={labelsStyle}>
                     Your Age:
                   </InputLabel>
                   <BootstrapInput

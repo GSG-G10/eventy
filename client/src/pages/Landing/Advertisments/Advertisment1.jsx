@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import createEvent from '../Assets/createEvent.png';
+import './style.css';
 
 const Advertisment1 = () => {
   const [admin, setAdmin] = useState(false);
@@ -29,40 +30,14 @@ const Advertisment1 = () => {
     }
   };
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: '#f0f0f0',
-          height: '30vh',
-          width: '75%',
-          marginTop: '5%',
-          display: 'flex',
-          justifyContent: 'space-between',
-          borderRadius: '25px',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '60%',
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-          }}
-        >
+    <div className='ad1-section'>
+      <div className='ad1-container'>
+        <div className='ad1-content'>
           <h2>Let people hear about your events!</h2>
           <Button
             variant="contained"
             type="submit"
-            style={{
-              backgroundColor: '#187F75',
-              fontSize: '0.8rem',
-            }}
+            id='ad1-create-btn'
             onClick={handleSubmit}
           >
             {' '}

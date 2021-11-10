@@ -1,0 +1,73 @@
+.organization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10vh auto;
+}
+
+.organization-container .organizationCard {
+    margin-bottom: 20px;
+    width: 70%;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, .87);
+}
+
+.organizationCard .organizationCardText {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between ;
+    margin-top: 24px ;
+    margin-left: 16px ;
+    max-width: 63%;
+    padding: 10px ;
+    height: fit-content;
+}
+
+.organization-cover {
+    height: 100%;
+}
+
+.organization-description {
+    font-size: 1.2em;
+    width: 100%;
+    text-align: left;
+    height: 60px;
+}
+
+@media screen and (max-width: 700px) {
+    .organization-container {
+        width: 75%;
+        align-self: center;
+    }
+    .organization-container .organizationCard {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    .organizationCard .organization-cover {
+        max-width: 100%;
+        height: 100%;
+    }
+    .organization-description {
+        height: 80px;
+        max-width: 100%;
+        font-weight: 500;
+    }
+    .organizationCard .organizationCardText {
+        max-width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        font-size: .9rem;
+    }
+    .organization-container .pagination {
+        margin-top: 5vh;
+    }
+    .pagination ul {
+        max-width: 100% ;
+        flex-wrap: nowrap;
+        margin-top: auto ;
+    }
+}

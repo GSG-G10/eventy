@@ -1,6 +1,4 @@
-import {
-  TextField, Button, Input, OutlinedInput,
-} from '@mui/material';
+import { TextField, Button, Input } from '@mui/material';
 import MultipleSelectChip from './categories';
 
 const getStepContent = (step, event, setEvent) => {
@@ -13,14 +11,15 @@ const getStepContent = (step, event, setEvent) => {
     };
     reader.readAsDataURL(file);
   };
+
   switch (step) {
   case 0: return (
     <>
       <h2>Enter your Event Name:</h2>
-      <TextField
+      <Input
         fullWidth
         id="outlined-basic"
-        type="name"
+        type="text"
         name="name"
         label="Event Name"
         value={event.name}
@@ -44,6 +43,7 @@ const getStepContent = (step, event, setEvent) => {
           required
           type="date"
           name="startDate"
+          min={`${new Date().toISOString().substring(0, 10)}`}
           value={event.startDate}
           onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         />
@@ -52,6 +52,7 @@ const getStepContent = (step, event, setEvent) => {
           required
           type="date"
           name="expireDate"
+          min={`${new Date().toISOString().substring(0, 10)}`}
           value={event.expireDate}
           onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
         />
@@ -151,13 +152,14 @@ const getStepContent = (step, event, setEvent) => {
   case 8: return (
     <>
       <h1>Is this event has a ticket price?</h1>
-      <OutlinedInput
+      <Input
         fullWidth
         id="outlined-adornment-amount"
         type="number"
         name="price"
         label="Enter price"
         value={event.price}
+        variant="standard"
         onChange={(e) => setEvent({ ...event, [e.target.name]: e.target.value })}
       />
     </>
