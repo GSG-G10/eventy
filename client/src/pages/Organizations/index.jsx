@@ -37,7 +37,7 @@ const Organizations = () => {
 
   return (
     <>
-      <div style={styles.container}>
+      <div className="organizationHeader" style={styles.container}>
         <img
           className="img"
           style={{ position: 'relative', objectFit: 'cover' }}

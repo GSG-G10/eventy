@@ -7,21 +7,21 @@
     margin: 10vh auto;
 }
 
-.organizationCard {
+.organization-container .organizationCard {
     margin-bottom: 20px;
-    width: 75% !important;
+    width: 70%;
     height: 30vh;
-    background-color:rgba(255, 255, 255, .87);
+    background-color: rgba(255, 255, 255, .87);
 }
 
-.organizationCardText {
+.organizationCard .organizationCardText {
     display: flex;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    margin-top: 24px !important;
-    margin-left: 16px !important;
+    flex-direction: column ;
+    justify-content: space-between ;
+    margin-top: 24px ;
+    margin-left: 16px ;
     max-width: 63%;
-    padding: 10px !important;
+    padding: 10px ;
     height: fit-content;
 }
 
@@ -38,21 +38,17 @@
 
 @media screen and (max-width: 700px) {
     .organization-container {
-        width: 75% !important;
+        width: 75%;
         align-self: center;
     }
-    .organizationCard {
-        width: 100% !important;
-        flex-direction: column !important;
-        height: auto !important;
-        margin-bottom: 10vh !important;
+    .organization-container .organizationCard {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10vh;
     }
-    .css-cqsb0v-MuiGrid-root {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-    .organization-cover {
-        max-width: 100% !important;
+    .organizationCard .organization-cover {
+        max-width: 100%;
         height: 100%;
     }
     .organization-description {
@@ -60,18 +56,18 @@
         max-width: 100%;
         font-weight: 500;
     }
-    .organizationCardText {
-        max-width: 100% !important;
-        margin-top: 0 !important;
-        margin-left: 0 !important;
+    .organizationCard .organizationCardText {
+        max-width: 100%;
+        margin-top: 0;
+        margin-left: 0;
         font-size: .9rem;
     }
-    .pagination{
-        margin-top: 5vh !important;
+    .organization-container .pagination {
+        margin-top: 5vh;
     }
-    .pagination ul{
-        max-width: 100% !important;
-        flex-wrap:nowrap;
-        margin-top: auto !important;
+    .pagination ul {
+        max-width: 100% ;
+        flex-wrap: nowrap;
+        margin-top: auto ;
     }
 }
