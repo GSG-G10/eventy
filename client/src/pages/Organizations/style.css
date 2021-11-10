@@ -36,7 +36,7 @@
     height: 60px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .organization-container {
         width: 75%;
         align-self: center;
