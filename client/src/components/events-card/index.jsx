@@ -19,7 +19,7 @@ import './style.css';
 const EventsCard = ({ event }) => {
   const history = useHistory();
   return (
-    <Card sx={styles.card}>
+    <Card className="eventCard" sx={styles.card}>
       <CardActionArea onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
         <div className="price-container">{`${event.price}$`}</div>
         <CardMedia

@@ -1,0 +1,16 @@
+@media screen and (max-width:768px) {
+    #root .css-1cxxitc {
+        max-width: 90%;
+        height: auto;
+        margin: 50px auto;
+    }
+    .css-1cxxitc .signUpTab {
+        width: 100%;
+        padding: 0;
+    }
+    .signUpTab #Form {
+        width: 100%;
+        padding: 0;
+        margin-left: 0 !important;
+    }
+}

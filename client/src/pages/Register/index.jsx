@@ -5,6 +5,8 @@ import { TabContext, TabList, TabPanel } from '@mui/lab';
 import Signup from './SignUp';
 import Login from './Login';
 
+import './style.css';
+
 const Register = ({ registerType, setRegisterType }) => {
   const handleChange = (event, newValue) => {
     setRegisterType(newValue);
@@ -33,7 +35,7 @@ const Register = ({ registerType, setRegisterType }) => {
             <Tab label="Sign In" value="2" />
           </TabList>
         </Box>
-        <TabPanel value="1" sx={{
+        <TabPanel value="1" className="signUpTab" sx={{
           height: '90%', width: '75%',
         }}>
           <Signup />

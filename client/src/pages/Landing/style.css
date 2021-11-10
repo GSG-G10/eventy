@@ -3,10 +3,12 @@
   justify-content: center;
   margin-top: 5%;
 }
+
 #landing-head-image {
   height: 32vh;
   width: 100%;
 }
+
 .landing-events-subCont {
   display: flex;
   flex-direction: column;
@@ -14,25 +16,157 @@
   color: white;
   width: 75%;
 }
+
 .landing-events-description-cont {
   display: flex;
   justify-content: space-between;
   width: 96%;
 }
+
 .landing-events-description {
   display: flex;
   flex-direction: column;
 }
+
 .landing-category-title {
   padding: 2%;
 }
+
 .landing-category-subtitle {
   padding: 2%;
   font-size: 0.8rem;
   width: 104%;
 }
+
 .landing-events-description-cont a {
   padding: 2%;
   color: white;
   text-decoration-line: underline;
+}
+@media ((min-width:775px) and (max-width: 1150px)) {
+  .landing-events-description-cont {
+    width: 90%;
+  }
+  .landing-events-description {
+    width: 100%;
+  }
+  .landing-events-description p {
+    display: none;
+  }
+  .landing-events-subCont {
+    width: 100%;
+  }
+  .landing-events-description {
+    width: 100%;
+  }
+  .landing-events-description p {
+    display: none;
+  }
+  .landing-events-description-cont a {
+    padding: 2%;
+    color: white;
+    text-decoration-line: underline;
+  }
+  .landing-category-title {
+    padding: 2%;
+  }
+  .landing-category-subtitle {
+    padding: 2%;
+    font-size: 0.8rem;
+    width: 104%;
+  }
+  .landing-events-description-cont {
+    width: 100%;
+  }
+  .landing-events-description {
+    width: 100%;
+  }
+  .landing-events-description p {
+    display: none;
+  }
+  .landing-events-description-cont a {
+    padding: 2%;
+    color: white;
+    text-decoration-line: underline;
+  }
+  .landing-category-title {
+    padding: 2%;
+  }
+  .landing-category-subtitle {
+    padding: 2%;
+    font-size: 0.8rem;
+    width: 104%;
+  }
+  .landing-events-description-cont {
+    width: 100%;
+  }
+  .landing-events-description {
+    width: 100%;
+  }
+}
+@media (max-width: 775px) {
+  #landing-head-image {
+    display: none;
+  }
+  .landing-events-description {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  .landing-events-description p {
+    display: none;
+  }
+  .about-slider-container img {
+    display: none;
+  }
+  .about-container h2, p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .about-slider-container .slick-slider {
+    width: 100% !important;
+  }
+  .about-slider-container {
+    margin: 2rem auto;
+  }
+  .ad1-container img {
+    display: none;
+  }
+  .ad1-section .ad2-container{
+    height: 20vh;
+    margin: 2rem auto;
+  }
+  .ad2-container .ad2-content {
+    width: 100%;
+    text-align: center;
+  }
+  .ad2-container img {
+    display: none;
+  }
+  .ad2-container h2{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .eventCard {
+    width: 100% !important;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ad1-section .ad1-container {
+    height: 20vh;
+  }
+  .ad1-container .ad1-content {
+    width: 100%;
+  }
+  .ad1-content h2 {
+    font-size: .8rem;
+    text-align: center;
+  }
+  .ad1-content button {
+    width: 80%;
+    height: 2rem;
+    font-size: .8rem;
+  }
 }
