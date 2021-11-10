@@ -13,7 +13,7 @@ VALUES (
         'Q0fTCwdxmR',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'literature'
+        '["literature"]'
     ),
     (
         'Skipfire',
@@ -21,7 +21,7 @@ VALUES (
         'UqQBSPg',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities',
-        'literature'
+        '["literature"]'
     ),
     (
         'Agivu',
@@ -29,7 +29,7 @@ VALUES (
         'DV4de1MN5X',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'formal'
+        '["formal"]'
     ),
     (
         'Browsebug',
@@ -37,7 +37,7 @@ VALUES (
         '$2a$10$9hFb703hGGntkbqXdeYNAe3aZbzXk40SVfrBxmxUsR2QdesHRGqDO',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'art'
+        '["art"]'
     ),
     (
         'Ooba',
@@ -45,7 +45,7 @@ VALUES (
         'gIHLa6Fecs9j',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'technology'
+        '["technology"]'
     ),
     (
         'Skinix',
@@ -53,7 +53,7 @@ VALUES (
         'QpDOF7HIG',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'technology'
+        '["technology"]'
     ),
     (
         'Meetz',
@@ -61,7 +61,7 @@ VALUES (
         'GU2kf5jOdF',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'literature'
+        '["literature"]'
     ),
     (
         'Eamia',
@@ -69,7 +69,7 @@ VALUES (
         '20fvqHFap',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities', 
-        'medicine'
+        '["medicine"]'
     ),
     (
         'Eimbee',
@@ -77,7 +77,7 @@ VALUES (
         'M08UqQrHG6h',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this  organization and its activities',
-        'literature'
+        '["literature"]'
     ),
     (
         'Thoughtblab',
@@ -85,7 +85,7 @@ VALUES (
         'HFZvhYcADi',
         'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg',
         'This is the organization description which should include a breif information about this organization and its activities',
-        'medicine'
+        '["medicine"]'
     );
 /*********************** events ************************************/
 INSERT INTO events (

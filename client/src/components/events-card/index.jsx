@@ -21,7 +21,7 @@ const EventsCard = ({ event }) => {
   return (
     <Card className="eventCard" sx={styles.card}>
       <CardActionArea onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
-        <div className="price-container">{`${event.price}$`}</div>
+        <div className="price-container">{event.price === 0 ? 'Free' : `${event.price}$`}</div>
         <CardMedia
           component="img"
           height="140"
