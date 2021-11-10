@@ -37,8 +37,12 @@
     color: #03DAC5;
 }
 
-@media screen and (max-width: 768px) {
-    .header p {
-        padding-left: 15px;
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+    .loginText p {
+        font-size: .75rem;
+        width: 100%;
     }
 }

@@ -97,11 +97,15 @@ const EventsPage = () => {
       </div>
       {/* {Filter Nav} */}
       <Paper
+        className="filter-nav"
         component="form"
         sx={styles.form}
       >
-        <Button size="medium" variant="outlined" sx={styles.button} onClick={handleOpen}> <FilterListIcon /> Filter </Button>
-        <Divider sx={{ height: 35 }} orientation="vertical" />
+        <Button id='filterButn' size="medium" variant="outlined" sx={styles.button} onClick={handleOpen}>
+          <FilterListIcon />
+        Filter
+        </Button>
+        <Divider id='divider' sx={{ height: 35 }} orientation="vertical" />
         <div className="search">
           <input type="text" name="search" id="search" placeholder='Search Events' onChange={handleSearchChange} />
         </div>

@@ -9,7 +9,7 @@
 }
 
 #header {
-  width: 100%;
+    width: 100%
 }
 #logo {
   height: 30px;
@@ -39,4 +39,13 @@
 #logOut {
     background-color: #187F75;
     font-size: 0.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .loginButn{
+      display: none;
+  }
+  #registerContainer a{
+    display: none;
+  }
 }

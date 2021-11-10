@@ -51,7 +51,7 @@ const Login = () => {
   return <section className='login-section'>
 
     <div className="container">
-      <div className="header">
+      <div className="loginText">
         <p>
               Login to your account to see all events that you organize
         </p>
@@ -64,25 +64,23 @@ const Login = () => {
         }
         <TextField
           hiddenLabel
-          id="outlined-basic"
           variant="filled"
           type='email'
           sx={inputStyle}
           placeholder='Email'
           onChange={handleInputChange}
           name='email'
-          requiered />
+          required />
 
         <TextField
           hiddenLabel
-          id="outlined-basic"
           variant="filled"
           type='password'
           sx={inputStyle}
           placeholder='Password'
           name='password'
           onChange={handleInputChange}
-          requiered />
+          required />
         <Button type='submit' variant="contained" sx={btnStyle}>Log in</Button>
       </form>
       <FormHelperText id="helper-text" sx={{ color: '#fff' }}>

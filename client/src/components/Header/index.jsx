@@ -60,6 +60,7 @@ const Header = ({ setRegisterType }) => {
                   <Link
                     to="/register"
                     component={RouterLink}
+                    className='loginButn'
                     id='login-link'
                     onClick={() => setRegisterType('2')}
                   >
