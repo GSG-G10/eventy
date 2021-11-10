@@ -27,7 +27,7 @@ module.exports = async (req, res, next) => {
         description,
         price, attendance,
         start_date, expire_date, location,
-        image, duration, details, organizer_id, category,
+        image, duration, details, organizer_id, JSON.stringify(category),
       );
       return res.json(updatedEvent);
     }

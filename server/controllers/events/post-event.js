@@ -7,6 +7,7 @@ const createEvent = async (req, res, next) => {
     const { userId } = req;
     await createEventValidation.validateAsync(req.body);
     req.body.image = await uploadImage(req.body.image);
+    req.body.category = JSON.stringify(req.body.category);
     const creatEvent = await createEventQuery(userId, req.body);
     return res.status(201).json(creatEvent);
   } catch (err) {
