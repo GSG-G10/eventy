@@ -17,7 +17,7 @@ const index = () => {
       <Button
         variant="outlined"
         onClick={() => history.push('/')}
-        style={{ marginTop: '2rem' }}
+        id='home-btn'
       >Return to Homepage</Button>
     </div>
 

@@ -1,0 +1,26 @@
+.about-section {
+  color: #f0f0f0;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  width: 75%;
+}
+.about-welcome {
+  padding: 1.5%;
+}
+.about-description {
+  padding: 1.5%;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.about-slider-container {
+  padding: 1.5%;
+  display: flex;
+  width: 100%;
+}
+.about-h2 {
+  padding: 2%;
+  letter-spacing: 1px;
+}

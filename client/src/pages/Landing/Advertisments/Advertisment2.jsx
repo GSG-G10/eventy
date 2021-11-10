@@ -9,44 +9,17 @@ const Advertisment2 = () => {
     history.push('/organizations');
   };
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: '#f0f0f0',
-          height: '30vh',
-          width: '75%',
-          marginTop: '5%',
-          display: 'flex',
-          justifyContent: 'space-between',
-          borderRadius: '15px',
-        }}
-      >
+    <div className='ad1-section'>
+      <div className='ad2-container'>
         <img src={eventy} alt="eventy logo" />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: '60%',
-            justifyContent: 'space-evenly',
-            alignItems: 'center',
-          }}
-        >
+        <div className='ad2-content'>
           <h2>Discover more organizations !</h2>
           <Button
             variant="contained"
             type="submit"
-            style={{
-              backgroundColor: '#187F75',
-              fontSize: '0.8rem',
-            }}
+            id='ad2-btn'
             onClick={handleSubmit}
           >
-            {' '}
             Click here
           </Button>
         </div>
