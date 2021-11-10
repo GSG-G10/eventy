@@ -108,11 +108,12 @@ Now you can view the app live in the Browser!
 - FrontEnd: **React JS**
 - Database: **PostgreSQL**
 - Styling: **CSS**
-- Libraries: **TailWind CSS**
+- Libraries: **Material UI (MUI)**
 
 ## **Lead Mentor** :sunglasses::-
 
 - Muhammad Abdulhadi
+- Ramy Al-Shurafa
 
 ## **Team Members** :-
 
