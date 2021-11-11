@@ -28,7 +28,7 @@ const OrganizationCard = ({ organizationData }) => {
           onClick={handleClick}
           sx={{
             mb: 2,
-            color: '#187F75',
+            color: '#024059',
             fontSize: '1.5rem',
             fontWeight: 'bold',
             border: 0,
@@ -43,9 +43,9 @@ const OrganizationCard = ({ organizationData }) => {
         >
           {organizationData.name}
         </Button>
-        <h3 className="organization-description">
+        <p className="organization-description">
           {organizationData.description}
-        </h3>
+        </p>
         <p style={{ fontSize: '1rem', marginTop: '2vh' }}> Catagories :
           {JSON.parse(organizationData.categories)
             .map((ele, i) => (i === 0 ? ` ${ele}` : ` , ${ele} `))}

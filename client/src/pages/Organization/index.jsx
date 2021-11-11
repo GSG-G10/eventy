@@ -58,10 +58,18 @@ const Organization = () => {
       <Cover organization={organization}/>
       <div className="orgSection">
         <Typography
-          sx={{ fontSize: { sm: '1.5rem', lg: '3rem' } }} color="white" variant='overline'>
+          sx={{ fontSize: { sm: '1.5rem', lg: '2.3rem' } }}
+          color="#024059"
+          variant='overline'
+          className="orgName"
+        >
           {organization.name ? organization.name : 'Organization'} Events:
         </Typography>
-        {userId === Number(organizationId) ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} /> : ''}
+        {
+          userId === Number(organizationId)
+            ? <EventStepper setSendRequest={setSendRequest} sendRequest={sendRequest} />
+            : ''
+        }
       </div>
       <div className="resultsSection">
         {isLoaded

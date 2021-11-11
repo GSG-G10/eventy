@@ -45,7 +45,7 @@ const EditEvent = ({
 
   return (
     <>
-      <h1 style={{ color: '#187F89', marginTop: '1rem' }}>Edit Event </h1>
+      <h1 style={{ color: '#024059', marginTop: '1rem' }}>Edit Event </h1>
       <form onSubmit={handleSubmit} style={styles.containerOne}>
         <TextField
           variant='filled'
@@ -135,14 +135,16 @@ const EditEvent = ({
         </div>
         <button
           style={{
-            backgroundColor: '#187F89',
+            backgroundColor: '#D97904',
             border: '0',
             width: '15vh',
             height: '5vh',
-            fontSize: '1rem',
+            fontSize: '1em',
             fontWeight: 'bold',
             alignSelf: 'center',
             marginTop: '1rem',
+            color: '#ffff',
+            borderRadius: '15px',
           }}
           type='submit'
         >
