@@ -1,4 +1,3 @@
-import Cover from './Assets/Cover.png';
 import TopEvents from './Top-events';
 import About from './About';
 import { Advertisment1, Advertisment2 } from './Advertisments';
@@ -9,13 +8,12 @@ import './style.css';
 function Landing() {
   return (
     <div>
-      <img src={Cover} id='landing-head-image'/>
       <TopEvents />
       <About />
-      <Advertisment1 />
       <ExclusiveEvents />
       <Advertisment2 />
       <OnlineEvents />
+      <Advertisment1 />
     </div>
   );
 }

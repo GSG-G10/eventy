@@ -7,7 +7,7 @@
   height: 25vh;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background-color: #024059;
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -16,7 +16,7 @@
   height: 150px;
   clear: both;
   position: absolute;
-  bottom: -200px;
+  bottom: -250px;
   left: 0;
 }
 .sentence {
@@ -29,6 +29,7 @@
   width: 15%;
   display: flex;
   justify-content: space-around;
+  color: #D97904;
 }
 .last-div {
   display: flex;

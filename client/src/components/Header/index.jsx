@@ -71,14 +71,14 @@ const Header = ({ setRegisterType }) => {
                     to="/register"
                     id='reg-link'
                   >
-                    <Button
+                    <button
                       variant="contained"
                       className="register-button"
                       id="SignUp"
                       onClick={() => setRegisterType('1')}
                     >
              Register
-                    </Button>
+                    </button>
                   </Link>
                 </>
                 : <div id="registerContainer">

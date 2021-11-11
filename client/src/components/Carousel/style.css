@@ -1,0 +1,8 @@
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 22px;
+    line-height: 1;
+    color: #A64833;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
