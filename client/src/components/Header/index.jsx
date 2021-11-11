@@ -39,8 +39,8 @@ const Header = ({ setRegisterType }) => {
   };
 
   return (
-    <Box id="header">
-      <AppBar position="static">
+    <Box id="header" sx={{ position: 'sticky', top: 0, zIndex: 1 }}>
+      <AppBar >
         <Toolbar>
           <Typography
             variant="h6"
@@ -73,7 +73,7 @@ const Header = ({ setRegisterType }) => {
                   >
                     <button
                       variant="contained"
-                      className="register-button"
+                      className="SignUp"
                       id="SignUp"
                       onClick={() => setRegisterType('1')}
                     >
@@ -83,18 +83,19 @@ const Header = ({ setRegisterType }) => {
                 </>
                 : <div id="registerContainer">
                   <Link component={RouterLink}
-                    to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` } id='username'>
+                    to={`/organization/${localStorage.getItem('id')}/${localStorage.getItem('username')}` }
+                    id='username'
+                    className='loginButn' >
                     {localStorage.getItem('username')}
                   </Link>
-                  <Button
+                  <button
                     id="logOut"
                     variant="contained"
-                    className="register-button"
+                    className="SignUp"
                     onClick={handleLogOut}
                   >
-                    <LogoutIcon sx={{ marginRight: '5px' }} />
                     Log out
-                  </Button>
+                  </button>
                 </div>
 
               }

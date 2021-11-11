@@ -16,7 +16,7 @@ const EventStepper = ({ setSendRequest, sendRequest }) => {
   return (
     <>
       <Button sx={{
-        p: 1, minWidth: 250, fontSize: '1.3rem', fontWeight: 'bold', borderRadius: '5px',
+        p: 1, minWidth: 200, fontSize: '1rem', fontWeight: '700', borderRadius: '5px',
       }} variant="contained" style={{
         backgroundColor: '#D97904',
       }}
