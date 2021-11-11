@@ -9,6 +9,9 @@
       justify-content: space-between;
       align-items: baseline;
 }
+.card-container svg {
+    color: #D97904;
+}
 .card-container a {
     margin-left: 2.5rem;
   }

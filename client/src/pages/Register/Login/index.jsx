@@ -44,7 +44,7 @@ const Login = () => {
   };
   const btnStyle = {
     fontSize: '25px',
-    backgroundColor: '#0D9488',
+    backgroundColor: '#D97904',
     color: '#fff',
     width: '70%',
   };

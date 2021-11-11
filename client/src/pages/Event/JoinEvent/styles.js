@@ -11,7 +11,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'light' ? '#fcfcfb' : '#2b2b2b',
     border: '1px solid #ced4da',
     fontSize: 16,
-    width: 'auto',
+    width: '100%',
     padding: '10px 12px',
     transition: theme.transitions.create([
       'border-color',
@@ -22,8 +22,8 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 }));
 
 const containerBox = {
-  bgcolor: '#404143',
-  color: '#fff',
+  bgcolor: '#fff',
+  color: '#024059',
   height: '96vh',
   width: { lg: '30%', sm: '60%' },
   margin: '0px auto',
@@ -40,7 +40,7 @@ const formContainer = {
   justifyContent: 'space-around',
   alignItems: 'center',
 };
-const labelsStyle = { color: '#fff', fontWeight: 'bold' };
+const labelsStyle = { color: '#024059', fontWeight: 'bold', paddingTop: '10px' };
 
 export {
   BootstrapInput,

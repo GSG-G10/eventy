@@ -6,17 +6,17 @@
 } 
 
 .input-cont {
-    width: 70%;
+    width: 90%;
 }
 .header-container {
     width: 80%;
     text-align: center; 
     display: flex; 
     flex-direction: column; 
-    color: #fff;
+    color: #024059;
 }
 .header-container h2 {
-    color: #fff;
+    color: #024059;
     font-size: 20px;
     width: 100%;
 }

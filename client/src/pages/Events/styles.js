@@ -2,11 +2,11 @@ export default {
   button: {
     height: '70%',
     fontSize: '15px',
-    color: '#797575',
-    border: '#797575 1px solid',
+    color: '#D97904',
+    border: '#D97904 1px solid',
   },
   form: {
-    p: '.2rem',
+    p: '5px',
     display: 'flex',
     alignItems: 'center',
     width: '75%',

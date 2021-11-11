@@ -16,13 +16,12 @@ import Cover from '../Landing/Assets/Cover.png';
 const useStyles = makeStyles(() => ({
   ul: {
     '& .MuiPaginationItem-root': {
-      color: 'white',
+      color: '#024059',
       fontWeight: 'bold',
-      backgroundColor: '#187F75',
+      marginBottom: '5vh',
+      backgroundColor: 'transpernt',
       padding: '1.3rem',
-      margin: '30px 0',
-      alignSelf: 'flex-end',
-      justifySelf: 'flex-end',
+      border: 'none',
     },
   },
 }));

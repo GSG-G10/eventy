@@ -40,7 +40,7 @@ const CategoriesSelector = ({ value, handleChange }) => (
         displayEmpty
         name="categories"
         size="small"
-        style={{ backgroundColor: '#d9d9d9' }}
+        style={{ backgroundColor: '#F3F3F3', opacity: '81%' }}
         color="secondary"
         value={value}
         onChange={handleChange}

@@ -18,10 +18,10 @@ body {
 .event-container {
   width: 65%;
   height: 90%;
-  background-color: #E7E5E5;
-  color: black;
+  background-color: #fff;
+  color: #024059;
   border-radius: 30px;
-  box-shadow: 4px 9px 9px 10px #121212;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,13 +44,15 @@ body {
   justify-content:space-around;
   width: 90%;
   height: 75%;
+  padding-top: 10px;
 }
 .info-card {
-  background-color: #222222;
+  background-color: #FFFEFE;
   height: 70%;
   border-radius: 8px;
-  box-shadow: 2.5px 5px 4px 5px #888888;
-  color: #fff;
+  border: 2px solid #D97904;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #4F4F4F;
   font-size: 17px;
   display: flex;
   flex-direction: column;
@@ -63,7 +65,7 @@ body {
 .info-card a,
 .info-card a:active,
 .info-card a:visited {
-  color: #03dac5;
+  color: #A64833;
 }
 .event-card {
   display: flex;
@@ -77,6 +79,14 @@ body {
   text-align: center;
   color:#4e4e4e;
 }
+.small-font {
+  padding-left: 5%;
+  color: #024059;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .event-details {
   display: flex;
   flex-direction: column;
@@ -84,15 +94,15 @@ body {
   height: 90%;
 }
 .event-details h2 {
-  color: #272727;
+  color: #024059;
 }
 .event-details .org-link {
-  color: #187f75;
   cursor: pointer;
 }
 .descriptionEvent h4,
 .details h4 {
-  color: #383838;
+  color: #024059;
+  background-color: #fff;
 }
 .descriptionEvent,
 .details p {
@@ -102,11 +112,11 @@ body {
 }
 #organizer-btn {
   max-width: 13%;
-  color: #03DAC5;
+  color: #D97904;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: 2.5rem;
-  margin-left: 2.3rem;
+  margin-left: 10%;
+
 }
 @media only screen and (max-width: 1200px) {
   .event-container{
@@ -144,5 +154,51 @@ body {
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 10px;
+  }
+  #price-btn {
+    font-size: 12px;
+    font-weight: 600;
+    width: 90%;
+  }
+  .btn-price {
+    align-self: flex-start;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    align-items: flex-start;
+  }
+  .event-container {
+    width: 90%;
+  }
+  .event-details h2 {
+    font-size: 16px;
+  }
+  .event-details h4 {
+    font-size: 14px;
+  }
+  .event-details p {
+    font-size: 12px;
+  }
+  #organizer-btn {
+    font-size: 12px;
+  }
+  .info-card {
+    align-items: flex-start;
+    width: 60%;
+    padding: 10px;
+  }
+  .info-card p {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .info-card h2 {
+    font-size: 14px;
+  }
+  .info-card a {
+    font-size: 14px;
+    width: 90%;
   }
 }

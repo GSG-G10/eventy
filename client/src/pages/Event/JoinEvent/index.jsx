@@ -72,7 +72,7 @@ function JoinEvent({
     >
       <>
         <CssBaseline />
-        <form onSubmit={onFinish} >
+        <form onSubmit={onFinish} id='join-form' >
           <Box sx={containerBox}>
             <CloseIcon onClick={handleClose} sx={{ margin: '10px 20px', cursor: 'pointer' }} />
             <Box
@@ -128,7 +128,7 @@ function JoinEvent({
                 </FormControl>
               </div>
               <div className='input-cont'>
-                <FormControl variant="standard" sx={labelsStyle}>
+                <FormControl variant="standard">
                   <InputLabel shrink htmlFor="bootstrap-input" sx={labelsStyle}>
                     Your Phone Number:
                   </InputLabel>
@@ -170,43 +170,44 @@ function JoinEvent({
                     aria-label="gender"
                     name="gender">
                     <FormControlLabel
+                      sx={{ color: '#024059' }}
                       value="female"
                       control={
                         <Radio size='small'
-                          sx={{ color: '#1AA195' }} />}
+                          sx={{ color: '#D97904' }} />}
                       label="Female" />
                     <FormControlLabel
-                      sx={{ fontSize: '12px' }}
+                      sx={{ fontSize: '12px', color: '#024059' }}
                       value="male"
                       control={
                         <Radio
                           size='small'
-                          sx={{ color: '#1AA195' }} />}
+                          sx={{ color: '#D97904' }} />}
                       label="Male" />
                   </RadioGroup>
                 </FormControl>
               </div>
               <div className='input-cont'>
                 <FormControlLabel
-                  sx={{ width: '100%' }}
+                  sx={{ width: '100%', color: '#024059' }}
                   control={
                     <Checkbox
                       onChange={handleInputChange}
                       name='isSubscriber'
-                      sx={{ color: '#1AA195', fontSize: '12px' }} />
+                      sx={{ color: '#D97904', fontSize: '12px' }} />
                   } label="Subscribe me to similar events"
                   startIcon={<DeleteIcon />} />
               </div>
               <div>
                 <Stack direction="row" spacing={2}>
-                  <Button type='submit' variant="contained" sx={{ bgcolor: '#1AA195' }}>
+                  <Button type='submit' variant="contained" sx={{ bgcolor: '#D97904' }}>
                     + Join Event
                   </Button>
                   <Button
                     variant="outlined"
                     onClick={handleClose}
                     startIcon={<DeleteIcon />}
-                    sx={{ color: '#1AA195', borderColor: '#1AA195' }}
+                    sx={{ color: '#D97904', borderColor: '#D97904' }}
                   >
                     Cancel
                   </Button>
