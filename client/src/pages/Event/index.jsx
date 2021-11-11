@@ -44,7 +44,7 @@ const SingleEventCard = () => {
         isLoaded // loader
           ? <>
             <div className="event-image">
-              <img src={'https://img.freepik.com/free-vector/events-concept-illustration_114360-931.jpg?size=626&ext=jpg'} alt="event image" />
+              <img src={eventInfo.image} alt="event image" />
             </div>
             <div className="distributer">
 
