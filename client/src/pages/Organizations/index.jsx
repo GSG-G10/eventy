@@ -37,9 +37,9 @@ const Organizations = () => {
 
   return (
     <>
-    <div className="org-svg">
-      <img src={illustration1} width={300} height={300} alt="" />
-    </div>
+      <div className="org-svg">
+        <img src={illustration1} width={300} height={300} alt="" />
+      </div>
       <div className="organizationHeader" style={styles.container}>
         <h1 className="helloOrg">Discover Different Organizations in Gaza</h1>
         <div style={styles.searchContainer}>

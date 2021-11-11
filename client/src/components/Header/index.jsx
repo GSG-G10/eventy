@@ -8,11 +8,9 @@ import {
   Box,
   Toolbar,
   Typography,
-  Button,
   Stack,
   Link,
 } from '@mui/material';
-import LogoutIcon from '@mui/icons-material/Logout';
 
 import styles from './styles';
 import logo from './EVENTY_logo.png';
