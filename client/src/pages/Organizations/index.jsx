@@ -38,11 +38,7 @@ const Organizations = () => {
   return (
     <>
       <div className="organizationHeader" style={styles.container}>
-        <img
-          className="img"
-          style={{ position: 'relative', objectFit: 'cover' }}
-          src='https://www.seekpng.com/png/full/291-2917400_on-the-periphery-of-the-periphery-household-archaeology.png'
-        />
+        <h1 className="helloOrg">Discover Different Organizations in Gaza</h1>
         <div style={styles.searchContainer}>
           <input
             className="search"

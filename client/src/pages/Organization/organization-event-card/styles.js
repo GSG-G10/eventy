@@ -22,7 +22,7 @@ const style = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    top: '53%',
+    top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: { sm: 500, lg: 450 },
