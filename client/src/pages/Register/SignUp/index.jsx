@@ -88,9 +88,10 @@ const SignUp = () => {
 
       <TextField
         className="filled-basic"
-        label="Organization Name"
+        hiddenLabel
+        placeholder='Organization Name'
         name="name"
-        sx={{ backgroundColor: '#F3F3F3', width: '100%' }}
+        sx={{ backgroundColor: '#F3F3F3', width: '100%', outline: 'none' }}
         required
         color="secondary"
         value={value.name}
@@ -99,10 +100,11 @@ const SignUp = () => {
 
       <TextField
         className="filled-basic"
-        label="Email"
+        hiddenLabel
+        placeholder='email'
         name="email"
         type="email"
-        style={{ backgroundColor: '#F3F3F3', width: '100%' }}
+        style={{ backgroundColor: '#F3F3F3', width: '100%', outline: 'none' }}
         required
         color="secondary"
         value={value.email}
