@@ -88,11 +88,11 @@ const SignUp = () => {
 
       <TextField
         className="filled-basic"
-        label="Organization Name"
+        hiddenLabel
+        placeholder='Organization Name'
         name="name"
-        style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+        sx={{ backgroundColor: '#F3F3F3', width: '100%', outline: 'none' }}
         required
-        variant="filled"
         color="secondary"
         value={value.name}
         onChange={handleChange}
@@ -100,12 +100,12 @@ const SignUp = () => {
 
       <TextField
         className="filled-basic"
-        label="Email"
+        hiddenLabel
+        placeholder='email'
         name="email"
         type="email"
-        style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+        style={{ backgroundColor: '#F3F3F3', width: '100%', outline: 'none' }}
         required
-        variant="filled"
         color="secondary"
         value={value.email}
         onChange={handleChange}
@@ -127,7 +127,7 @@ const SignUp = () => {
       />
 
       <TextField
-        style={{ backgroundColor: '#d9d9d9' }}
+        style={{ backgroundColor: '#F3F3F3' }}
         className="outlined-textarea"
         name="description"
         placeholder="Short words about your organization"
@@ -139,7 +139,7 @@ const SignUp = () => {
         onChange={handleChange}
       />
 
-      <label htmlFor="contained-button-file" style={{ color: '#d9d9d9', fontSize: '13px' }}>
+      <label htmlFor="contained-button-file" style={{ backgroundColor: '#fff', fontSize: '13px' }}>
           Enter organization’s logo
         <Input
           accept="image/*"
@@ -155,7 +155,7 @@ const SignUp = () => {
         variant="contained"
         type="submit"
         style={{
-          backgroundColor: '#187F75',
+          backgroundColor: '#D97904',
           fontWeight: '600',
           fontSize: '1.2rem',
         }}

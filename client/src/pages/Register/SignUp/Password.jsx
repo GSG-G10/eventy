@@ -30,7 +30,7 @@ const Password = ({
           size="small"
           name="password"
           inputProps={{ minLength: 8 }}
-          style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+          style={{ backgroundColor: '#F3F3F3', width: '100%' }}
           color="secondary"
           type={showPassword ? 'text' : 'password'}
           value={password}
@@ -57,7 +57,7 @@ const Password = ({
         <FilledInput
           className="filled-adornment-password"
           size="small"
-          style={{ backgroundColor: '#d9d9d9', width: '100%' }}
+          style={{ backgroundColor: '#F3F3F3', width: '100%' }}
           color="secondary"
           type={showConfirmPassword ? 'text' : 'password'}
           value={confirmPassword}

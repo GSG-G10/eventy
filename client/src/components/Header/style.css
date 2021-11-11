@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 .MuiToolbar-root {
   background-color: #024059;
-  height: 40px;
-}
-
-.css-1t29gy6-MuiToolbar-root {
-  min-height: 55px !important;
 }
 
 #registerContainer {
@@ -16,22 +11,21 @@
 
 #header {
   width: 100%;
-  height: 1vh;
+  height: 10vh;
 }
 
 #logo {
   height: 25px;
 }
 
-#login-link {
-  color: #ffff;
+.loginButn {
+  color: #ffff !important;
   text-decoration-color: #ffff;
   font-weight: 500;
   font-size: 0.95rem;
-  width: 13%;
 }
 
-#login-link:hover {
+.loginButn:hover a {
   font-size: 1rem;
   text-decoration-color: #D97904;
 }
@@ -40,7 +34,7 @@
   text-decoration: none;
 }
 
-#SignUp {
+.SignUp {
   background-color: #ffff;
   color: #D97904;
   border: #D97904 solid 2px;
@@ -52,22 +46,11 @@
   font-size: 0.8rem;
 }
 
-#SignUp:hover {
+.SignUp:hover {
   background-color: #D97904;
   color: #ffff;
   cursor: pointer;
 }
-
-#username {
-  color: white;
-  font-size: 1.2rem;
-}
-
-#logOut {
-  background-color: #187F75;
-  font-size: 0.5rem;
-}
-
 @media screen and (max-width: 700px) {
   .loginButn {
     display: none;

@@ -16,7 +16,7 @@ const InfoCard = ({ eventInfo }) => {
     </h2>
     <div className='card-container'>
       <p className='card-element' >
-        <EventIcon fontSize='15px' /> Start Date : {startDate.split('T')[0]}
+        <EventIcon fontSize='15px' backgroundColor='#D97904' />  Start Date :{startDate.split('T')[0]}
       </p>
       <p className='card-element' >
         <EventIcon fontSize='15px' /> End Date : {endDate.split('T')[0]}

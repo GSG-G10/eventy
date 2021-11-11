@@ -16,23 +16,25 @@ const EventsCard = ({ event }) => {
   const history = useHistory();
   return (
     <Card sx={{
-      width: 260, height: 300, borderRadius: 6, marginBottom: '20px', boxShadow: 'rgba(194, 189, 189, 0.35) 0px 5px 8px',
+      width: 260, height: 320, margin: '7px', borderRadius: 6, marginBottom: '20px', boxShadow: 'rgba(194, 189, 189, 0.35) 0px 5px 8px',
     }}>
-      <CardActionArea sx={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 10px' }}onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
-        <div className="price-container">{`$${event.price}`}</div>
+      <CardActionArea
+        sx={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 10px', height: '100%', width: '100%' }}
+        onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+        <div className="price-container">{event.price === 0 ? 'Free' : `${event.price}$`}</div>
         <CardMedia
           component="img"
-          height="140"
+          height="130"
           width='200'
           image={event.image}
           alt="green iguana"
         ></CardMedia>
-        <CardContent style={{ padding: '0%' }}>
+        <CardContent>
           <Typography gutterBottom variant="p" component="div" >
-            <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+            <Typography sx={{ color: '#024059' }} onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
               {event.name}</Typography>
           </Typography>
-          <div style={{ marginTop: '-6%' }}>
+          <div style={{ marginTop: '0' }}>
             <Typography variant="body2" fontSize='15px' >
               <Typography component="div">
                 <GroupOutlinedIcon sx={{ color: '#D97904', fontSize: '22px' }} /> <span>{event.organizer}</span>

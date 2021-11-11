@@ -11,18 +11,16 @@ import FilterModal from './Modal';
 
 import styles from './styles';
 import './style.css';
-import Cover from '../Landing/Assets/Cover.png';
 // for pagination
 const useStyles = makeStyles(() => ({
   ul: {
     '& .MuiPaginationItem-root': {
-      color: 'white',
+      color: '#024059',
       fontWeight: 'bold',
-      backgroundColor: '#187F75',
+      marginBottom: '5vh',
+      backgroundColor: 'transpernt',
       padding: '1.3rem',
-      margin: '30px 0',
-      alignSelf: 'flex-end',
-      justifySelf: 'flex-end',
+      border: 'none',
     },
   },
 }));
@@ -91,11 +89,6 @@ const EventsPage = () => {
 
   return <>
     <section className="filter-container">
-      {/* {Header Image} */}
-      <div className="header-img">
-        <img src={Cover} alt="event" />
-      </div>
-      {/* {Filter Nav} */}
       <Paper
         className="filter-nav"
         component="form"

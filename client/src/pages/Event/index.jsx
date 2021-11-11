@@ -29,11 +29,10 @@ const SingleEventCard = () => {
 
   const butnStyle = { // style object for the button
     width: { lg: 300, sm: 200 },
-    backgroundColor: '#03DAC5',
-    color: '#000',
-    opacity: '70%',
-    borderRadius: 11,
-    fontSize: '1.5rem',
+    backgroundColor: '#D97904',
+    color: '#FFFEFE',
+    borderRadius: 5,
+    fontSize: '1rem',
     fontWeight: 'bold',
   };
   const handleOpen = () => setOpen(true);
@@ -43,9 +42,6 @@ const SingleEventCard = () => {
       {
         isLoaded // loader
           ? <>
-            <div className="event-image">
-              <img src={eventInfo.image} alt="event image" />
-            </div>
             <div className="distributer">
 
               <div className="event-details">
@@ -75,10 +71,8 @@ const SingleEventCard = () => {
               </div>
               <div className="event-card">
                 <div className="btn-price">
-                  <p className='price'>
-                    {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}
-                  </p>
-                  <Button onClick={handleOpen} variant="contained" sx={butnStyle}>GET TICKET</Button>
+                  <Button onClick={handleOpen} id='price-btn' variant="contained" sx={butnStyle}>GET TICKET
+                    <small className='small-font'> {eventInfo.price === 0 ? 'Free' : `₪ ${eventInfo.price}`}</small></Button>
                 </div>
                 <InfoCard eventInfo={eventInfo} />
               </div>
@@ -97,9 +91,9 @@ const SingleEventCard = () => {
               </Snackbar>}
             </div>
           </>
-          : <Stack spacing={2} width='70vw' height='70vh'>
-            <Skeleton variant="text" height={100} />
-            <Skeleton variant="rectangular" width={600} height={100} />
+          : <Stack spacing={2} width='100%' height='70vh'sx={{ marginLeft: '2%' }}>
+            <Skeleton variant="text" height={100} width={700} />
+            <Skeleton variant="rectangular" width={600} height={100}/>
             <Skeleton variant="rectangular" width={410} height={318} />
           </Stack>
       }

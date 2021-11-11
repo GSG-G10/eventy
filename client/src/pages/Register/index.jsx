@@ -17,8 +17,8 @@ const Register = ({ registerType, setRegisterType }) => {
       maxWidth: '60%',
       height: registerType === '1' ? '125vh' : '80vh',
       typography: 'body1',
-      bgcolor: '#404143',
-      color: 'white',
+      bgcolor: '#fff',
+      color: '#024059',
       marginLeft: '20%',
       marginTop: '2.5%',
       display: 'flex',
@@ -27,6 +27,7 @@ const Register = ({ registerType, setRegisterType }) => {
       justifyContent: 'center',
       borderRadius: '15px',
       padding: '1rem',
+      boxShadow: ' rgba(0, 0, 0, 0.35) 0px 5px 15px',
     }}>
       <TabContext value={registerType}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

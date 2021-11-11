@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Pagination, Skeleton } from '@mui/material';
 
 import OrganizationCard from './organization-card';
-
+import illustration1 from '../Landing/Assets/1.svg';
 import { styles, useStyles } from './styles';
 import './style.css';
 
@@ -37,6 +37,9 @@ const Organizations = () => {
 
   return (
     <>
+    <div className="org-svg">
+      <img src={illustration1} width={300} height={300} alt="" />
+    </div>
       <div className="organizationHeader" style={styles.container}>
         <h1 className="helloOrg">Discover Different Organizations in Gaza</h1>
         <div style={styles.searchContainer}>
