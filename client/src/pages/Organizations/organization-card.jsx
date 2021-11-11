@@ -46,7 +46,10 @@ const OrganizationCard = ({ organizationData }) => {
         <h3 className="organization-description">
           {organizationData.description}
         </h3>
-        <p style={{ fontSize: '1rem', marginTop: '2vh' }}> Catagories : {JSON.parse(organizationData.categories).map((ele) => `${ele} `)}</p>
+        <p style={{ fontSize: '1rem', marginTop: '2vh' }}> Catagories :
+          {JSON.parse(organizationData.categories)
+            .map((ele, i) => (i === 0 ? ` ${ele}` : ` , ${ele} `))}
+        </p>
       </Grid>
     </Grid>
   );
