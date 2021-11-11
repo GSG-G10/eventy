@@ -58,7 +58,7 @@ const EventsPage = () => {
     setIsLoaded(false);
     const newData = events.filter((ele) => (ele.price <= filters.price
       && filters.category === 'all'
-      ? true : ele.category.includes(filters.category)));
+      ? true : ele.category.toLowerCase().includes(filters.category)));
     setIsLoaded(true);
     setPage(1);
     setFilteredEvents(newData);
