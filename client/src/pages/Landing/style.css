@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 .landing-events-container {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 10.9%;
 }
 
 #landing-head-image {
-  height: 32vh;
+  height: 20vh;
   width: 100%;
+  margin-top: 4%;
 }
 
 .landing-events-subCont {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color: #024059;
   width: 75%;
 }
 
@@ -30,6 +32,8 @@
 
 .landing-category-title {
   padding: 2%;
+  font-size: 1.2rem;
+  font-family: 'Paytone One';
 }
 
 .landing-category-subtitle {
@@ -40,7 +44,7 @@
 
 .landing-events-description-cont a {
   padding: 2%;
-  color: white;
+  color: #A64833;
   text-decoration-line: underline;
 }
 @media ((min-width:775px) and (max-width: 1150px)) {

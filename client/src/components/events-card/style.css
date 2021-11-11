@@ -1,10 +1,10 @@
 .MuiPaper-root {
-    background-color: #FFFEFE;
+    background-color: #ffff;
     border-radius: 15px;
 }
 
 .price-container {
-    background-color: rgba(3, 218, 197, 1);
+    background-color: #F2A71B;
     width: 20%;
     height: 6vh;
     display: flex;
@@ -26,6 +26,7 @@
 .css-ahj2mt-MuiTypography-root {
     font-weight: 600;
     font-size: 0.99rem;
+    padding:2.2%;
     padding: 4%;
     line-height: unset;
     display: flex;

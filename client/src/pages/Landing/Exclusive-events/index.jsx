@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { EventsCard, Carousel } from '../../../components';
 import Loader from '../../Events/Loader';
+import illustration4 from '../Assets/4.svg';
 import '../style.css';
 
 const ExclusiveEvents = () => {
@@ -26,31 +27,40 @@ const ExclusiveEvents = () => {
   }, []);
 
   return (
-    <><div className='landing-events-container'>
-      <div className='landing-events-subCont'>
-        <div className='landing-events-description-cont'>
-          <div className='landing-events-description'>
-            <h3 className='landing-category-title'>Exclusive events</h3>
-            <p className='landing-category-subtitle'>
-                Some of exclusive events around your location
-            </p>
-          </div>
-          <Link to="/events">
-            { eventData.length > 0 ? 'See all' : 'Discover other events'}
-          </Link>
-        </div>
-        {isLoaded
-          ? eventData.length > 0
-            ? <Carousel>
-              {eventData.map((event) => (
-                <EventsCard key={event.id} event={event} />
-              ))}
-            </Carousel>
-            : <h3>No current events with this type.</h3>
-          : <Loader />
-        }
+    <>
+      <div>
+        <img src={illustration4} width={440} height={300} style={{
+          position: 'fixed',
+          marginTop: '45%',
+          marginLeft: '64.5%',
+          transform: 'rotate(146)',
+        }} />
       </div>
-    </div>
+      <div className='landing-events-container'>
+        <div className='landing-events-subCont'>
+          <div className='landing-events-description-cont'>
+            <div className='landing-events-description'>
+              <h3 className='landing-category-title'>Exclusive events</h3>
+              <p className='landing-category-subtitle'>
+                Some of exclusive events around your location
+              </p>
+            </div>
+            <Link to="/events">
+              { eventData.length > 0 ? 'See all' : 'Discover other events'}
+            </Link>
+          </div>
+          {isLoaded
+            ? eventData.length > 0
+              ? <Carousel>
+                {eventData.map((event) => (
+                  <EventsCard key={event.id} event={event} />
+                ))}
+              </Carousel>
+              : <h3>No current events with this type.</h3>
+            : <Loader />
+          }
+        </div>
+      </div>
     </>
   );
 };
