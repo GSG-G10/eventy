@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 .orgSection {
     display: flex;
     align-items: center;
@@ -16,18 +18,30 @@
 }
 
 .css-wg8xxg-MuiStack-root button {
-    width: 100%;
     margin-bottom: 25px;
     margin-top: inherit;
     text-align: left;
     font-weight: bolder;
     max-height: 28px;
-    font-size: 1.2rem;
-    color: #187F75;
+    font-size: 1.1rem;
+    font-family: 'Paytone One', sans-serif;
+    color: #024059;
 }
-
+.orgSection .orgName{
+    font-family: 'Paytone One', sans-serif ;
+}
+.css-wg8xxg-MuiStack-root .css-i4bv87-MuiSvgIcon-root {
+    color: #D97904;
+}
+.css-9ooee9-MuiStack-root button {
+    color: #D97904;
+}
 .organizationEventCard {
     margin-bottom: 10vh;
+}
+.css-1aczowp-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: transparent  !important;
+    color: #D97904 !important;
 }
 
 @media screen and (max-width:700px) {

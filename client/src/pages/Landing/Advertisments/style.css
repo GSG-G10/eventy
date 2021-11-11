@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 .ad1-section {
   display: flex;
   justify-content: center;
 }
 .ad1-container {
-  background-color: #f0f0f0;
-  height: 30vh;
+  background-color: #F2A71B;
+  height: 27vh;
   width: 75%;
-  margin-top: 5%;
+  margin-top: 7.5%;
   display: flex;
   justify-content: space-between;
   border-radius: 25px;
+  font-family: 'Paytone One sans-serif',
 }
 .ad1-content {
   display: flex;
@@ -24,22 +26,48 @@
 }
 
 .ad2-container {
-    background-color: #f0f0f0;
-    height: 30vh;
-    width: 75%;
-    margin-top: 5%;
+    background-color: #024059;
+    height: 27vh;
+    width: 70%;
+    margin-top: 7%;
     display: flex;
-    justify-content: space-between;
     border-radius: 15px;
+    align-items: center;
+    position: relative;
 }
+
+.ad2-container:hover{
+  cursor: pointer;
+}
+
 .ad2-content {
     display: flex;
     flex-direction: column;
     width: 60%;
     justify-content: space-evenly;
     align-items: center;
+    height: 27vh;
+}
+.ad2-header{
+  color: #ffff;
+  font-family: 'Paytone One';
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+
 }
 #ad2-btn {
-    background-color: #187F75;
-    font-size: 0.8rem;
+    background-color: #ffff;
+    font-size: 0.92rem;
+    width: 35%;
+    border-radius: 10px;
+    color: #024059;
+    height: 5vh;
+    font-weight: bold;
+    border: none;
+    font-family: 'Paytone One';
+    box-shadow: rgba(209, 201, 201, 0.35) 0px 5px 10px;
+}
+#ad2-btn:hover {
+  cursor: pointer;
+  background-color: #f8c86e;
 }

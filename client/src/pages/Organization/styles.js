@@ -3,11 +3,12 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
   ul: {
     '& .MuiPaginationItem-root': {
-      color: 'white',
+      color: '#024059',
       fontWeight: 'bold',
       marginBottom: '5vh',
-      backgroundColor: '#187F75',
+      backgroundColor: 'transpernt',
       padding: '1.3rem',
+      border: 'none',
     },
   },
 }));

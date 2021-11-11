@@ -1,6 +1,6 @@
 .about-section {
-  color: #f0f0f0;
-  margin-top: 5%;
+  color: #024059;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
 }
@@ -8,19 +8,22 @@
   width: 75%;
 }
 .about-welcome {
-  padding: 1.5%;
+  padding: 1%;
 }
 .about-description {
-  padding: 1.5%;
+  padding: 1%;
   font-weight: lighter;
   letter-spacing: 1px;
 }
 .about-slider-container {
-  padding: 1.5%;
   display: flex;
   width: 100%;
+  border-radius: '22px';
+  color: '#D97904';
+  box-shadow: rgba(194, 189, 189, 0.35) 0px 5px 8px;
 }
 .about-h2 {
-  padding: 2%;
+  padding: 1%;
   letter-spacing: 1px;
+  margin-top: 3%;
 }

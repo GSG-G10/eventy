@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import createEvent from '../Assets/createEvent.png';
+import illustration5 from '../Assets/5.svg';
 import './style.css';
 
 const Advertisment1 = () => {
@@ -30,23 +31,29 @@ const Advertisment1 = () => {
     }
   };
   return (
-    <div className='ad1-section'>
-      <div className='ad1-container'>
-        <div className='ad1-content'>
-          <h2>Let people hear about your events!</h2>
-          <Button
-            variant="contained"
-            type="submit"
-            id='ad1-create-btn'
-            onClick={handleSubmit}
-          >
-            {' '}
+    <div>
+      <div>
+        <img src={illustration5} width={400} height={280} style={{ position: 'absolute', marginTop: '2%', right: '68%' }}/>
+      </div>
+      <div className='ad1-section'>
+        <div className='ad1-container'>
+          <div className='ad1-content'>
+            <h2 className='ad2-header'>Let people hear about your events!</h2>
+            <Button
+              variant="contained"
+              type="submit"
+              id='ad2-btn'
+              onClick={handleSubmit}
+            >
+              {' '}
             +Create your Event
-          </Button>
+            </Button>
+          </div>
+          <img src={createEvent} alt="group of people" />
         </div>
-        <img src={createEvent} alt="group of people" />
       </div>
     </div>
+
   );
 };
 

@@ -10,18 +10,16 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import { useHistory } from 'react-router-dom';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import PeopleIcon from '@mui/icons-material/People';
-
-import styles from './styles';
 import './style.css';
 
 const EventsCard = ({ event }) => {
   const history = useHistory();
   return (
-    <Card className="eventCard" sx={styles.card}>
-      <CardActionArea onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
-        <div className="price-container">{event.price === 0 ? 'Free' : `${event.price}$`}</div>
+    <Card sx={{
+      width: 260, height: 300, borderRadius: 6, marginBottom: '20px', boxShadow: 'rgba(194, 189, 189, 0.35) 0px 5px 8px',
+    }}>
+      <CardActionArea sx={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 10px' }}onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+        <div className="price-container">{`$${event.price}`}</div>
         <CardMedia
           component="img"
           height="140"
@@ -29,36 +27,31 @@ const EventsCard = ({ event }) => {
           image={event.image}
           alt="green iguana"
         ></CardMedia>
-        <CardContent>
-          <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
-            {event.name}
+        <CardContent style={{ padding: '0%' }}>
+          <Typography gutterBottom variant="p" component="div" >
+            <Typography onClick={() => history.push(`/event/${event.id}/${event.name}`)}>
+              {event.name}</Typography>
           </Typography>
-          <Typography variant="body2" fontSize='15px' sx={styles.infoContainer}>
-            <Typography component="div" sx={{ ...styles.singleElement, width: '50%' }}>
-              <GroupOutlinedIcon fontSize='15px' /> <span>{event.organizer}</span>
+          <div style={{ marginTop: '-6%' }}>
+            <Typography variant="body2" fontSize='15px' >
+              <Typography component="div">
+                <GroupOutlinedIcon sx={{ color: '#D97904', fontSize: '22px' }} /> <span>{event.organizer}</span>
+              </Typography>
+              <Typography component="div">
+                <Typography component="div" sx={{ width: '90%' }}>
+                  <DateRangeIcon sx={{ color: '#D97904', fontSize: '20px' }} />
+                  <span>{event.start_date.split('T')[0]}</span>
+                </Typography>
+              </Typography>
+              <Typography component="div">
+                <Typography component="div" sx={{ width: '91%' }}>
+                  <LocationOnIcon sx={{ color: '#D97904', fontSize: '22px' }} />
+                  <span>{event.location}</span>
+                </Typography>
+              </Typography>
             </Typography>
-            <Typography component="div" sx={styles.doubleElements}>
-              <Typography component="div" sx={{ ...styles.singleElement, width: '50%' }}>
-                <DateRangeIcon fontSize='15px' />
-                <span>{event.start_date.split('T')[0]}</span>
-              </Typography>
-              <Typography component="div" sx={{ ...styles.singleElement, width: '50%' }}>
-                <AccessTimeIcon fontSize='15px' />
-                <span > {event.duration} </span>
-              </Typography>
+          </div>
 
-            </Typography>
-            <Typography component="div" sx={styles.doubleElements}>
-              <Typography component="div" sx={{ ...styles.singleElement, width: '80%' }}>
-                <LocationOnIcon fontSize='15px' />
-                <span>{event.location}</span>
-              </Typography>
-              <Typography component="div" sx={{ ...styles.singleElement, width: '20%' }}>
-                <PeopleIcon fontSize='15px' />
-                <span>{event.attendance}</span>
-              </Typography>
-            </Typography>
-          </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
