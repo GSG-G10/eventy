@@ -1,5 +1,5 @@
 .MuiToolbar-root {
-    background-color: #121212;
+    background-color: #024059;
 }
 
 #registerContainer {
@@ -10,4 +10,23 @@
 
 #header {
     width: 100%
+}
+
+.link-login{
+    color: '#ffff';
+    text-decoration-color: '#ffff';
+    font-weight: '400';
+    font-size: '1rem';
+    width: '12%';
+}
+
+.register-button{
+    background-color: '#ffff';
+    color : #D97904;
+    font-weight: '400';
+    font-size: '1rem';
+    width: '50%';
+    height: 5vh;
+    border-radius: 6px;
+    border: solid 2px #D97904;
 }

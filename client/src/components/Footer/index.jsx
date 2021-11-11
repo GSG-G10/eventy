@@ -12,7 +12,7 @@ const Footer = () => (
         <p>Follow Us</p>
         <p>Follow us on our social accounts to find the best events.</p>
       </div>
-      <div className='icons'>
+      <div className='icons' style={{ color: '#D97904' }}>
         <FacebookRoundedIcon />
         <TwitterIcon />
         <WhatsAppIcon />

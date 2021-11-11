@@ -8,13 +8,13 @@ import OnlineEvents from './Online-events';
 function Landing() {
   return (
     <div>
-      <img src={Cover} style={{ height: '32vh', width: '100%' }}/>
+      <img src={Cover} style={{ height: '20vh', width: '100%',marginTop:'1.5%' }}/>
       <TopEvents />
       <About />
-      <Advertisment1 />
       <ExclusiveEvents />
       <Advertisment2 />
       <OnlineEvents />
+      <Advertisment1 />
     </div>
   );
 }

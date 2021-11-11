@@ -43,8 +43,8 @@ const ExclusiveEvents = () => {
                 width: '96%',
               }}
             >
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ padding: '2%' }}>Exclusive events</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', color: '#024059' }}>
+                <h3 style={{ padding: '2%', fontFamily: 'Paytone One', fontSize: '1.2rem' }}>Exclusive events</h3>
                 <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
             Some of exclusive events around your location
                 </p>
@@ -52,8 +52,8 @@ const ExclusiveEvents = () => {
               <Link
                 style={{
                   padding: '2%',
-                  color: 'white',
                   textDecorationLine: 'underline',
+                  color: '#A64833',
                 }}
                 to="/events"
               >

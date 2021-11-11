@@ -21,13 +21,13 @@ const TopEvents = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.2%' }}>
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          color: 'white',
+          color: '#024059',
           width: '75%',
         }}
       >
@@ -39,7 +39,7 @@ const TopEvents = () => {
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ padding: '2%' }}>Top events</h3>
+            <h3 style={{ padding: '2%', fontFamily: 'Paytone One', fontSize: '1.2rem' }}>Top events</h3>
             <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
               Some of our favourite events around your location
             </p>
@@ -47,7 +47,7 @@ const TopEvents = () => {
           <Link
             style={{
               padding: '2%',
-              color: 'white',
+              color: '#A64833',
               textDecorationLine: 'underline',
             }}
             to="/events"

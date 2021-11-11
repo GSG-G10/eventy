@@ -37,7 +37,7 @@ const Header = ({ setRegisterType }) => {
   };
 
   return (
-    <Box id="header">
+    <Box id="header" style={{ height: '6vh' }}>
       <AppBar position="static">
         <Toolbar>
           <Typography
@@ -68,12 +68,13 @@ const Header = ({ setRegisterType }) => {
                   <Link
                     to="/register"
                     component={RouterLink}
+                    className='link-login'
                     style={{
                       color: '#ffff',
                       textDecorationColor: '#ffff',
                       fontWeight: '400',
                       fontSize: '1rem',
-                      width: '39%',
+                      width: '12%',
                     }}
                     onClick={() => setRegisterType('2')}
                   >
@@ -90,13 +91,10 @@ const Header = ({ setRegisterType }) => {
                       variant="contained"
                       className="register-button"
                       style={{
-                        backgroundColor: '#187F75',
-                        height: '31px',
-                        fontWeight: '500',
-                        width: '82%',
-                        textDecoration: 'none',
+                        backgroundColor: '#ffff',
+                        color: '#D97904',
+                        border: '#D97904 solid 2px',
                       }}
-                      id="SignUp"
                       onClick={() => setRegisterType('1')}
                     >
              Register

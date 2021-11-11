@@ -34,7 +34,7 @@ const OnlineEvents = () => {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              color: 'white',
+              color: '#A64833',
               width: '75%',
             }}
           >
@@ -92,8 +92,8 @@ const OnlineEvents = () => {
                 width: '96%',
               }}
             >
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ padding: '2%' }}>Online events</h3>
+              <div style={{ display: 'flex', flexDirection: 'column', color: '#024059' }}>
+                <h3 style={{ padding: '2%', fontFamily: 'Paytone One', fontSize: '1.2rem' }}>Online events</h3>
                 <p style={{ padding: '2%', fontSize: '0.8rem', width: '104%' }}>
                   Online events around your location
                 </p>
@@ -101,7 +101,7 @@ const OnlineEvents = () => {
               <Link
                 style={{
                   padding: '2%',
-                  color: 'white',
+                  color: '#A64833',
                   textDecorationLine: 'underline',
                 }}
                 to="/events"
@@ -114,7 +114,8 @@ const OnlineEvents = () => {
                 padding: '5%',
                 display: 'flex',
                 justifyContent: 'center',
-                color: 'rgb(24, 127, 117)',
+                color: '#A64833',
+                fontFamily: 'Paytone One',
               }}
             >
               <h3>No current events with this type.</h3>

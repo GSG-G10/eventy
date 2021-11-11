@@ -17,7 +17,7 @@ const CategoryFilter = ({ value, setValue }) => {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, minWidth: 150, width: '300px' }}>
+      <FormControl sx={{ m: 1, minWidth: 150, width: '250px' }}>
         <InputLabel id="demo-simple-select-autowidth-label">Category</InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"

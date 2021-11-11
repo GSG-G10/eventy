@@ -1,6 +1,6 @@
-import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 import eventy from '../Assets/eventy.png';
+import './style.css';
 
 const Advertisment2 = () => {
   const history = useHistory();
@@ -17,8 +17,8 @@ const Advertisment2 = () => {
     >
       <div
         style={{
-          backgroundColor: '#f0f0f0',
-          height: '30vh',
+          backgroundColor: '#024059',
+          height: '27vh',
           width: '75%',
           marginTop: '5%',
           display: 'flex',
@@ -36,19 +36,27 @@ const Advertisment2 = () => {
             alignItems: 'center',
           }}
         >
-          <h2>Discover more organizations !</h2>
-          <Button
+          <h2 style={{ color: '#ffff', fontFamily: 'Paytone One sans-serif', fontSize: '2rem' }}>Discover more organizations !</h2>
+          <button
+            className='discover-more-button'
             variant="contained"
             type="submit"
             style={{
-              backgroundColor: '#187F75',
-              fontSize: '0.8rem',
+              backgroundColor: '#ffff',
+              fontSize: '1rem',
+              width: '35%',
+              borderRadius: '10px',
+              color: '#024059',
+              fontFamily: 'Paytone One',
+              height: '6vh',
+              fontWeight: '600',
+              border: 'none',
             }}
             onClick={handleSubmit}
           >
             {' '}
             Click here
-          </Button>
+          </button>
         </div>
       </div>
     </div>
